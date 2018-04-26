@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tim Haintz Blog Launched"
+title: "Tim Haintz Blog Launch"
 date: 2018-04-26
 ---
 
