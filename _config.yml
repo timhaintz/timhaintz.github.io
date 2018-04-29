@@ -1,2 +1,4 @@
 name: Tim Haintz' Blog
 markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
