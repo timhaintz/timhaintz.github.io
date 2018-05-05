@@ -27,7 +27,7 @@ UserPrincipalName :
 
 
 ## Windows 10
-If you are using Windows 10, you will need to install [Remote Server Administration Tools (RSAT) for Windows 10](https://www.microsoft.com/en-au/download/details.aspx?id=45520) and then enable RSATClient-Roles-AD-Powershell before you can access the [ActiveDirectory Module](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps) [cmdlets](https://msdn.microsoft.com/en-us/library/ms714395(v=vs.85).aspx). [Install the Active Directory PowerShell Module on Windows 10 by Ashley McLoan](https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/) has a scriptable way to install RSAT.
+If you are using Windows 10, you will need to install [Remote Server Administration Tools (RSAT) for Windows 10](https://www.microsoft.com/en-au/download/details.aspx?id=45520) and then enable RSATClient-Roles-AD-Powershell before you can access the [ActiveDirectory Module](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps) [cmdlets](https://msdn.microsoft.com/en-us/library/ms714395(v=vs.85).aspx). [Install the Active Directory PowerShell Module on Windows 10 by Ashley McGloan](https://blogs.technet.microsoft.com/ashleymcglone/2016/02/26/install-the-active-directory-powershell-module-on-windows-10/) has a scriptable way to install RSAT.
 
 ## Steps to run the ActiveDirectory module from Windows 10.
 1. Install RSAT
