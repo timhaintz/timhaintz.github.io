@@ -2,6 +2,7 @@
 layout: default
 title: Glossary of Terms
 ---
+
 # Glossary of Terms
 
 * [ActiveDirectory Module](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps)
