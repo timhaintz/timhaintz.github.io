@@ -15,3 +15,7 @@ I chose to create this blog using GitHub Pages and Jekyll as it enables me to us
 If you would like to leave comments, please use the built in GitHub Issues functionality. [GitHub Issues](https://guides.github.com/features/issues/) can be created by browsing to the source code of [this site](https://github.com/timhaintz/timhaintz.github.io). If you would like to comment on a specific page, please create the issue for that page.
 
 If I have made a mistake or a type (see what I did there?), please feel free to make a [GitHub Pull request](https://help.github.com/articles/about-pull-requests/). Happy for feedback.
+
+Thank you for stopping by. Hopefully some of the blog posts will be usefull.
+
+Thanks, Tim.
