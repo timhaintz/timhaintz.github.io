@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "PowerShell & Get-ADComputer"
+title: "PowerShell ActiveDirectory Module & Get-ADComputer"
 date: 2018-05-04
 ---
 ## Get-ADComputer
-I'm often looking up workstation or server details. This can be tedious if I have to open up *Active Directory Users and Computers* and *Find* every time. If I don't know the exact name, something I use often is the -Filter parameter from the Get-ADComputer Cmdlet.
+I'm often looking up workstation and/or server details. This can be tedious if I have to open up *Active Directory Users and Computers* and *Find* every time. PowerShell to the rescue! If I don't know the exact name, something I use often is the -Filter parameter from the Get-ADComputer Cmdlet.
 
 ```PowerShell
 Get-ADComputer -Filter {name -like '*a*'}
