@@ -2,4 +2,4 @@
 layout: default
 title: Thank You
 ---
-# [%title]
+# Thank You
