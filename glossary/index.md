@@ -3,7 +3,7 @@ layout: default
 title: Glossary of Terms
 ---
 
-# [%title]
+# Glossary of Terms
 
 * [ActiveDirectory Module](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps)
 * [Cmdlet](https://msdn.microsoft.com/en-us/library/ms714395(v=vs.85).aspx)
