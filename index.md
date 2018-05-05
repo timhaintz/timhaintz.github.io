@@ -16,6 +16,6 @@ If you would like to leave comments, please use the built in GitHub Issues funct
 
 If I have made a mistake or a type (see what I did there?), please feel free to make a [GitHub Pull request](https://help.github.com/articles/about-pull-requests/). Happy for feedback.
 
-Thank you for stopping by. Hopefully some of the blog posts will be usefull.
+Thank you for stopping by. Hopefully some of the blog posts will be useful.
 
 Thanks, Tim.
