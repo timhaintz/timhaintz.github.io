@@ -2,4 +2,4 @@
 layout: default
 title: Thank You
 ---
-# {page.title}
+# text {page.title}
