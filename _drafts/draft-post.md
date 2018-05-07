@@ -40,3 +40,28 @@ Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----                                                                             
 -a----         5/7/2018   9:34 PM          16382 180507-Process.txt
 ```
+
+You can use Get-Date -Format in a number of ways. For a list of available format specifiers, see the [DateTimeFormatInfo Class](https://msdn.microsoft.com/en-GB/Library/system.globalization.datetimeformatinfo(VS.85).aspx)
+
+Some further examples are below:
+
+```PowerShell
+Get-Date -Format ddMMyy
+070518
+
+Get-Date -Format D
+Monday, May 7, 2018
+
+Get-Date -Format d
+5/7/2018
+
+Get-Date -Format R
+Mon, 07 May 2018 21:46:29 GMT
+
+Get-Date -Format u
+2018-05-07 21:46:49Z
+```
+
+As you can see, these are just some of the ways you can format the date and time.
+
+Have a try and see which option works best for you.
