@@ -1,67 +1,51 @@
 ---
 layout: post
-title: "How to save a file with today's date in it: Get-Date"
-date: 2018-05-07
+title: "Copying files to other machines: New-PSSession & Copy-Item"
+date: 2018-05-08
 ---
+## New-PSSession and Copy-Item
+On occassion, files need to be copied from one machine to another. This can include times where the machines are in different domains, or elevated permissions are required to fulfil the task. There are quite a few methods to do this. 
 
-Often, when running a regular report, I like to keep the date in the name of the output file. This removes any potential file overwrite issues and is a good visual indicator of the history of the job.
-
-To do this, I use the [Get-Date](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-6) cmdlet. 
-
-By default, Get-Date outputs as below:
-```PowerShell
-Get-Date
-Monday, May 7, 2018 9:19:08 PM
-```
-
-This isn't particularly useful to put in a filename. 
-
-Luckily for us, Get-Date has a -Format parameter. The -Format parameter can be used to display the date in a number of ways.
-
-For example:
-```PowerShell
-Get-Date -Format yyMMdd
-180507
-```
-
-To use it in a file name, I like to save the date in the desired format as a variable and then use it in the filename.
+Below, I use [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6), [New-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-6) and [Copy-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/copy-item?view=powershell-6). 
+The folder and file layout on my local machine is as below:
 
 ```PowerShell
-$dateyyMMdd = Get-Date -Format yyMMdd
-Get-Process > $dateyyMMdd-Process.txt
+PS C:\Users\azureadmin\test> $env:COMPUTERNAME
+ca1
 
-PS C:\Users\azureadmin\test> ls
-
+PS C:\Users\azureadmin\test> ls -Recurse
 
     Directory: C:\Users\azureadmin\test
 
+Mode                LastWriteTime         Length Name                               
+----                -------------         ------ ----
+d-----         5/8/2018   8:32 PM                Info                                                                                    
+    Directory: C:\Users\azureadmin\test\Info
 
-Mode                LastWriteTime         Length Name                                                                             
-----                -------------         ------ ----                                                                             
--a----         5/7/2018   9:34 PM          16382 180507-Process.txt
+Mode                LastWriteTime         Length Name 
+----                -------------         ------ ---- 
+d-----         5/8/2018   8:32 PM                Folder1  
+d-----         5/8/2018   8:32 PM                Folder2 
+
+    Directory: C:\Users\azureadmin\test\Info\Folder1
+
+Mode                LastWriteTime         Length Name 
+----                -------------         ------ ----   
+-a----         5/8/2018   8:32 PM             14 Test1.txt   
+-a----         5/8/2018   8:32 PM              0 Test2.txt                                                                                                              
+
+    Directory: C:\Users\azureadmin\test\Info\Folder2
+
+Mode                LastWriteTime         Length Name    
+----                -------------         ------ ----     
+-a----         5/8/2018   8:32 PM              0 Test3.txt  
+-a----         5/8/2018   8:32 PM              0 Test4.txt
 ```
 
-You can use Get-Date -Format in a number of ways. For a list of available format specifiers, see the [DateTimeFormatInfo Class](https://msdn.microsoft.com/en-GB/Library/system.globalization.datetimeformatinfo(VS.85).aspx)
-
-Some further examples are below:
 
 ```PowerShell
-Get-Date -Format ddMMyy
-070518
 
-Get-Date -Format D
-Monday, May 7, 2018
 
-Get-Date -Format d
-5/7/2018
-
-Get-Date -Format R
-Mon, 07 May 2018 21:46:29 GMT
-
-Get-Date -Format u
-2018-05-07 21:46:49Z
 ```
 
-As you can see, these are just some of the ways you can format the date and time.
 
-Have a try and see which option works best for you.
