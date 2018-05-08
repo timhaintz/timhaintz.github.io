@@ -36,3 +36,5 @@ If you are using Windows 10, you will need to install [Remote Server Administrat
 Get-WindowsOptionalFeature -Online -FeatureName RSATClient-Roles-AD-Powershell
 ```
 3. You will now be able to use the ActiveDirectory module from your Windows 10 machine.
+
+Thanks, Tim.
