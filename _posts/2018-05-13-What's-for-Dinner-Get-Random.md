@@ -58,10 +58,8 @@ Missing closing ')' in subexpression.
     + CategoryInfo          : ParserError: (:) [], ParseException
     + FullyQualifiedErrorId : UnexpectedToken
 ```
-Single quotes inside single quotes cannot be escaped by using the backtick ``.
-
-I could have used double quotes as below:
-*"Sharron's Chicken and Salad"*
+Single quotes inside single quotes cannot be escaped by using the the normal escape character, the backtick `.
+A work around could be to use double quotes *"Sharron's Chicken and Salad"* around the string.
 
 For more information on this, [Richard Mueller's PowerShell Escape article](http://www.rlmueller.net/PowerShellEscape.htm) has a good explanation of escaping characters.
 
