@@ -58,7 +58,8 @@ Missing closing ')' in subexpression.
     + CategoryInfo          : ParserError: (:) [], ParseException
     + FullyQualifiedErrorId : UnexpectedToken
 ```
-Single quotes inside single quotes cannot be escaped by using the backtick `.
+Single quotes inside single quotes cannot be escaped by using the backtick ``.
+
 I could have used double quotes as below:
 *"Sharron's Chicken and Salad"*
 
