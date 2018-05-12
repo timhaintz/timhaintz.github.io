@@ -80,7 +80,7 @@ PS C:\Users\timha\Desktop> .\randomMeals.ps1
 Sharron's Chicken and Salad
 ```
 
-Feel free to change the meals, or, use the idea to ransomise anything.
+Feel free to change the meals, or, use the idea to randomise anything.
 
 Usually, in a script like above, I would use parameter completion and use:
 ```PowerShell
