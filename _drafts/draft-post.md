@@ -1,110 +1,100 @@
 ---
 layout: post
-title: "Copying files to other machines: New-PSSession & Copy-Item"
-date: 2018-05-08
+title: "What's for dinner?: Get-Random"
+date: 2018-05-13
 ---
-## New-PSSession and Copy-Item
-On occassion, files need to be copied from one machine to another. This can include times where the machines are in different domains, or elevated permissions are required to fulfil the task. There are quite a few methods to do this. 
+## Get-Random
 
-Below, I use [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6), [New-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-6) and [Copy-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/copy-item?view=powershell-6). From the *Notes* section of the New-PSSession documentation **This cmdlet uses the Windows PowerShell remoting infrastructure. To use this cmdlet, the local computer and any remote computers must be configured for Windows PowerShell remoting.** Please ensure [PowerShell Remoting](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/running-remote-commands?view=powershell-6#windows-powershell-remoting) is setup.
+Often, as a family it gets to 5:00PM and the inevitable question is asked.
 
-The folder and file layout on my local machine is as below:
+**What's for dinner?**
 
-```PowerShell
-PS C:\Users\azureadmin\test> $env:COMPUTERNAME
-ca1
+My wife came up with a wonderful idea. Collect a list of all of our favourite meals.
+Number them, use a random number generator and **BOOM**, dinner is sorted.
 
-PS C:\Users\azureadmin\test> ls -Recurse
+Always thinking of ways to use PowerShell, it seemed like the perfect use for [Get-Random](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-random?view=powershell-6).
 
-    Directory: C:\Users\azureadmin\test
+Today is Mother's Day in Australia. I thought using *Get-Random* and using it to
+generate our meal list would be a great Mother's Day present... :).
+We no longer need to generate a number and then look at our list. It can be done automatically.
 
-Mode                LastWriteTime         Length Name                               
-----                -------------         ------ ----
-d-----         5/8/2018   8:32 PM                Info                                                                                    
-    Directory: C:\Users\azureadmin\test\Info
+To all the Mum's out there, Thank You. Thank You for everything you do. Thank You
+for everything you do that isn't recognised and Thank You for being you!
 
-Mode                LastWriteTime         Length Name 
-----                -------------         ------ ---- 
-d-----         5/8/2018   8:32 PM                Folder1  
-d-----         5/8/2018   8:32 PM                Folder2 
+To my wife, Thank You for being the best Mum our kids could ask for.
 
-    Directory: C:\Users\azureadmin\test\Info\Folder1
-
-Mode                LastWriteTime         Length Name 
-----                -------------         ------ ----   
--a----         5/8/2018   8:32 PM             14 Test1.txt   
--a----         5/8/2018   8:32 PM              0 Test2.txt                                                                                                              
-
-    Directory: C:\Users\azureadmin\test\Info\Folder2
-
-Mode                LastWriteTime         Length Name    
-----                -------------         ------ ----     
--a----         5/8/2018   8:32 PM              0 Test3.txt  
--a----         5/8/2018   8:32 PM              0 Test4.txt
-```
-To copy the folders and files, the below PowerShell commands are run.
+Now, to the code...
 
 ```PowerShell
-$credential = Get-Credential timhaintz\azureadmin
-$session = New-PSSession -ComputerName dc1 -Credential $credential
-Copy-Item -Recurse "C:\Users\azureadmin\test" -Destination "C:\test\" -ToSession $Session
+Get-Random @('Spaghetti Bolognaise','Tuna Pasta Bake','Steak and Vegies',
+             'Silverside and Vegies','Toasted Sangas','Tacos','Chicken Pasta',
+             'Chicken Pasta Bake'.'Pancakes','FODMAP Soup and Sandwiches',
+             'Chicken Tenders and Vegies','Roast Vegies','Lasagna','Fried Rice',
+             'Roast Beef','Sausages and Gravy','Spaghetti Carbonara','Beans on Toast',
+             'Rissotto','Braised Steak and Mash','Baked Potatoes','Homemade Pizza',
+             'Hot Dogs','Nuggets and Chips','Nachos','Sharron''s Chicken and Salad',
+             'Chicken and Leek Pie','Shepherds Pie')
 ```
-The first line $credential = Get-Credential...... prompts for a username and password. In a future blog, I will use [Export-Clixml](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-clixml?view=powershell-6) to export the credentials into an XML file, so as to remove the need for user interaction.
-
-The New-PSSession example is taken straight from Microsoft's documenation, as is Copy-Item.
-
-To interactively connect to the destination server [Enter-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-6) can be utilised. 
+Those with a keen eye may have noticed *Sharron''s Chicken and Salad*.
+As a single quote is used as an apostrophe, PowerShell thinks the string has finished at *'Sharron'*. Below is the error without *'Sharron''s'*.
 
 ```PowerShell
-PS C:\Users\azureadmin\test> Enter-PSSession -Session $session
+PS C:\Users\timha\Desktop> .\randomMeals.ps1
+At C:\Users\timha\Desktop\randomMeals.ps1:7 char:63
++ ...            'Hot Dogs','Nuggets and Chips','Nachos','Sharron's Chicken ...
++                                                                 ~
+Unexpected token 's' in expression or statement.
 
-[dc1]: PS C:\test> 
+At C:\Users\timha\Desktop\randomMeals.ps1:8 char:51
++              'Chicken and Leek Pie','Shepherds Pie')
++                                                   ~~
+The string is missing the terminator: '.
+
+At C:\Users\timha\Desktop\randomMeals.ps1:10 char:2
++
+Missing closing ')' in subexpression.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : UnexpectedToken
 ```
-From this session, you can check if the files and folders copied correctly.
+Single quotes inside single quotes cannot be escaped by using the backtick *`*.
+I could have used double quotes as below:
+*"Sharron's Chicken and Salad"*
+
+For more information on this, [Richard Mueller's PowerShell Escape article](http://www.rlmueller.net/PowerShellEscape.htm) has a good explanation of escaping characters.
+
+I saved the file as a .PS1 file. As long as [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell?view=powershell-6) is installed on your computer, it knows how to run this file.
+[How to Write and Run Scripts in the Windows PowerShell ISE](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise?view=powershell-6) and [Running Scripts](https://technet.microsoft.com/en-us/library/bb613481(v=vs.85).aspx) have further information on how to runs scripts from your computer. Please note the *Execution Policy* section in both documents to enable the script to run.
+
+The output of running the script is shown below:
 
 ```PowerShell
-[dc1]: PS C:\test> $env:COMPUTERNAME
-dc1
-
-[dc1]: PS C:\test> ls -Recurse
-
-
-    Directory: C:\test
-
-
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
-d-----         5/8/2018   8:36 PM                Info
-
-
-    Directory: C:\test\Info
-
-
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
-d-----         5/8/2018   8:36 PM                Folder1
-d-----         5/8/2018   8:36 PM                Folder2
-
-
-    Directory: C:\test\Info\Folder1
-
-
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
--a----         5/8/2018   8:32 PM             14 Test1.txt
--a----         5/8/2018   8:32 PM              0 Test2.txt
-
-
-    Directory: C:\test\Info\Folder2
-
-
-Mode                LastWriteTime         Length Name
-----                -------------         ------ ----
--a----         5/8/2018   8:32 PM              0 Test3.txt
--a----         5/8/2018   8:32 PM              0 Test4.txt
+PS C:\Users\timha\Desktop> .\randomMeals.ps1
+Shepherds Pie
+PS C:\Users\timha\Desktop> .\randomMeals.ps1
+Silverside and Vegies
+PS C:\Users\timha\Desktop> .\randomMeals.ps1
+Rissotto
+PS C:\Users\timha\Desktop> .\randomMeals.ps1
+Fried Rice
+PS C:\Users\timha\Desktop> .\randomMeals.ps1
+Sharron's Chicken and Salad
 ```
-As displayed above, the folders and files from the local machine are successfully copied to the destination machine using a session.
 
-Hope this is of use.
+Feel free to change the meals, or, use the idea to ransomise anything.
+
+Usually, in a script like above, I would use parameter completion and use:
+```PowerShell
+Get-Random -InputObject @('String1','String2')
+```
+However, this generated the error *Get-Random : Cannot validate argument on parameter 'InputObject'.*
+See [PowerShell GitHub Issue 3682](https://github.com/PowerShell/PowerShell/issues/3682) for further information.
+
+*Get-Random* has a lot of uses as shown by running Get-Help against it, or by viewing the documentation as linked above.
+
+```PowerShell
+Get-Help Get-Random -Full
+```
+
+Hope you're having a great day and this is of use.
 
 Thanks, Tim.
