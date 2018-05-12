@@ -10,7 +10,7 @@ Often, as a family it gets to 5:00PM and the inevitable question is asked.
 **What's for dinner?**
 
 My wife came up with a wonderful idea. Collect a list of all of our favourite meals.
-Number them, use a random number generator and **BOOM**, dinner is sorted.
+Number them, use a random number generator and **BOOM**, *What's for dinner?* Is answered.
 
 Always thinking of ways to use PowerShell, it seemed like the perfect use for [Get-Random](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-random?view=powershell-6).
 
