@@ -36,7 +36,7 @@ Get-Random @('Spaghetti Bolognaise','Tuna Pasta Bake','Steak and Vegies',
              'Chicken and Leek Pie','Shepherds Pie')
 ```
 Those with a keen eye may have noticed *Sharron''s Chicken and Salad*.
-As a single quote is used as an apostrophe, PowerShell thinks the string has finished at *'Sharron'*. 
+As a single quote is used as an apostrophe, PowerShell thinks the string has finished at *'Sharron'*. Therefore, we need to use two single quotes side by side.
 
 Below is the error without *'Sharron''s'*.
 
