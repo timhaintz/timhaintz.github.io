@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What's for dinner?: Get-Random"
+title: "What's for Dinner?: Get-Random"
 date: 2018-05-13
 ---
 ## Get-Random
