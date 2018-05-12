@@ -60,10 +60,9 @@ Missing closing ')' in subexpression.
 ```
 Single quotes inside single quotes cannot be escaped by using the the normal escape character, the backtick `.
 A work around could be to use double quotes *"Sharron's Chicken and Salad"* around the string.
-
 For more information on this, [Richard Mueller's PowerShell Escape article](http://www.rlmueller.net/PowerShellEscape.htm) has a good explanation of escaping characters.
 
-I saved the file as a .PS1 file. As long as [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell?view=powershell-6) is installed on your computer, it knows how to run this file.
+To execute the script, I saved the file as a .PS1 file. As long as [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell?view=powershell-6) is installed on your computer, it knows how to run this file.
 [How to Write and Run Scripts in the Windows PowerShell ISE](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise?view=powershell-6) and [Running Scripts](https://technet.microsoft.com/en-us/library/bb613481(v=vs.85).aspx) have further information on how to runs scripts from your computer. Please note the *Execution Policy* section in both documents to enable the script to run.
 
 The output of running the script is shown below:
