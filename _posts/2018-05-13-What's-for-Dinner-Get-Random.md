@@ -90,7 +90,7 @@ Get-Random -InputObject @('String1','String2')
 However, this generated the error *Get-Random : Cannot validate argument on parameter 'InputObject'.*
 See [PowerShell GitHub Issue 3682](https://github.com/PowerShell/PowerShell/issues/3682) for further information.
 
-*Get-Random* has a lot of uses as shown by running Get-Help against it, or by viewing the documentation as linked above.
+*Get-Random* has a lot of uses as shown by running [Get-Help](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-help?view=powershell-6) against it, or by viewing the documentation as linked above.
 
 ```PowerShell
 Get-Help Get-Random -Full
