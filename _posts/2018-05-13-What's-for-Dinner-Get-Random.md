@@ -36,7 +36,9 @@ Get-Random @('Spaghetti Bolognaise','Tuna Pasta Bake','Steak and Vegies',
              'Chicken and Leek Pie','Shepherds Pie')
 ```
 Those with a keen eye may have noticed *Sharron''s Chicken and Salad*.
-As a single quote is used as an apostrophe, PowerShell thinks the string has finished at *'Sharron'*. Below is the error without *'Sharron''s'*.
+As a single quote is used as an apostrophe, PowerShell thinks the string has finished at *'Sharron'*. 
+
+Below is the error without *'Sharron''s'*.
 
 ```PowerShell
 PS C:\Users\timha\Desktop> .\randomMeals.ps1
@@ -56,7 +58,7 @@ Missing closing ')' in subexpression.
     + CategoryInfo          : ParserError: (:) [], ParseException
     + FullyQualifiedErrorId : UnexpectedToken
 ```
-Single quotes inside single quotes cannot be escaped by using the backtick *`*.
+Single quotes inside single quotes cannot be escaped by using the backtick `.
 I could have used double quotes as below:
 *"Sharron's Chicken and Salad"*
 
