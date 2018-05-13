@@ -5,7 +5,7 @@ date: 2018-05-13
 ---
 ## Get-Random
 
-Often, as a family it gets to 5:00PM and the inevitable question is asked.
+Often, as a family, it gets to 5:00PM and the inevitable question is asked.
 
 **What's for dinner?**
 
