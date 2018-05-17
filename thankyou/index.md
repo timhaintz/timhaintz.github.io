@@ -7,16 +7,16 @@ title: Thank You
 Thank you to the people and products below. Without their creativity and knowledge sharing, this blog would not have been created. A quote that I often remind myself is ["Standing on the shoulders of giants"](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants). This sums up my appreciation for the assistance provided from those below.
 
 
-|Twitter - People|
-| --- |
-|[Bill Gates](https://twitter.com/BillGates)|
-|[Tim Berners-Lee](https://twitter.com/timberners_lee)|
-|[Jeffrey Snover](https://twitter.com/jsnover)|
-|[Bruce Payette](https://twitter.com/BrucePayette)|
-|[Don Jones](https://twitter.com/concentrateddon)|
-|[Nicole Forsgren](https://twitter.com/nicolefv)|
-|[Jocko Willink](https://twitter.com/jockowillink)|
-|[Adam Jacob](https://twitter.com/adamhjk)|
+|Twitter - People|Twitter - Products or Groups|
+| --- | --- |
+|[Bill Gates](https://twitter.com/BillGates)|[Active Directory Tips](https://twitter.com/ADTipsTricks)|
+|[Tim Berners-Lee](https://twitter.com/timberners_lee)|[Arrested DevOps](https://twitter.com/ArrestedDevOps)|
+|[Jeffrey Snover](https://twitter.com/jsnover)|[Azure Weekly](https://twitter.com/AzureWeekly)|
+|[Bruce Payette](https://twitter.com/BrucePayette)|[Chef](https://twitter.com/chef)|
+|[Don Jones](https://twitter.com/concentrateddon)|[DevOps.com](https://twitter.com/devopsdotcom)|
+|[Nicole Forsgren](https://twitter.com/nicolefv)|[docs.microsoft.com](https://twitter.com/docsmsft)|
+|[Jocko Willink](https://twitter.com/jockowillink)|[Full Stack Python](https://twitter.com/fullstackpython)|
+|[Adam Jacob](https://twitter.com/adamhjk)|[Have I Been Pwned](https://twitter.com/haveibeenpwned)|
 |[Adam the Automator](https://twitter.com/adbertram)|
 |[Bridget Kromhout](https://twitter.com/bridgetkromhout)|
 |[Dan Scott-Raynsford](https://twitter.com/dscottraynsford)|
@@ -46,14 +46,6 @@ Thank you to the people and products below. Without their creativity and knowled
 
 |Twitter - Products or Groups|
 | --- |
-|[Active Directory Tips](https://twitter.com/ADTipsTricks)|
-|[Arrested DevOps](https://twitter.com/ArrestedDevOps)|
-|[Azure Weekly](https://twitter.com/AzureWeekly)|
-|[Chef](https://twitter.com/chef)|
-|[DevOps.com](https://twitter.com/devopsdotcom)|
-|[docs.microsoft.com](https://twitter.com/docsmsft)|
-|[Full Stack Python](https://twitter.com/fullstackpython)|
-|[Have I Been Pwned](https://twitter.com/haveibeenpwned)|
 |[IT Revolution Press](https://twitter.com/ITRevBooks)|
 |[Linux](https://twitter.com/Linux)|
 |[Microsoft](https://twitter.com/Microsoft)|
