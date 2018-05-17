@@ -17,55 +17,29 @@ Thank you to the people and products below. Without their creativity and knowled
 |[Nicole Forsgren](https://twitter.com/nicolefv)|[docs.microsoft.com](https://twitter.com/docsmsft)|
 |[Jocko Willink](https://twitter.com/jockowillink)|[Full Stack Python](https://twitter.com/fullstackpython)|
 |[Adam Jacob](https://twitter.com/adamhjk)|[Have I Been Pwned](https://twitter.com/haveibeenpwned)|
-|[Adam the Automator](https://twitter.com/adbertram)|
-|[Bridget Kromhout](https://twitter.com/bridgetkromhout)|
-|[Dan Scott-Raynsford](https://twitter.com/dscottraynsford)|
-|[Gene Kim](https://twitter.com/RealGeneKim)|
-|[Hal Rottenberg](https://twitter.com/halr9000)|
-|[Iris Classon](https://twitter.com/IrisClasson)|
-|[Jason Helmick](https://twitter.com/theJasonHelmick)|
-|[Jeffery Hicks](https://twitter.com/JeffHicks)|
-|[Jenny Hunter](https://twitter.com/MsftJenny)|
-|[Jez Humble](https://twitter.com/jezhumble)|
-|[John Allspaw](https://twitter.com/allspaw)|
-|[Jonathan Walz](https://twitter.com/jonwalz)|
-|[Katie Keim](https://twitter.com/katiedsc)|
-|[Lee Holmes](https://twitter.com/Lee_Holmes)|
-|[Mark Minasi](https://twitter.com/mminasi)|
-|[Mark Russinovich](https://twitter.com/markrussinovich)|
-|[Matt Ray](https://twitter.com/mattray)|
-|[Melissa Januszko](https://twitter.com/thedevopsdiva)|
-|[Michael Ducy](https://twitter.com/mfdii)|
-|[Ned Pyle](https://twitter.com/NerdPyle)|
-|[Patrick Debois](https://twitter.com/patrickdebois)|
-|[Paul Cunningham](https://twitter.com/PaulCunningham)|
-|[Scott Hanselman](https://twitter.com/shanselman)|
+|[Adam the Automator](https://twitter.com/adbertram)|[IT Revolution Press](https://twitter.com/ITRevBooks)|
+|[Bridget Kromhout](https://twitter.com/bridgetkromhout)|[Linux](https://twitter.com/Linux)|
+|[Dan Scott-Raynsford](https://twitter.com/dscottraynsford)|[Microsoft](https://twitter.com/Microsoft)|
+|[Gene Kim](https://twitter.com/RealGeneKim)|[Microsoft Australia](https://twitter.com/MicrosoftAU)|
+|[Hal Rottenberg](https://twitter.com/halr9000)|[Microsoft AU Tech](https://twitter.com/MicrosoftAUTech)|
+|[Iris Classon](https://twitter.com/IrisClasson)|[Microsoft Azure](https://twitter.com/Azure)|
+|[Jason Helmick](https://twitter.com/theJasonHelmick)|[Microsoft Learning](https://twitter.com/MSLearning)|
+|[Jeffery Hicks](https://twitter.com/JeffHicks)|[MSFT Scripting Guys](https://twitter.com/ScriptingGuys)|
+|[Jenny Hunter](https://twitter.com/MsftJenny)|[MVP ITPro](https://twitter.com/mvpitpro)|
+|[Jez Humble](https://twitter.com/jezhumble)|[Pester](https://twitter.com/PSPester)|
+|[John Allspaw](https://twitter.com/allspaw)|[Pluralsight](https://twitter.com/pluralsight)|
+|[Jonathan Walz](https://twitter.com/jonwalz)|[PowerShell.org](https://twitter.com/PSHOrg)|
+|[Katie Keim](https://twitter.com/katiedsc)|[PowershellDSC](https://twitter.com/PowershellDSC_)|
+|[Lee Holmes](https://twitter.com/Lee_Holmes)|[Red Hat Ansible](https://twitter.com/ansible)|
+|[Mark Minasi](https://twitter.com/mminasi)|[Red Hat, Inc.](https://twitter.com/RedHat)|
+|[Mark Russinovich](https://twitter.com/markrussinovich)|[Software Defined Talk](https://twitter.com/SoftwareDefTalk)|
+|[Matt Ray](https://twitter.com/mattray)|[The PowerShell Team](https://twitter.com/PowerShell_Team)|
+|[Melissa Januszko](https://twitter.com/thedevopsdiva)|[The Toyota Way](https://twitter.com/The_Toyota_Way)|
+|[Michael Ducy](https://twitter.com/mfdii)|[Visual Sutdio Code](https://twitter.com/code)|
+|[Ned Pyle](https://twitter.com/NerdPyle)|[VMware Australia](https://twitter.com/VMwareAU)|
+|[Patrick Debois](https://twitter.com/patrickdebois)|[Windows](https://twitter.com/Windows)|
+|[Paul Cunningham](https://twitter.com/PaulCunningham)|[Windows Admin Center](https://twitter.com/servermgmt)|
+|[Scott Hanselman](https://twitter.com/shanselman)|[Windows Australia](https://twitter.com/WindowsAU)|
 |[Steven Murawski](https://twitter.com/StevenMurawski)|
 |[Trevor Hess](https://twitter.com/trevorghess)|
 |[Troy Hunt](https://twitter.com/troyhunt)|
-
-|Twitter - Products or Groups|
-| --- |
-|[IT Revolution Press](https://twitter.com/ITRevBooks)|
-|[Linux](https://twitter.com/Linux)|
-|[Microsoft](https://twitter.com/Microsoft)|
-|[Microsoft Australia](https://twitter.com/MicrosoftAU)|
-|[Microsoft AU Tech](https://twitter.com/MicrosoftAUTech)|
-|[Microsoft Azure](https://twitter.com/Azure)|
-|[Microsoft Learning](https://twitter.com/MSLearning)|
-|[MSFT Scripting Guys](https://twitter.com/ScriptingGuys)|
-|[MVP ITPro](https://twitter.com/mvpitpro)|
-|[Pester](https://twitter.com/PSPester)|
-|[Pluralsight](https://twitter.com/pluralsight)|
-|[PowerShell.org](https://twitter.com/PSHOrg)|
-|[PowershellDSC](https://twitter.com/PowershellDSC_)|
-|[Red Hat Ansible](https://twitter.com/ansible)|
-|[Red Hat, Inc.](https://twitter.com/RedHat)|
-|[Software Defined Talk](https://twitter.com/SoftwareDefTalk)|
-|[The PowerShell Team](https://twitter.com/PowerShell_Team)|
-|[The Toyota Way](https://twitter.com/The_Toyota_Way)|
-|[Visual Sutdio Code](https://twitter.com/code)|
-|[VMware Australia](https://twitter.com/VMwareAU)|
-|[Windows](https://twitter.com/Windows)|
-|[Windows Admin Center](https://twitter.com/servermgmt)|
-|[Windows Australia](https://twitter.com/WindowsAU)|
