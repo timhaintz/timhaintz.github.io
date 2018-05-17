@@ -8,7 +8,7 @@ Thank you to the people and products below. Without their creativity and knowled
 
 
 |Twitter - People|Twitter - Products or Groups|
-| --- | --- |
+| --- | ---: |
 |[Bill Gates](https://twitter.com/BillGates)|[Active Directory Tips](https://twitter.com/ADTipsTricks)|
 |[Tim Berners-Lee](https://twitter.com/timberners_lee)|[Arrested DevOps](https://twitter.com/ArrestedDevOps)|
 |[Jeffrey Snover](https://twitter.com/jsnover)|[Azure Weekly](https://twitter.com/AzureWeekly)|
