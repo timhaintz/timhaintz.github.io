@@ -7,9 +7,9 @@ title: Thank You
 Thank you to the people and products below. Without their creativity and knowledge sharing, this blog would not have been created. A quote I often remind myself of is ["Standing on the shoulders of giants"](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants). This sums up my appreciation for the assistance provided from those below.
 
 
-|Twitter - People|Twitter - Products or Groups|
-| --- | ---: |
-|[Bill Gates](https://twitter.com/BillGates)|[Active Directory Tips](https://twitter.com/ADTipsTricks)|
+|Twitter - People|Twitter - Products or Groups|Useful resources and training material|
+| :--- | --- | ---: |
+|[Bill Gates](https://twitter.com/BillGates)|[Active Directory Tips](https://twitter.com/ADTipsTricks)|[Arrested DevOps](https://www.arresteddevops.com/)|
 |[Tim Berners-Lee](https://twitter.com/timberners_lee)|[Arrested DevOps](https://twitter.com/ArrestedDevOps)|
 |[Jeffrey Snover](https://twitter.com/jsnover)|[Azure Weekly](https://twitter.com/AzureWeekly)|
 |[Bruce Payette](https://twitter.com/BrucePayette)|[Chef](https://twitter.com/chef)|
