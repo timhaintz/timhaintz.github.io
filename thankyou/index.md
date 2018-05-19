@@ -8,7 +8,7 @@ Thank you to the people and products below. Without their creativity and knowled
 
 
 |Twitter - People|Twitter - Products or Groups|Useful Resources & Training Material|
-| :--- | :---: | --- |
+| :---: | :---: | :---: |
 |[Bill Gates](https://twitter.com/BillGates)|[Active Directory Tips](https://twitter.com/ADTipsTricks)|[Arrested DevOps](https://www.arresteddevops.com/)|
 |[Tim Berners-Lee](https://twitter.com/timberners_lee)|[Arrested DevOps](https://twitter.com/ArrestedDevOps)|[CBTNuggets](https://www.cbtnuggets.com/)|
 |[Jeffrey Snover](https://twitter.com/jsnover)|[Azure Weekly](https://twitter.com/AzureWeekly)|[CBTNuggets - PowerShell Reference Training](https://www.cbtnuggets.com/it-training/microsoft-windows-powershell-2-3-4)|
