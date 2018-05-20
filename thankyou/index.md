@@ -44,5 +44,3 @@ Thank you to the people and products below. Without their creativity and knowled
 |[Steven Murawski](https://twitter.com/StevenMurawski)|
 |[Trevor Hess](https://twitter.com/trevorghess)|
 |[Troy Hunt](https://twitter.com/troyhunt)|
-
-
