@@ -4,7 +4,7 @@ title: Thank You
 ---
 # Thank You
 
-Thank you to the people and products below. Without their creativity and knowledge sharing, this blog would not have been created. A quote I often remind myself of is ["Standing on the shoulders of giants"](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants). This sums up my appreciation for the assistance provided from the people and products below.
+Thank you to the people and products below. Without their creativity and knowledge sharing, this blog would not have been created. A quote I often remind myself of is ["Standing on the shoulders of giants"](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants). This sums up my appreciation for the assistance provided from the people and products below. Thank you to Karl for the extra hardware to test and thank you to everyone else who has and is sharing this learning journey with me. Hopefully, you know who you are.
 
 
 |Twitter - People|Twitter - Products & Groups|Useful Resources & Training Material|
