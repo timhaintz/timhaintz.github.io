@@ -39,6 +39,26 @@ TD{border-width: 1px;padding: 0px;border-style: solid;border-color: black;backgr
 # Date format correct for saving in the output location. A new file will be created each new day/date
 $date = (Get-Date -Format yyyyMMdd)
 $outputlocation = "$env:TEMP\$date`_test.html"
+
+
+
+#$frag is a fragment used for ConvertTo-Html. It contains the interesting information.
+$frag = foreach ($server in $servers)
+{
+    Write-Host $server.cn
+    #If Test-Connection is false (that's what ! in the if statement means) then pass into the if statement.
+    if(!(Test-Connection -ComputerName $server.dnshostname -Count 1 -Quiet))
+    {
+        $server | Select-Object -Property @{Label='Computer Name'; expression ={$_.cn}},IPv4Address,whenCreated,whenChanged                               
+    }
+}
+#Convert captured servers into HTML as per formatting and information required.
+$frag | ConvertTo-Html -Title 'Failed PING of Servers' `
+                       -PreContent "<h1>Below are the $($frag.count) servers that failed a PING test. $($servers.count) servers were pinged in this process.</h1>" `
+                       -Head $head |
+        Out-File "$env:TEMP\$date`_test.html"
+        Write-Host "File written to: $env:TEMP\$date`_test.html"
+        Invoke-Item "$env:TEMP\$date`_test.html"
 ```
 
 Hope you're having a great day and this is of use.
