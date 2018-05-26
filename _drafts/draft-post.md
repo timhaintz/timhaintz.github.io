@@ -7,7 +7,8 @@ date: 2018-05-24
 
 Generating a HTML report of your servers.
 
-Below is an example of some of the data that you can retrieve from a server. I'm outputting this information as HTML.
+Below is an example of some of the data that you can retrieve from a server. I'm outputting this information to a HTML document.
+This script is also slightly interactive as I'm using Write-Host. This is for visual feedback in an interactive environment. Note that Write-Host isn't able to output to another script or be re-used. Inventor of PowerShell Jeffrey Snover has a great article [here](http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/) about Write-Host. 
 
 ```PowerShell
 <#
@@ -40,7 +41,28 @@ TD{border-width: 1px;padding: 0px;border-style: solid;border-color: black;backgr
 $date = (Get-Date -Format yyyyMMdd)
 $outputlocation = "$env:TEMP\$date`_test.html"
 
+<#
+Used if you would like to put individual machines in rather than using OUs
+$computernames = 'dc1','ca1'
 
+$servers = foreach ($computername in $computernames)
+           {
+               Get-ADComputer $computername -Properties *
+               
+           }
+#>
+
+$ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com'
+
+Write-Host "OUs being used to search are: $($ous)"
+
+#$servers being populated from the OUs with all of their AD attributes. 
+#$servers is then filtered using where-object to only objects that contain .dnshostname entries as these are 'real' machines
+#$servers is then sorted alphabetically based on CN/hostname. 
+$servers = $ous | ForEach-Object { Get-ADComputer -Filter * -properties * -SearchBase $_ }
+$servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
+
+Write-Host "Retreived servers from OUs and sorted machines based on server name"
 
 #$frag is a fragment used for ConvertTo-Html. It contains the interesting information.
 $frag = foreach ($server in $servers)
