@@ -3,9 +3,7 @@ layout: post
 title: "HTML Report for servers"
 date: 2018-05-24
 ---
-## HTML Report
-
-Generating a HTML report of your servers.
+## Generating a HTML report of your servers
 
 Below is an example of some of the data that you can retrieve from a server. I'm outputting this information to a HTML document.
 This script is also slightly interactive as I'm using [Write-Host](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-6). This is for visual feedback in an interactive environment. Note that Write-Host isn't able to output to another script or be re-used. Inventor of PowerShell Jeffrey Snover has a great article [here](http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/) about Write-Host. 
