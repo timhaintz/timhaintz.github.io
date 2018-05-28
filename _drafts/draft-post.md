@@ -78,9 +78,9 @@ $frag = foreach ($server in $servers)
 $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
                        -PreContent "<h1>Below are the $($frag.count) servers that failed a PING test. $($servers.count) servers were pinged in this process.</h1>" `
                        -Head $head |
-        Out-File "$env:TEMP\$date`_test.html"
-        Write-Host "File written to: $env:TEMP\$date`_test.html"
-        Invoke-Item "$env:TEMP\$date`_test.html"
+        Out-File $outputlocation
+        Write-Host "File written to: $outputlocation"
+        Invoke-Item $outputlocation
 ```
 
 Hope you're having a great day and this is of use.
