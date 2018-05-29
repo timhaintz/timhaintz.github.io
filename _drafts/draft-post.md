@@ -8,6 +8,8 @@ date: 2018-05-24
 Below is an example of some of the data that you can retrieve from a server. I'm outputting this information to a HTML document.
 This script is also slightly interactive as I'm using [Write-Host](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-6). This is for visual feedback in an interactive environment. Note that Write-Host isn't able to output to another script or be re-used. Inventor of PowerShell Jeffrey Snover has a great article [here](http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/) about Write-Host. 
 
+Using an If statement with Test-Connection, I'm also checking if the server responds to a ping or in this case, not responding to a ping.
+
 The script is below. Copy it and save it as a .PS1 file. Below, I break down what each section of the script does.
 
 ```PowerShell
