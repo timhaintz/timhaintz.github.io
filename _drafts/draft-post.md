@@ -59,7 +59,7 @@ Write-Host "OUs being used to search are: $($ous)"
 #$servers being populated from the OUs with all of their AD attributes. 
 #$servers is then filtered using where-object to only objects that contain .dnshostname entries as these are 'real' machines
 #$servers is then sorted alphabetically based on CN/hostname. 
-$servers = $ous | ForEach-Object { Get-ADComputer -Filter * -properties * -SearchBase $_ }
+$servers = $ous | ForEach-Object { Get-ADComputer -Filter * -Properties * -SearchBase $_ }
 $servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
 
 Write-Host "Retreived servers from OUs and sorted machines based on server name"
@@ -85,7 +85,7 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 
 Breaking out each of the parts below, I will explain what each is doing.
 
-### CSS and date and file format
+### CSS, Date and File Format
 I'm using CSS to style my HTML page. The CSS is being stored as the $head variable. This is used later on in [ConvertTo-Html](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-6) with the -Head parameter. 
 
 I also like to store the date in a specific format. The date is then used to generate the file name. 
@@ -106,6 +106,28 @@ TD{border-width: 1px;padding: 0px;border-style: solid;border-color: black;backgr
 # Date format correct for saving in the output location. A new file will be created each new day/date
 $date = (Get-Date -Format yyyyMMdd)
 $outputlocation = "$env:TEMP\$date`_test.html"
+```
+
+### Obtaining the Servers
+Get-ADComputer can't search multiple OUs with the -SearchBase parameter. For this reason, we have to store the OUs as separate strings and then run them through the [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6) cmdlet.
+
+$ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com' is where I have the computers stored in Active Directory.
+
+$servers = $ous | ForEach-Object { Get-ADComputer -Filter * -Properties * -SearchBase $_ } searches through each of the OUs for the machines I'm looking for and stores them in the $servers variable.
+Get-ADComputer cmdlet, I'm using -Filter * and -Properties * to retrive all machines and also all information about those machines.
+
+$servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
+Checks that the computer object contains a dnshostname value
+
+```PowerShell
+$ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com'
+
+Write-Host "OUs being used to search are: $($ous)"
+
+$servers = $ous | ForEach-Object { Get-ADComputer -Filter * -properties * -SearchBase $_ }
+$servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
+
+Write-Host "Retreived servers from OUs and sorted machines based on server name"
 ```
 
 Hope you're having a great day and this is of use.
