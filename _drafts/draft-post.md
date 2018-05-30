@@ -108,7 +108,7 @@ $date = (Get-Date -Format yyyyMMdd)
 $outputlocation = "$env:TEMP\$date`_test.html"
 ```
 
-### Obtaining the Servers
+### Capturing the Servers and Their Properties
 Get-ADComputer can't search multiple OUs with the -SearchBase parameter. For this reason, we have to store the OUs as separate strings and then run them through the [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6) cmdlet.
 
 $ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com' is where I have the computers stored in Active Directory.
@@ -117,7 +117,9 @@ $servers = $ous | ForEach-Object { Get-ADComputer -Filter * -Properties * -Searc
 Get-ADComputer cmdlet, I'm using -Filter * and -Properties * to retrive all machines and also all information about those machines.
 
 $servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
-Checks that the computer object contains a dnshostname value
+Checks that the computer object contains a dnshostname value.
+
+Write-Host is being used to present feedback to the user running the script.
 
 ```PowerShell
 $ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com'
