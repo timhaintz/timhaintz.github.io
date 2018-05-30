@@ -17,7 +17,7 @@ The script is below. Copy it and save it as a .PS1 file. Below, I break down wha
     Created by  : Tim Haintz
     Date Created: 24/05/2017
     
-    Description : Produce an HTML report of all production servers pinged but not responding.
+    Description : Produce an HTML report of all servers pinged but not responding.
 
     URLs used   :
     https://technet.microsoft.com/en-us/library/ff730936.aspx
@@ -35,8 +35,6 @@ BODY{background-color:white;}
 TABLE{border-width: 1px;border-style: solid;border-color: black;border-collapse: collapse;}
 TH{border-width: 1px;padding: 0px;border-style: solid;border-color: black;background-color:LightSteelBlue}
 TD{border-width: 1px;padding: 0px;border-style: solid;border-color: black;background-color:LightCoral}
-.success{background-color:#ff3333;}
-.failure{background-color:#66ff99;}
 </style>
 "
 # Date format correct for saving in the output location. A new file will be created each new day/date
@@ -83,6 +81,31 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
         Out-File $outputlocation
         Write-Host "File written to: $outputlocation"
         Invoke-Item $outputlocation
+```
+
+Breaking out each of the parts below, I will explain what each is doing.
+
+### CSS and date and file format
+I'm using CSS to style my HTML page. The CSS is being stored as the $head variable. This is used later on in [ConvertTo-Html](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-6) with the -Head parameter. 
+
+I also like to store the date in a specific format. The date is then used to generate the file name. 
+Storing the date as yyyyMMdd (20180530) for example allows the files to be sorted nicely in date order.
+I also use the $env:TEMP variable as whoever is running the script has permission to this location. 
+As below, the file will be called 20180530_test and will be located in $env:TEMP. In my test environment, this is: C:\Users\AZUREA~1\AppData\Local\Temp
+
+```PowerShell
+# CSS Styles for HTML output
+$head = "
+<style>
+BODY{background-color:white;}
+TABLE{border-width: 1px;border-style: solid;border-color: black;border-collapse: collapse;}
+TH{border-width: 1px;padding: 0px;border-style: solid;border-color: black;background-color:LightSteelBlue}
+TD{border-width: 1px;padding: 0px;border-style: solid;border-color: black;background-color:LightCoral}
+</style>
+"
+# Date format correct for saving in the output location. A new file will be created each new day/date
+$date = (Get-Date -Format yyyyMMdd)
+$outputlocation = "$env:TEMP\$date`_test.html"
 ```
 
 Hope you're having a great day and this is of use.
