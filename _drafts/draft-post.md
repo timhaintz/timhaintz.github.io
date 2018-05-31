@@ -163,6 +163,7 @@ $frag = foreach ($server in $servers)
 ### Generating and Saving the HTML Report
 
 $frag is piped into ConvertTo-Html. Using the -Title, -PreContent, and -Head parameters of ConvertTo-Html, the CSS in $head is used to present the $frag information and display it in a table.
+
 In my test environment, the contents of $frag is as below:
 
 ```PowerShell
