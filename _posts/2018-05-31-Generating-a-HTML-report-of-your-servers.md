@@ -90,9 +90,9 @@ Breaking out each of the parts below, I will explain what the script is doing.
 I'm using CSS to style my HTML page. The CSS is being stored as the $head variable. This is used later on in [ConvertTo-Html](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-6) with the -Head parameter. 
 
 I also like to store the date in a specific format. The date is then used to generate the file name. 
-Storing the date as yyyyMMdd (20180530) for example allows the files to be sorted nicely in date order.
+Storing the date as yyyyMMdd (20180531) for example allows the files to be sorted nicely in date order.
 I also use the $env:TEMP variable as whoever is running the script has permission to this location. 
-As below, the file will be called 20180530_test and will be located in $env:TEMP. In my test environment, this is: C:\Users\AZUREA~1\AppData\Local\Temp
+As below, the file will be called 20180531_test and will be located in $env:TEMP. In my test environment, $env:TEMP is: C:\Users\AZUREA~1\AppData\Local\Temp
 
 ```PowerShell
 # CSS Styles for HTML output
@@ -192,6 +192,8 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 A screenshot of the report from my test environment is shown below:
 
 ![HTML Report]({{ "/assets/20180531/HTML-Report.png" | absolute_url }})
+
+This is a nice visual way of displaying if any of your servers or computers are no longer 'pingable' and may need attention.
 
 Hope you're having a great day and this is of use.
 
