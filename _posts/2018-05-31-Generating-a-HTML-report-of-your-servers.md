@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HTML Report for servers"
+title: "Generating a HTML Report of your servers"
 date: 2018-05-31
 ---
 ## Generating a HTML report of your servers
