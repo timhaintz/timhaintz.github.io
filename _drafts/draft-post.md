@@ -189,6 +189,10 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
         Invoke-Item $outputlocation
 ```
 
+A screenshot of the report from my test environment is shown below:
+
+![HTML Report]({{ "/assets/20180531/HTML-Report.png" | absolute_url }})
+
 Hope you're having a great day and this is of use.
 
 Thanks, Tim.
