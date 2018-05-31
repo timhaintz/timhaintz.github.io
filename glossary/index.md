@@ -6,6 +6,7 @@ title: Glossary of Terms
 # Glossary of Terms
 
 * [ActiveDirectory Module](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps)
+* [Boolean](https://blogs.msdn.microsoft.com/powershell/2006/12/24/boolean-values-and-operators/)
 * [Cmdlet](https://msdn.microsoft.com/en-us/library/ms714395(v=vs.85).aspx)
 * [ConvertTo-Html](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-6)
 * [Copy-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/copy-item?view=powershell-6)
