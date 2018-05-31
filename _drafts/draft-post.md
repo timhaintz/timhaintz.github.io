@@ -119,7 +119,7 @@ $servers = $ous | ForEach-Object { Get-ADComputer -Filter * -Properties * -Searc
 Get-ADComputer cmdlet, I'm using -Filter * and -Properties * to retrive all machines and also all information about those machines.
 
 $servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
-Checks that the computer object contains a dnshostname value.
+Checks that the computer object contains a dnshostname value. I also use [Sort-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-6) to sort the list of servers from their CN value or server name.
 
 Write-Host is being used to present feedback to the user running the script.
 
@@ -161,6 +161,8 @@ $frag = foreach ($server in $servers)
 ```
 
 ### Generating and Saving the HTML Report
+
+$frag is piped into ConvertTo-Html. Using the -Title, -PreContent, and -Head parameters of ConvertTo-Html, the CSS in $head is used to present the $frag information and display it in a table. 
 
 ```PowerShell
 #Convert captured servers into HTML as per formatting and information required.
