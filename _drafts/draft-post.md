@@ -163,6 +163,16 @@ $frag = foreach ($server in $servers)
 ### Generating and Saving the HTML Report
 
 $frag is piped into ConvertTo-Html. Using the -Title, -PreContent, and -Head parameters of ConvertTo-Html, the CSS in $head is used to present the $frag information and display it in a table.
+In my test environment, the contents of $frag is as below:
+
+```PowerShell
+PS C:\Users\azureadmin\Documents> $frag
+
+Computer Name IPv4Address whenCreated          whenChanged         
+------------- ----------- -----------          -----------         
+Srv1          10.0.0.8    5/31/2018 8:06:30 PM 5/31/2018 8:07:20 PM
+Srv2          10.0.0.7    5/30/2018 8:39:30 PM 5/30/2018 8:40:21 PM
+```
 
 This information is then piped to [Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6) and saved to $outputlocation.
 
