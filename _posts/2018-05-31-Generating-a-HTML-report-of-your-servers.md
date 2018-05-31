@@ -114,7 +114,7 @@ Get-ADComputer can't search multiple OUs with the -SearchBase parameter. For thi
 $ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com' is where I have the computers stored in Active Directory.
 
 $servers = $ous | ForEach-Object { Get-ADComputer -Filter * -Properties * -SearchBase $_ } searches through each of the OUs for the machines I'm looking for and stores them in the $servers variable.
-Get-ADComputer cmdlet, I'm using -Filter * and -Properties * to retrive all machines and also all information about those machines.
+Get-ADComputer cmdlet, I'm using -Filter * and -Properties * to retrieve all machines and also all information about those machines.
 
 $servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
 Checks that the computer object contains a dnshostname value. I also use [Sort-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-6) to sort the list of servers from their CN value or server name.
