@@ -71,7 +71,7 @@ $frag = foreach ($server in $servers)
     #If Test-Connection is false (that's what ! in the if statement means) then pass into the if statement.
     if(!(Test-Connection -ComputerName $server.dnshostname -Count 1 -Quiet))
     {
-        $server | Select-Object -Property @{Label='Computer Name'; expression ={$_.cn}},IPv4Address,whenCreated,whenChanged                               
+        $server | Select-Object -Property @{Label='Computer Name'; Expression ={$_.cn}},IPv4Address,whenCreated,whenChanged                               
     }
 }
 #Convert captured servers into HTML as per formatting and information required.
@@ -130,6 +130,26 @@ $servers = $ous | ForEach-Object { Get-ADComputer -Filter * -properties * -Searc
 $servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
 
 Write-Host "Retreived servers from OUs and sorted machines based on server name"
+```
+
+### Create Fragment for ConvertTo-Html
+Using the [ForEach](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_foreach?view=powershell-6) statement I loop through each server that was collected in $servers.
+Again, I'm using Write-Host to provide feedback to the person running the script.
+Using an [If](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-6) statement and Test-Connection, logic can be used to decide what information to look for. Below, I'm using if(!(Test-Connection -Quiet)). The ! reverses the logic to be NOT. -Quiet returns a [boolean](https://blogs.msdn.microsoft.com/powershell/2006/12/24/boolean-values-and-operators/) value. If Test-Connection fails, with the ! mark, the if statement evaluates TRUE and enters the if statement. Remove the ! and it will capture the information of servers where Test-Connection is successful.
+To present the HTML report with nice labels, I'm using [Select-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6) and a calculated property to rename the property from cn to Computer Name. @{Label='Computer Name'; Expression ={$_.cn}} is the calculated property. I'm also selecting IPv4Address, whenCreated and whenChanged. Anything that is gathered from Get-ADComputer -Properties * can be used in Select-Object -Property.
+For example, badPwdCount or LastLogonDate could also be included if that information was of interest.
+
+```PowerShell
+#$frag is a fragment used for ConvertTo-Html. It contains the interesting information.
+$frag = foreach ($server in $servers)
+{
+    Write-Host $server.cn
+    #If Test-Connection is false (that's what ! in the if statement means) then pass into the if statement.
+    if(!(Test-Connection -ComputerName $server.dnshostname -Count 1 -Quiet))
+    {
+        $server | Select-Object -Property @{Label='Computer Name'; Expression ={$_.cn}},IPv4Address,whenCreated,whenChanged                               
+    }
+}
 ```
 
 Hope you're having a great day and this is of use.
