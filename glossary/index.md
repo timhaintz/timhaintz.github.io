@@ -6,7 +6,7 @@ title: Glossary of Terms
 # Glossary of Terms
 
 * [ActiveDirectory Module](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps)
-* [Boolean](https://blogs.msdn.microsoft.com/powershell/2006/12/24/boolean-values-and-operators/)
+* [Boolean Value](https://blogs.msdn.microsoft.com/powershell/2006/12/24/boolean-values-and-operators/)
 * [Cmdlet](https://msdn.microsoft.com/en-us/library/ms714395(v=vs.85).aspx)
 * [ConvertTo-Html](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-6)
 * [Copy-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/copy-item?view=powershell-6)
@@ -22,6 +22,7 @@ title: Glossary of Terms
 * [If](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-6)
 * [Install PowerShell Core - Linux](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-powershell-core-on-linux?view=powershell-6)
 * [Install PowerShell - Windows](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell?view=powershell-6)
+* [Invoke-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/invoke-item?view=powershell-6)
 * [New-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-6)
 * [Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)
 * [PowerCLI - VMware](https://www.vmware.com/support/developer/PowerCLI/)
