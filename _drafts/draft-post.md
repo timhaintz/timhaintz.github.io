@@ -86,6 +86,7 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 Breaking out each of the parts below, I will explain what each is doing.
 
 ### CSS, Date and File Format
+
 I'm using CSS to style my HTML page. The CSS is being stored as the $head variable. This is used later on in [ConvertTo-Html](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-6) with the -Head parameter. 
 
 I also like to store the date in a specific format. The date is then used to generate the file name. 
@@ -109,6 +110,7 @@ $outputlocation = "$env:TEMP\$date`_test.html"
 ```
 
 ### Capturing the Servers and Their Properties
+
 Get-ADComputer can't search multiple OUs with the -SearchBase parameter. For this reason, we have to store the OUs as separate strings and then run them through the [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6) cmdlet.
 
 $ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com' is where I have the computers stored in Active Directory.
@@ -133,11 +135,17 @@ Write-Host "Retreived servers from OUs and sorted machines based on server name"
 ```
 
 ### Create Fragment for ConvertTo-Html
+
 Using the [ForEach](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_foreach?view=powershell-6) statement I loop through each server that was collected in $servers.
+
 Again, I'm using Write-Host to provide feedback to the person running the script.
+
 Using an [If](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-6) statement and Test-Connection, logic can be used to decide what information to look for. Below, I'm using if(!(Test-Connection -Quiet)). The ! reverses the logic to be NOT. -Quiet returns a [boolean](https://blogs.msdn.microsoft.com/powershell/2006/12/24/boolean-values-and-operators/) value. If Test-Connection fails, with the ! mark, the if statement evaluates TRUE and enters the if statement. Remove the ! and it will capture the information of servers where Test-Connection is successful.
+
 To present the HTML report with nice labels, I'm using [Select-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6) and a calculated property to rename the property from cn to Computer Name. @{Label='Computer Name'; Expression ={$_.cn}} is the calculated property. I'm also selecting IPv4Address, whenCreated and whenChanged. Anything that is gathered from Get-ADComputer -Properties * can be used in Select-Object -Property.
 For example, badPwdCount or LastLogonDate could also be included if that information was of interest.
+
+The results of $server | Select-Object ... are stored in the $frag variable to be used later with ConvertTo-Html.
 
 ```PowerShell
 #$frag is a fragment used for ConvertTo-Html. It contains the interesting information.
