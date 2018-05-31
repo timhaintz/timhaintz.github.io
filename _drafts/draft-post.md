@@ -162,7 +162,11 @@ $frag = foreach ($server in $servers)
 
 ### Generating and Saving the HTML Report
 
-$frag is piped into ConvertTo-Html. Using the -Title, -PreContent, and -Head parameters of ConvertTo-Html, the CSS in $head is used to present the $frag information and display it in a table. 
+$frag is piped into ConvertTo-Html. Using the -Title, -PreContent, and -Head parameters of ConvertTo-Html, the CSS in $head is used to present the $frag information and display it in a table.
+
+This information is then piped to [Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6) and saved to $outputlocation.
+
+I then call [Invoke-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/invoke-item?view=powershell-6) $outputlocation to open the HTML document automatically.
 
 ```PowerShell
 #Convert captured servers into HTML as per formatting and information required.
