@@ -83,7 +83,7 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
         Invoke-Item $outputlocation
 ```
 
-Breaking out each of the parts below, I will explain what each is doing.
+Breaking out each of the parts below, I will explain what the script is doing.
 
 ### CSS, Date and File Format
 
