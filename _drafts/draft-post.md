@@ -160,6 +160,18 @@ $frag = foreach ($server in $servers)
 }
 ```
 
+### Generating and Saving the HTML Report
+
+```PowerShell
+#Convert captured servers into HTML as per formatting and information required.
+$frag | ConvertTo-Html -Title 'Failed PING of Servers' `
+                       -PreContent "<h1>Below are the $($frag.count) servers that failed a PING test. $($servers.count) servers were pinged in this process.</h1>" `
+                       -Head $head |
+        Out-File $outputlocation
+        Write-Host "File written to: $outputlocation"
+        Invoke-Item $outputlocation
+```
+
 Hope you're having a great day and this is of use.
 
 Thanks, Tim.
