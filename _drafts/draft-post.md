@@ -193,6 +193,9 @@ A screenshot of the report from my test environment is shown below:
 
 ![HTML Report]({{ "/assets/20180531/HTML-Report.png" | absolute_url }})
 
+UPDATE:
+I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) how to send the HTML report via email.
+
 Hope you're having a great day and this is of use.
 
 Thanks, Tim.
