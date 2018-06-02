@@ -196,6 +196,12 @@ A screenshot of the report from my test environment is shown below:
 UPDATE:
 I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) how to send the HTML report via email. Building a test environment now. Watch this space.
 
+Testing
+```PowerShell
+$body = Get-Content $ouputlocation -Raw
+Send-MailMessage -Body $body -BodyAsHtml
+```
+
 Hope you're having a great day and this is of use.
 
 Thanks, Tim.
