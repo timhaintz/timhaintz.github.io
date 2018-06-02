@@ -200,6 +200,8 @@ Testing
 ```PowerShell
 $body = Get-Content $ouputlocation -Raw
 Send-MailMessage -Body $body -BodyAsHtml
+# or
+Send-MailMessage -Attachments $outputlocation
 ```
 
 Hope you're having a great day and this is of use.
