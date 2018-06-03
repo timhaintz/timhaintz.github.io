@@ -194,7 +194,7 @@ A screenshot of the report from my test environment is shown below:
 This is a nice visual way of displaying if any of your servers or computers are no longer 'pingable' and may need attention.
 
 ### UPDATE:
-I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) by @ottafish how to send the HTML report via email. Using a very helpful post from [A Guide to Microsoft Products](http://guidestomicrosoft.com/2016/02/17/configure-a-smtp-server-in-azure/) I setup a SendGrid SMTP relay in Azure. The script using SendGrid is below. 
+I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) by @ottafish how to send the HTML report via email. Using a very helpful post from [A Guide to Microsoft Products](http://guidestomicrosoft.com/2016/02/17/configure-a-smtp-server-in-azure/) I setup a SendGrid SMTP relay in Azure. The script using SendGrid is below. I have added a screen shot of the email I received after each option of code.
 
 For $cred, I used:
 ```PowerShell
@@ -225,6 +225,8 @@ $body = $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 Send-MailMessage -Subject 'Test HTML message' -Body $($body) -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
 ![HTML Report]({{ "/assets/20180531/HTML-EmailRaw.png" | absolute_url }})
+
+As shown above, these are a few ways you can send HTML reports via email. 
 
 Hope you're having a great day and this is of use.
 
