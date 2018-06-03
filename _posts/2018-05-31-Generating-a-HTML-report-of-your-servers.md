@@ -219,8 +219,8 @@ Send-MailMessage -Subject 'Test HTML message' -Attachments $outputlocation -Cred
 ```PowerShell
 # If you don't want to store a file at all, modify the last part of the script to as below
 $body = $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
-                       -PreContent "<h1>Below are the $($frag.count) servers that failed a PING test. $($servers.count) servers were pinged in this process.</h1>" `
-                       -Head $head
+                               -PreContent "<h1>Below are the $($frag.count) servers that failed a PING test. $($servers.count) servers were pinged in this process.</h1>" `
+                               -Head $head
                        
 Send-MailMessage -Subject 'Test HTML message' -Body $($body) -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
