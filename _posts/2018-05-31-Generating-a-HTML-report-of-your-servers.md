@@ -194,7 +194,7 @@ A screenshot of the report from my test environment is shown below:
 This is a nice visual way of displaying if any of your servers or computers are no longer 'pingable' and may need attention.
 
 ### UPDATE:
-I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) by @ottafish how to send the HTML report via email. Using a very helpful post from [A Guide to Microsoft Products](http://guidestomicrosoft.com/2016/02/17/configure-a-smtp-server-in-azure/) I setup a SendGrid SMTP relay in Azure. The script using SendGrid is below. I have added a screen shot of the email I received after each option of code.
+I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) by @ottafish how to send the HTML report via email. Using a very helpful post from [A Guide to Microsoft Products](http://guidestomicrosoft.com/2016/02/17/configure-a-smtp-server-in-azure/) I setup a SendGrid SMTP relay in Azure. The script using [Send-MailMessage](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-5.1) and SendGrid is below. I have added a screen shot of the email I received after each option of code.
 
 For $cred, I used:
 ```PowerShell
