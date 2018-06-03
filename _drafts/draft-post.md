@@ -10,7 +10,7 @@ I know it has happened to me more than once. I thought "wouldn't it be nice to b
 
 We were doing some upgrades recently and we needed to run *ping -t*. A colleague asked if it was possible to add the date and time of the ping to the query.
 
-Below is the result of these queries using PowerShell. Adding a date/time for each requst and also running it for a pre-determined length of time.
+Below is the result of these questions using PowerShell. Adding a date/time for each requst and also running it for a pre-determined length of time.
 
 
 
