@@ -193,6 +193,39 @@ A screenshot of the report from my test environment is shown below:
 
 This is a nice visual way of displaying if any of your servers or computers are no longer 'pingable' and may need attention.
 
+### UPDATE:
+I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) by @ottafish how to send the HTML report via email. Using a very helpful post from [A Guide to Microsoft Products](http://guidestomicrosoft.com/2016/02/17/configure-a-smtp-server-in-azure/) I setup a SendGrid SMTP relay in Azure. The script using SendGrid is below. 
+
+For $cred, I used:
+```PowerShell
+$cred = Get-Credential
+```
+and used the credentials for SendGrid. You could also use Export-Clixml and Import-Clixml if you wanted to automate entering credentials. I will be doing a blog post in the coming weeks around Export-Clixml and Import-Clixml.
+
+#### Option 1 - Using the outputted HTML file and creating HTML email
+```PowerShell
+$body = Get-Content $ouputlocation -Raw
+Send-MailMessage -Subject 'Test HTML message' -Body $body -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
+```
+![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
+
+#### Option 2 - Using the outputted HTML file and attaching it to the email
+```PowerShell
+Send-MailMessage -Subject 'Test HTML message' -Attachments $outputlocation -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
+```
+![HTML Report]({{ "/assets/20180531/HTML-EmailAsFileAttached.png" | absolute_url }})
+
+#### Option 3 - Storing the converted HTML as a variable and using it in the email. No file created.
+```PowerShell
+# If you don't want to store a file at all, modify the last part of the script to as below
+$body = $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
+                       -PreContent "<h1>Below are the $($frag.count) servers that failed a PING test. $($servers.count) servers were pinged in this process.</h1>" `
+                       -Head $head
+                       
+Send-MailMessage -Subject 'Test HTML message' -Body $($body) -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
+```
+![HTML Report]({{ "/assets/20180531/HTML-EmailRaw.png" | absolute_url }})
+
 Hope you're having a great day and this is of use.
 
 Thanks, Tim.
