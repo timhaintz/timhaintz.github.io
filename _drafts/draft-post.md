@@ -194,14 +194,27 @@ A screenshot of the report from my test environment is shown below:
 ![HTML Report]({{ "/assets/20180531/HTML-Report.png" | absolute_url }})
 
 UPDATE:
-I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) how to send the HTML report via email. Building a test environment now. Watch this space.
+I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) by @ottafish how to send the HTML report via email. Using a very helpful post from [A Guide to Microsoft Products](http://guidestomicrosoft.com/2016/02/17/configure-a-smtp-server-in-azure/) I setup a SendGrid SMTP relay in Azure. The script using SendGrid is below. 
 
-Testing
+For $cred, I used:
+```PowerShell
+$cred = Get-Credential
+```
+and used the credentials for SendGrid. You could also use Export-Clixml and Import-Clixml if you wanted to automate entering credentials. I will be doing a blog post in the coming weeks around Export-Clixml and Import-Clixml.
+
 ```PowerShell
 $body = Get-Content $ouputlocation -Raw
-Send-MailMessage -Body $body -BodyAsHtml
+Send-MailMessage -Subject 'Test HTML message' -Body $body -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
+
 # or
-Send-MailMessage -Attachments $outputlocation
+Send-MailMessage -Subject 'Test HTML message' -Attachments $outputlocation -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
+
+# or if you don't want to store a file at all, modify the last part of the script to be as below
+$body = $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
+                       -PreContent "<h1>Below are the $($frag.count) servers that failed a PING test. $($servers.count) servers were pinged in this process.</h1>" `
+                       -Head $head
+                       
+Send-MailMessage -Subject 'Test HTML message' -Body $($body) -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
 
 Hope you're having a great day and this is of use.
