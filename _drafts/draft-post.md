@@ -66,7 +66,7 @@ If you do want a continual ping, you can use:
 ```PowerShell
 while($true)
 {
-    "$(Get-Date);$(Test-Connection -Count 1  -ComputerName srv1 -Quiet)";Start-Sleep -Seconds 20
+    "$(Get-Date);$(Test-Connection -Count 1  -ComputerName srv1 -Quiet)"
 }
 ```
 You will have to CTRL+C out of this.
