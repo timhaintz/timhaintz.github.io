@@ -71,6 +71,8 @@ while($true)
 ```
 You will have to CTRL+C out of this.
 
+While statements are very useful for time based and also quantity based loops. You can set them up to run for a certain period of time as I have above, or for a certain number of loops.  
+
 Hope you're having a great day and this is of use.
 
 Thanks, Tim.
