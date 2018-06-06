@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Draft Post"
+title: "VMware PowerCLI - Multipathing"
 date: 2018-06-04
 ---
-## Draft Post
+## VMware PowerCLI - Multipathing
 
 
 
