@@ -23,7 +23,7 @@ In the *statement list* of the while statement, the value of Get-Date is returne
 The result of [Test-Connection -Quiet](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/test-connection?view=powershell-6) is used to return the value of either true or false. The *-Count 1* parameter is used as a single 'ping' test. *-ComputerName* is the name of the machine you are attempting to 'ping'.
 [Start-Sleep](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/start-sleep?view=powershell-6) is used so that the output below in the results section were of reasonable size. *Start-Sleep* suspends the while statement for 20 seconds each 'loop'.
 
-### Script
+### PowerShell Code Block
 ```PowerShell
 $add5Mins = (Get-Date).AddMinutes(5)
 
@@ -61,7 +61,7 @@ while ((Get-Date) -le $add5Mins)
 PS C:\Windows\system32> 
 ```
 
-### Continual Test-Connection
+### PowerShell Code Block - Continual Test-Connection
 If you do want a continual ping, you can use:
 ```PowerShell
 while($true)
