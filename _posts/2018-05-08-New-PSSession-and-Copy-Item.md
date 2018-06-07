@@ -43,7 +43,7 @@ Mode                LastWriteTime         Length Name
 -a----         5/8/2018   8:32 PM              0 Test4.txt
 ```
 To copy the folders and files, the below PowerShell commands are run.
-
+### PowerShell Code Block
 ```PowerShell
 $credential = Get-Credential timhaintz\azureadmin
 $session = New-PSSession -ComputerName dc1 -Credential $credential
