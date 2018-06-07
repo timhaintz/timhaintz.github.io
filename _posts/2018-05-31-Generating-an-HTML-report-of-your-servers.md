@@ -82,9 +82,7 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
         Invoke-Item $outputlocation
 ```
 
-Breaking out each of the parts below.
-
-### CSS, Date and File Format
+### CSS, Date and File Format Section
 
 I'm using CSS to style my HTML page. The CSS is being stored as the $head variable. This is used later on in [ConvertTo-Html](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-6) with the -Head parameter. 
 
@@ -108,7 +106,7 @@ $date = (Get-Date -Format yyyyMMdd)
 $outputlocation = "$env:TEMP\$date`_test.html"
 ```
 
-### Capturing the Servers and Their Properties
+### Capturing the Servers and Their Properties Section
 
 Get-ADComputer can't search multiple OUs with the -SearchBase parameter. For this reason, we have to store the OUs as separate strings and then run them through the [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6) cmdlet.
 
@@ -133,7 +131,7 @@ $servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
 Write-Host "Retreived servers from OUs and sorted machines based on server name"
 ```
 
-### Create Fragment for ConvertTo-Html
+### Create Fragment for ConvertTo-Html Section
 
 Using the [ForEach](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_foreach?view=powershell-6) statement I loop through each server that was collected in $servers.
 
@@ -159,7 +157,7 @@ $frag = foreach ($server in $servers)
 }
 ```
 
-### Generating and Saving the HTML Report
+### Generating and Saving the HTML Report Section
 
 $frag is piped into ConvertTo-Html. Using the -Title, -PreContent, and -Head parameters of ConvertTo-Html, the CSS in $head is used to present the $frag information and display it in a table.
 
@@ -188,6 +186,7 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
         Invoke-Item $outputlocation
 ```
 
+### Result
 A screenshot of the report from my test environment is shown below:
 
 ![HTML Report]({{ "/assets/20180531/HTML-Report.png" | absolute_url }})
