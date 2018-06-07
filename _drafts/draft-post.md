@@ -7,7 +7,9 @@ date: 2018-06-04
 
 ### PowerCLI code block
 ```PowerShell
-Get-Datastore esx11_local | Get-ScsiLun | Select-Object VMHost,CanonicalName,@{Name='SAN ID';Expression={($_ | Get-SCsiLunPath).SanID }} | Sort-Object VMHost | Format-Table -AutoSize
+Get-Datastore esx11_local | Get-ScsiLun | 
+Select-Object VMHost,CanonicalName,@{Name='SAN ID';Expression={($_ | Get-SCsiLunPath).SanID }} | 
+Sort-Object VMHost | Format-Table -AutoSize
 ```
 
 ### Results
