@@ -24,7 +24,7 @@ for everything you do that isn't recognised and Thank You for being you!
 To my wife, Thank You for being the best Mum our kids could ask for.
 
 Now, to the code...
-
+### PowerShell Code Block
 ```PowerShell
 Get-Random @('Spaghetti Bolognaise','Tuna Pasta Bake','Steak and Vegies',
              'Silverside and Vegies','Toasted Sangas','Tacos','Chicken Pasta',
@@ -65,7 +65,7 @@ For more information on this, [Richard Mueller's PowerShell Escape article](http
 To execute the script, I saved the file as a .PS1 file. As long as [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell?view=powershell-6) is installed on your computer, it knows how to run this file.
 [How to Write and Run Scripts in the Windows PowerShell ISE](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/ise/how-to-write-and-run-scripts-in-the-windows-powershell-ise?view=powershell-6) and [Running Scripts](https://technet.microsoft.com/en-us/library/bb613481(v=vs.85).aspx) have further information on how to runs scripts from your computer. Please note the *Execution Policy* section in both documents to enable the script to run.
 
-The output of running the script is shown below:
+### Results
 
 ```PowerShell
 PS C:\Users\timha\Desktop> .\randomMeals.ps1
@@ -90,7 +90,6 @@ However, this generated the error *Get-Random : Cannot validate argument on para
 See [PowerShell GitHub Issue 3682](https://github.com/PowerShell/PowerShell/issues/3682) for further information.
 
 *Get-Random* has a lot of uses as shown by running [Get-Help](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-help?view=powershell-6) against it, or by viewing the documentation as linked above.
-
 ```PowerShell
 Get-Help Get-Random -Full
 ```
