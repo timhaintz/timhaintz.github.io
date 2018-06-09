@@ -5,14 +5,20 @@ date: 2018-06-04
 ---
 ## VMware PowerCLI - Multipathing
 
+Often it is useful to see multipathing information from your VMware hosts. This could be for reduncancy confirmation or testing. You may be migrating and need to confirm that multipathing is correct. The below script will give you the information you need. 
+
 ### PowerCLI code block
 ```PowerShell
 Get-Datastore esx11_local | Get-ScsiLun | 
-Select-Object VMHost,CanonicalName,@{Name='SAN ID';Expression={($_ | Get-SCsiLunPath).SanID }} | 
+Select-Object VMHost,CanonicalName,@{Name='SAN ID';Expression={($_ | Get-ScsiLunPath).SanID }} | 
 Sort-Object VMHost | Format-Table -AutoSize
 ```
 
+### Explanation
+I have chosen just one datastore in [Get-DataStore](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-Datastore.html). Multiple  datastores can be chosen and all will be displayed along with their multipathing information.
+
 ### Results
+I edited the results below to easily show the CanonicalName and SAN ID. 
 ```PowerShell
 # Code block run with 1 path visible
 VMHost  CanonicalName   SAN ID
@@ -24,7 +30,6 @@ VMHost  CanonicalName   SAN ID
 ------  -------------   ------
 esx11   naa.00a06       {F4:25, F4:34, F4:05, F4:14}
 ```
-
 
 Hope you're having a great day and this is of use.
 
