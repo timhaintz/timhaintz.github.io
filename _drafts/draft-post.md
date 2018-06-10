@@ -15,7 +15,7 @@ Sort-Object VMHost | Format-Table -AutoSize
 ```
 
 ### Explanation
-I have chosen just one datastore in [Get-DataStore](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-Datastore.html). Multiple  datastores can be chosen via a couple of methods. I like to use [Regular Expressions](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-6) or via ESX Host. All datastores will be displayed along with their multipathing information. These objects are [piped](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-6) to [Get-ScsiLun](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-ScsiLun.html) which are then piped to Select-Object.
+I have chosen just one datastore in [Get-DataStore](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-Datastore.html). Multiple  datastores can be chosen via a couple of methods. I like to use [Regular Expressions](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-6) or via ESX Host. All datastores will be displayed along with their multipathing information. These objects are [piped](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-6) to [Get-ScsiLun](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-ScsiLun.html) which are then piped to [Select-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6).
 
 ### Results
 I edited the results below to easily show the CanonicalName and SAN ID. 
