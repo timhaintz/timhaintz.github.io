@@ -35,7 +35,7 @@ title: Glossary of Terms
 * [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-6)
 * [PowerShell Remoting](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/running-remote-commands?view=powershell-6#windows-powershell-remoting)
 * [PowerTool Suite - Cisco](https://communities.cisco.com/docs/DOC-37154)
-* [Regular Expression](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-6)
+* [Regular Expressions](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-6)
 * [Remote Server Administration Tools (RSAT)](https://support.microsoft.com/en-au/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems)
 * [Send-MailMessage](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-5.1)
 * [SendGrid](https://sendgrid.com/)
