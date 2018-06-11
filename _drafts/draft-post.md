@@ -5,7 +5,7 @@ date: 2018-06-04
 ---
 ## VMware PowerCLI - Multipathing
 
-Often it is useful to see multipathing information from your VMware hosts. This could be for reduncancy confirmation or testing. You may be migrating and need to confirm that multipathing is correct. The below script will give you the information you need. 
+Often it is useful to see multipathing information from your VMware hosts. This could be for reduncancy or testing. You may be migrating and need to confirm that multipathing is correct. The below script will give you the information you need. 
 
 ### PowerCLI code block
 ```PowerShell
