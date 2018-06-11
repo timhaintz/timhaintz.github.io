@@ -19,6 +19,7 @@ I have chosen just one datastore in [Get-DataStore](https://code.vmware.com/docs
 
 Using *Select-Object*, I'm displaying the VMHost and CanonicalName property values from *Get-ScsiLun*. The script also uses a [Calculated Property](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6#examples) which is named *SAN ID*. This could be named anything, I have chosen to give it the same name as the property I'm retrieving the value for from [Get-ScsiLunPath](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-ScsiLunPath.html).
 
+#### Calculated Property
 *@{Name='SAN ID';Expression={($_ | Get-ScsiLunPath).SanID }}*
 
 Using the [Automatic Variable](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-6) *$_* I'm using the current object in the pipeline, in this case, *Get-ScsciLun* and piping it to *Get-ScsiLunPath*. Using brackets/parentheses the SanID property is chosen.
