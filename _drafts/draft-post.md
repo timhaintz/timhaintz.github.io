@@ -31,11 +31,13 @@ This propery is the value of the vmhba path to the specified SCSI device.
 
 *Sort-Object - Property VMHost* will keep all of the VMware hosts together and sorted by name. 
 
-Finally, Format-Table
+Finally, [Format-Table](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-6) is used to output the information as a table.
+
+*Format-Table -AutoSize* adjusts the column size and number of columns based on the width of the data.
 
 
 ### Results
-I edited the results below to easily show the CanonicalName and SAN ID. 
+I edited the results below to easily show the CanonicalName and SAN ID. The first results display when only 1 path is visible from VMware to the storage. The second results show when 4 paths are visible.
 ```PowerShell
 # Code block run with 1 path visible
 VMHost  CanonicalName   SAN ID
@@ -47,6 +49,8 @@ VMHost  CanonicalName   SAN ID
 ------  -------------   ------
 esx11   naa.00a06       {F4:25, F4:34, F4:05, F4:14}
 ```
+
+The above script can be very useful to confirm that your VMware ESXi environment is able to see all of the paths that are presented. If  paths are missing, you can then troubleshoot your environment for any misconfigurations. 
 
 Hope you're having a great day and this is of use.
 
