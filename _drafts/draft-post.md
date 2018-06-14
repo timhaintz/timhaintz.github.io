@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Template Title"
+title: "Windows Update - WSUS"
 date: 2018-06-14
 ---
-## Template Title
+## Windows Update - WSUS
 
 ### PowerCLI code block
 ```PowerShell
-
+Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
 ```
 
 ### Explanation
