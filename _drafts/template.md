@@ -5,7 +5,7 @@ date: 2018-06-09
 ---
 ## Template Title
 
-### PowerCLI code block
+### PowerShell Code Block
 ```PowerShell
 
 ```
