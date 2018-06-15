@@ -5,7 +5,7 @@ date: 2018-06-14
 ---
 ## Windows Update - WSUS
 
-### PowerCLI code block
+### PowerShell Code Block
 ```PowerShell
 Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
 ```
