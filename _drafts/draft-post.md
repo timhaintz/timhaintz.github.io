@@ -3,7 +3,7 @@ layout: post
 title: "Windows Update - WSUS"
 date: 2018-06-14
 ---
-## Windows Update Settings
+## Windows Update Settings - Group Policy or Registry
 
 ### PowerShell Code Block
 ```PowerShell
