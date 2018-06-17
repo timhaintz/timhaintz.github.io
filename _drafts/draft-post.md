@@ -4,7 +4,7 @@ title: "Windows Update - WSUS"
 date: 2018-06-14
 ---
 ## Windows Update Settings - Group Policy or Registry
-If Windows Update is managed by Group Policy, it is good to be able to confirm that the Group Policy setting is applied correctly.
+If Windows Update is managed by Group Policy, it is nice to be able to confirm that the Group Policy setting is applied correctly. The below registry key is created by Group Policy for Windows Update.
 
 ### PowerShell Code Block - Windows Update Registry Key
 ```PowerShell
