@@ -4,11 +4,14 @@ title: "Automatic Updates"
 date: 2018-06-14
 ---
 ## Configuring Automatic Updates - Group Policy or Registry
-If Automatic Updates is managed by [Group Policy](https://msdn.microsoft.com/en-us/library/ee663280(v=vs.85).aspx) or via the [Registry](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724871(v=vs.85).aspx), it is nice to be able to confirm that the Group Policy setting is applied correctly. The registry key required for Automatic Updates is located at *HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU* as described in [this](https://support.microsoft.com/en-au/help/328010/how-to-configure-automatic-updates-by-using-group-policy-or-registry-s) Microsoft Support document.
+If Automatic Updates is managed by [Group Policy](https://msdn.microsoft.com/en-us/library/ee663280(v=vs.85).aspx) or via the [Registry](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724871(v=vs.85).aspx), it is nice to be able to confirm that the Group Policy setting has applied correctly. The registry key required for Automatic Updates is located in *HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU* as described in [this](https://support.microsoft.com/en-au/help/328010/how-to-configure-automatic-updates-by-using-group-policy-or-registry-s) Microsoft Support document.
+
+
 
 ### PowerShell Code Block - Windows Update Registry Key
 ```PowerShell
 Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
 ```
 
 ### Explanation
