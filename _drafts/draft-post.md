@@ -16,14 +16,20 @@ If Automatic Updates are managed by [Group Policy](https://msdn.microsoft.com/en
 Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
 Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
 
-Invoke-Command -ComputerName (Get-ADComputer -filter {name -like 'srv*'}).name -ScriptBlock {Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU} -Credential $cred
+Invoke-Command -ComputerName (Get-ADComputer -Filter {name -like 'srv*'}).name -ScriptBlock {Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU} -Credential $cred | Format-Table -AutoSize
 ```
 
 ### Explanation
 
 ### Results
 ```PowerShell
+Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
 
+
+Name Property      PSComputerName
+---- --------      --------------
+AU   AUOptions : 3 Srv2          
+AU   AUOptions : 3 Srv1 
 ```
 
 ### Insert Assets
