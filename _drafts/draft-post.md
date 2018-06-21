@@ -13,23 +13,38 @@ If Automatic Updates are managed by [Group Policy](https://msdn.microsoft.com/en
 
 ### PowerShell Code Block - WSUS and Automatic Update Registry Keys
 ```PowerShell
-Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
-Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
+Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
 
-Invoke-Command -ComputerName (Get-ADComputer -Filter {name -like 'srv*'}).name -ScriptBlock {Get-Item HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU} -Credential $cred | Format-Table -AutoSize
+
+$cred = Get-Credential
+Invoke-Command -ComputerName (Get-ADComputer -Filter {name -like 'srv*'}).name -ScriptBlock {Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU} -Credential $cred
+
 ```
 
 ### Explanation
 
 ### Results
 ```PowerShell
-Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+AUOptions                 : 3
+DetectionFrequency        : 20
+DetectionFrequencyEnabled : 1
+PSPath                    : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
+PSParentPath              : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+PSChildName               : AU
+PSDrive                   : HKLM
+PSProvider                : Microsoft.PowerShell.Core\Registry
+PSComputerName            : Srv1
+RunspaceId                : dff61f57-2a4e-4767-9f5f-72af18d52313
 
-
-Name Property      PSComputerName
----- --------      --------------
-AU   AUOptions : 3 Srv2          
-AU   AUOptions : 3 Srv1 
+AUOptions      : 3
+PSPath         : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
+PSParentPath   : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
+PSChildName    : AU
+PSDrive        : HKLM
+PSProvider     : Microsoft.PowerShell.Core\Registry
+PSComputerName : Srv2
+RunspaceId     : 6e5c234b-075d-42d1-a65b-238c43aa3e56
 ```
 
 ### Insert Assets
