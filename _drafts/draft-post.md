@@ -9,8 +9,6 @@ If Automatic Updates are managed by [Group Policy](https://msdn.microsoft.com/en
 *Please note, this link is a French language page. The values are in English. At the time of writing, the English page equivalent does not exist.*
 
 
-
-
 ### PowerShell Code Block - WSUS and Automatic Update Registry Keys
 ```PowerShell
 Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
