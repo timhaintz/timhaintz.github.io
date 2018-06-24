@@ -9,7 +9,7 @@ If Automatic Updates are managed by [Group Policy](https://msdn.microsoft.com/en
 
 ### PowerShell Code Block - WSUS and Automatic Update Registry Keys
 ```PowerShell
-# Locations to check for Automatic Updates settings
+# Locations to check for Automatic Update settings
 Get-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
 Get-ItemProperty -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
 
@@ -23,6 +23,9 @@ Invoke-Command -ComputerName (Get-ADComputer -Filter {name -like 'srv*'}).name -
 Using [Get-ItemProperty](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-itemproperty?view=powershell-6), you can retrieve the registry entries and their values. By default, HKLM: is mapped as a PowerShell drive to the *HKEY_LOCAL_MACHINE* hive of the registry. 
 
 [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6) stores the appropriate username and password in the *$cred* variable.
+
+[Invoke-Command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-6) is used and the -ComputerName paramater uses the [Get-ADComputer](https://technet.microsoft.com/es-es/library/hh852328(v=wps.630).aspx) cmdlet to retrieve the required servers.
+*Please see this [blog post](https://github.com/timhaintz/timhaintz.github.io/blob/master/_posts/2018-05-04-PowerShell-Get-ADComputer.md) to install the Remote Server Administration Tools*
 
 
 ### Results
