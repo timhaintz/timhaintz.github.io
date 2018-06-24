@@ -22,6 +22,8 @@ Invoke-Command -ComputerName (Get-ADComputer -Filter {name -like 'srv*'}).name -
 ### Explanation
 Using [Get-ItemProperty](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-itemproperty?view=powershell-6), you can retrieve the registry entries and their values. By default, HKLM: is mapped as a PowerShell drive to the *HKEY_LOCAL_MACHINE* hive of the registry. 
 
+[Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6) stores the appropriate username and password in the *$cred* variable.
+
 
 ### Results
 ```PowerShell
