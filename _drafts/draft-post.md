@@ -25,7 +25,7 @@ Using [Get-ItemProperty](https://docs.microsoft.com/en-us/powershell/module/micr
 [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6) stores the appropriate username and password in the *$cred* variable.
 
 [Invoke-Command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-6) is used and the -ComputerName paramater uses the [Get-ADComputer](https://technet.microsoft.com/es-es/library/hh852328(v=wps.630).aspx) cmdlet to retrieve the required servers.
-*Please see this [blog post](https://github.com/timhaintz/timhaintz.github.io/blob/master/_posts/2018-05-04-PowerShell-Get-ADComputer.md) to install the Remote Server Administration Tools*
+*Please see this [blog post](https://github.com/timhaintz/timhaintz.github.io/blob/master/_posts/2018-05-04-PowerShell-Get-ADComputer.md) to install the Remote Server Administration Tools and gain access to the Get-ADComputer cmdlet.*
 
 
 ### Results
