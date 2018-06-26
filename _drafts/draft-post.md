@@ -26,6 +26,7 @@ Using [Get-ItemProperty](https://docs.microsoft.com/en-us/powershell/module/micr
 
 [Invoke-Command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-6) is used and the -ComputerName paramater uses the [Get-ADComputer](https://technet.microsoft.com/es-es/library/hh852328(v=wps.630).aspx) cmdlet to retrieve the required servers.
 *Please see this [blog post](https://github.com/timhaintz/timhaintz.github.io/blob/master/_posts/2018-05-04-PowerShell-Get-ADComputer.md) to install the Remote Server Administration Tools and gain access to the Get-ADComputer cmdlet.*
+To retrive the names of the servers to check, I'm using *(Get-ADComputer -Filter {name -like 'srv*'}).name* as the value for the -ComputerName paramater. This checks active directory for any machines with a name like *srv`**. The * is for a wildcard search.
 
 
 ### Results
