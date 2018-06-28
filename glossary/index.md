@@ -20,6 +20,7 @@ title: Glossary of Terms
 * [Get-DataStore - PowerCLI](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-Datastore.html)
 * [Get-Date](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-6)
 * [Get-Help](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-help?view=powershell-6)
+* [Get-ItemProperty](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-itemproperty?view=powershell-6)
 * [Get-Random](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-random?view=powershell-6)
 * [Get-ScsiLun - PowerCLI](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-ScsiLun.html)
 * [Get-ScsiLunPath - PowerCLI](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-ScsiLunPath.html)
