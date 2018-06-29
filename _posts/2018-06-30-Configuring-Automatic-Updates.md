@@ -37,6 +37,7 @@ Running *Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdat
 
 [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6) stores the appropriate username and password in the *$cred* variable.
 
+### PowerShell Code Block - Setting the $cred variable
 ```PowerShell
 $cred = Get-Credential
 ```
