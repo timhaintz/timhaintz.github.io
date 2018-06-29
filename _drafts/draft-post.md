@@ -38,7 +38,7 @@ Running *Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdat
 $cred = Get-Credential
 ```
 
-The results of the script are shown below.
+The results of the script is shown below.
 
 ### Results
 ```PowerShell
@@ -63,10 +63,10 @@ PSComputerName : Srv2
 RunspaceId     : 6e5c234b-075d-42d1-a65b-238c43aa3e56
 ```
 
-*Srv1* has *AUOptions*,*DetectionFrequency* and *DetectionFrequencyEnabled* set. *Srv2* only has *AUOptions* set.
+The above results show *Srv1* has *AUOptions*,*DetectionFrequency* and *DetectionFrequencyEnabled* set. *Srv2* only has *AUOptions* set. If a setting isn't as it seems, you can modify it and then run the script again to conifrm that all server settings are compliant.
 
 ### Conclusion
-Using *Invoke-Command* as above is a quick method to iterate through and view multiple remote machine details quickly.
+Using *Invoke-Command* as above is a quick method to iterate through and view multiple remote machine details quickly. The *ScriptBlock* and *Credential* paramaters allow it to run remote commands in an authenticated manner.
 
 
 
