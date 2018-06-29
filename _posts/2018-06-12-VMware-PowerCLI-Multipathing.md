@@ -7,7 +7,8 @@ date: 2018-06-12
 
 Often it is useful to see multipathing information from your VMware hosts to your storage device(s). This could be for reduncancy testing or confirmation. You may be migrating VMware ESXi hosts or storage/SAN and need to confirm that multipathing is correct. The below script will give you the information you need. 
 
-### PowerCLI code block
+### Script
+#### PowerCLI code block
 ```PowerShell
 Get-Datastore esx11_local | Get-ScsiLun | 
 Select-Object VMHost,CanonicalName,@{Name='SAN ID';Expression={($_ | Get-ScsiLunPath).SanID }} | 
@@ -51,6 +52,7 @@ VMHost  CanonicalName   SAN ID
 esx11   naa.00a06       {F4:25, F4:34, F4:05, F4:14}
 ```
 
+### Conclusion
 The above script can be very useful to confirm that your VMware ESXi environment is able to see all of the paths that are presented. If  paths are missing, you can then troubleshoot your environment for any misconfigurations. 
 
 Hope you're having a great day and this is of use.
