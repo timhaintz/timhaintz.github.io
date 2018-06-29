@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Automatic Updates"
+title: "Configuring Automatic Updates - Group Policy or Registry"
 date: 2018-06-14
 ---
 ## Configuring Automatic Updates - Group Policy or Registry
