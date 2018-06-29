@@ -26,12 +26,15 @@ Invoke-Command -ComputerName (Get-ADComputer -Filter {name -like 'srv*'}).name -
 *Please see this [blog post](https://github.com/timhaintz/timhaintz.github.io/blob/master/_posts/2018-05-04-PowerShell-Get-ADComputer.md) to install the Remote Server Administration Tools and gain access to the Get-ADComputer cmdlet.*
 
 *-ComputerName*
+
 To retrive the names of the servers, I'm using *(Get-ADComputer -Filter {name -like 'srv*'}).name* as the value for the -ComputerName paramater. This checks active directory for any machines with a name like *srv*. The * is for a wildcard search.
 
 *-ScriptBlock*
+
 Running *Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU* as the ScriptBlock paramater runs the command on the remote machine.
 
 *-Credential*
+
 [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6) stores the appropriate username and password in the *$cred* variable.
 
 ```PowerShell
