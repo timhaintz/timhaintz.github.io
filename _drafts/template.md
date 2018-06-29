@@ -5,12 +5,19 @@ date: 2018-06-09
 ---
 ## Template Title
 
-### PowerShell Code Block
+### Script
+#### PowerShell Code Block
 ```PowerShell
 
 ```
 
 ### Explanation
+
+#### Paramater 1
+
+#### Paramater 2
+
+#### Paramater N
 
 ### Results
 ```PowerShell
