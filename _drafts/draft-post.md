@@ -20,14 +20,25 @@ Invoke-Command -ComputerName (Get-ADComputer -Filter {name -like 'srv*'}).name -
 ```
 
 ### Explanation
-Using [Get-ItemProperty](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-itemproperty?view=powershell-6), you can retrieve the registry entries and their values. By default, HKLM: is mapped as a PowerShell drive to the *HKEY_LOCAL_MACHINE* hive of the registry. 
-
-[Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6) stores the appropriate username and password in the *$cred* variable.
+[Get-ItemProperty](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-itemproperty?view=powershell-6) in this instance retrieves the registry entries and their values. By default, HKLM: is mapped as a PowerShell drive to the *HKEY_LOCAL_MACHINE* hive of the registry. 
 
 [Invoke-Command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-6) is used and the -ComputerName paramater uses the [Get-ADComputer](https://technet.microsoft.com/es-es/library/hh852328(v=wps.630).aspx) cmdlet to retrieve the required servers.
 *Please see this [blog post](https://github.com/timhaintz/timhaintz.github.io/blob/master/_posts/2018-05-04-PowerShell-Get-ADComputer.md) to install the Remote Server Administration Tools and gain access to the Get-ADComputer cmdlet.*
-To retrive the names of the servers to check, I'm using *(Get-ADComputer -Filter {name -like 'srv*'}).name* as the value for the -ComputerName paramater. This checks active directory for any machines with a name like *srv`**. The * is for a wildcard search.
 
+*-ComputerName*
+To retrive the names of the servers, I'm using *(Get-ADComputer -Filter {name -like 'srv*'}).name* as the value for the -ComputerName paramater. This checks active directory for any machines with a name like *srv*. The * is for a wildcard search.
+
+*-ScriptBlock*
+Running *Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU* as the ScriptBlock paramater runs the command on the remote machine.
+
+*-Credential*
+[Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6) stores the appropriate username and password in the *$cred* variable.
+
+```PowerShell
+$cred = Get-Credential
+```
+
+The results of the script are shown below.
 
 ### Results
 ```PowerShell
@@ -52,8 +63,11 @@ PSComputerName : Srv2
 RunspaceId     : 6e5c234b-075d-42d1-a65b-238c43aa3e56
 ```
 
-### Insert Assets
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
+*Srv1* has *AUOptions*,*DetectionFrequency* and *DetectionFrequencyEnabled* set. *Srv2* only has *AUOptions* set.
+
+### Conclusion
+Using *Invoke-Command* as above is a quick method to iterate through and view multiple remote machine details quickly.
+
 
 
 Hope you're having a great day and this is of use.
