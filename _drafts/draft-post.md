@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "Template Title"
-date: 2018-06-09
+title: "PowerCLI - Copy-DataStoreItem"
+date: 2018-07-03
 ---
 ## Template Title
 
 ### Script
 #### PowerShell Code Block
 ```PowerShell
-
+# PowerCLI VMware copy datastore
+Copy-DatastoreItem 'vmstores:\vc@443\SAS7K_ISOs\RHEL-7\' 'vmstores:\vc@443\SSD_ISOs\' -Recurse
 ```
 
 ### Explanation
