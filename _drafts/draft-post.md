@@ -9,7 +9,7 @@ date: 2018-07-03
 #### PowerShell Code Block
 ```PowerShell
 # PowerCLI VMware copy datastore
-Copy-DatastoreItem 'vmstores:\vc@443\SAS7K_ISOs\RHEL-7\' 'vmstores:\vc@443\SSD_ISOs\' -Recurse
+Copy-DatastoreItem 'vmstores:\virtualcentername@443\SAS7K_ISOs\RHEL-7\' 'vmstores:\virtualcentername@443\SSD_ISOs\' -Recurse
 ```
 
 ### Explanation
