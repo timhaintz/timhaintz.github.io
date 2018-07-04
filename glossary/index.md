@@ -9,6 +9,7 @@ title: Glossary of Terms
 * [Boolean Value](https://blogs.msdn.microsoft.com/powershell/2006/12/24/boolean-values-and-operators/)
 * [Cmdlet](https://msdn.microsoft.com/en-us/library/ms714395(v=vs.85).aspx)
 * [ConvertTo-Html](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-html?view=powershell-6)
+* [Copy-DatastoreItem - PowerCLI](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html)
 * [Copy-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/copy-item?view=powershell-6)
 * [Enter-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-6)
 * [Export-Clixml](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-clixml?view=powershell-6)
