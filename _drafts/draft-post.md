@@ -18,21 +18,11 @@ Copy-DatastoreItem -Item 'c:\ISOs\' -Destination 'vmstores:\virtualcentername@44
 
 ### Explanation
 
-#### *Cmdlet 1*
+#### *Copy-DatastoreItem*
 
-#### *-Paramater 1*
+#### *-Item*
 
-#### *-Paramater 2*
-
-#### *-Paramater N*
-
-#### *Cmdlet N*
-
-#### *-Paramater 1*
-
-#### *-Paramater 2*
-
-#### *-Paramater N*
+#### *-Destination*
 
 ### Results
 ```PowerShell
