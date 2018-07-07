@@ -24,13 +24,6 @@ Copy-DatastoreItem -Item 'c:\ISOs\' -Destination 'vmstores:\virtualcentername@44
 
 #### *-Destination*
 
-### Results
-```PowerShell
-
-```
-
-### Insert Assets
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
 
 ### Conclusion
 
