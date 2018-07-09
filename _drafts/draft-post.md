@@ -1,38 +1,45 @@
 ---
 layout: post
-title: "PowerCLI - Copy-DataStoreItem"
-date: 2018-07-03
+title: "PowerCLI - Installation"
+date: 2018-07-09
 ---
-## PowerCLI - Copy-DataStoreItem
-[Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html) copies items/files between datastores and between a datastore and a local file system provider.
+## PowerCLI - Installation
+[VMware PowerCLI 10.1.1](https://code.vmware.com/web/dp/tool/vmware-powercli/10.1.1)
+[Vmware PowerCLI User's Guide](https://vdc-download.vmware.com/vmwb-repository/dcr-public/76e07a15-f457-47a0-a16c-0db7bd31bda8/9d37ff69-25de-45d9-80c1-16a1f429b86e/vmware-powercli-1011-user-guide.pdf)
 
 ### Script
 #### PowerShell Code Block
 ```PowerShell
-# PowerCLI VMware copy datastore to datastore
-Copy-DatastoreItem -Item 'vmstores:\virtualcentername@443\SAS7K_ISOs\RHEL-7\' -Destination 'vmstores:\virtualcentername@443\SSD_ISOs\' -Recurse
 
-# PowerCLI VMware copy local file to vCenter datastore
-Copy-DatastoreItem -Item 'c:\ISOs\' -Destination 'vmstores:\virtualcentername@443\SSD_ISOs\' -Recurse
 ```
 
 ### Explanation
 
-#### *[Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html)*
-[Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html) can be used to copy between vCenters, if you are connected to two vCenters in PowerCLI, between datastores in the same vCenter and also from a local system provider to a vCenter.
+#### *Cmdlet 1*
 
-#### *-Item*
-This is the source file or folder. The *RHEL-7* folder is the source folder.
+#### *-Paramater 1*
 
-#### *-Destination*
-This is the destination file or folder. Please note that the path ends with *\*. *SSD_ISOs* is the destination folder. *RHEL-7* will be copied to *SSD_ISOs*.
+#### *-Paramater 2*
 
-#### *-Recurse*
-Copy the item as well as its children items.
+#### *-Paramater N*
 
+#### *Cmdlet N*
+
+#### *-Paramater 1*
+
+#### *-Paramater 2*
+
+#### *-Paramater N*
+
+### Results
+```PowerShell
+
+```
+
+### Insert Assets
+![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
 
 ### Conclusion
-The above is an automatable way to copy files and folders using PowerCLI without using the vSphere Web Client. You may use it to upload an ISO automatically once it has been created.
 
 Hope you're having a great day and this is of use.
 
