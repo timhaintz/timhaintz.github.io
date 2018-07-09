@@ -32,6 +32,7 @@ Copy the item as well as its children items.
 
 
 ### Conclusion
+The above is an automatable way to copy files and folders using PowerCLI without using the vSphere Web Client. You may use it to upload an ISO automatically once it has been created.
 
 Hope you're having a great day and this is of use.
 
