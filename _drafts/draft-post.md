@@ -13,6 +13,8 @@ You can also install PowerCLI via the [PowerShell Gallery](https://www.powershel
 #### PowerShell Code Block
 ```PowerShell
 Find-Module VMware.PowerCLI
+
+Install-Module -Name VMware.PowerCLI
 ```
 
 ### Explanation
