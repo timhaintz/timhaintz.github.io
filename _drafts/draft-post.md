@@ -10,7 +10,7 @@ The [Vmware PowerCLI User's Guide](https://vdc-download.vmware.com/vmwb-reposito
 ### Script
 #### PowerShell Code Block
 ```PowerShell
-
+Find-Module VMware.PowerCLI
 ```
 
 ### Explanation
