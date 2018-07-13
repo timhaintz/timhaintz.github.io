@@ -38,6 +38,7 @@ title: Glossary of Terms
 * [Pipelines](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-6)
 * [PowerCLI - VMware](https://www.vmware.com/support/developer/PowerCLI/)
 * [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-6)
+* [PowerShell Gallery](https://www.powershellgallery.com/)
 * [PowerShell Remoting](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/running-remote-commands?view=powershell-6#windows-powershell-remoting)
 * [PowerTool Suite - Cisco](https://communities.cisco.com/docs/DOC-37154)
 * [Registry](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724871(v=vs.85).aspx)
