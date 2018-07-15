@@ -17,6 +17,11 @@ Find-Module VMware.PowerCLI
 Install-Module -Name VMware.PowerCLI
 ```
 
+### Results
+```PowerShell
+
+```
+
 ### Explanation
 
 #### *Cmdlet 1*
@@ -35,10 +40,7 @@ Install-Module -Name VMware.PowerCLI
 
 #### *-Paramater N*
 
-### Results
-```PowerShell
 
-```
 
 ### Insert Assets
 ![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
