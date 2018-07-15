@@ -11,6 +11,11 @@ date: 2018-06-09
 
 ```
 
+### Results
+```PowerShell
+
+```
+
 ### Explanation
 
 #### *Cmdlet 1*
@@ -28,11 +33,6 @@ date: 2018-06-09
 #### *-Paramater 2*
 
 #### *-Paramater N*
-
-### Results
-```PowerShell
-
-```
 
 ### Insert Assets
 ![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
