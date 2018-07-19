@@ -23,7 +23,7 @@ Install-Module -Name VMware.PowerCLI
 
 ### Results
 ```PowerShell
-
+Get-Module VMware.PowerCLI
 ```
 
 ### Explanation
