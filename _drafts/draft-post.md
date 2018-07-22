@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PowerCLI - Installation"
-date: 2018-07-21
+date: 2018-07-25
 ---
 ## PowerCLI - Installation
 VMware [PowerCLI](https://www.vmware.com/support/developer/PowerCLI/) is a command-line and scripting tool built on Windows Powershell.
