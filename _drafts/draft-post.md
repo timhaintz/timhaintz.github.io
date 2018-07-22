@@ -17,6 +17,11 @@ Installing PowerCLI via PowerShell gallery is below.
 #### PowerShell Code Block
 ```PowerShell
 Find-Module VMware.PowerCLI
+
+Version    Name                                Repository           Description                                                                                               
+-------    ----                                ----------           -----------                                                                                               
+10.1.1.... VMware.PowerCLI                     PSGallery            This Windows PowerShell module contains VMware.PowerCLI 
+
 Install-Module -Name VMware.PowerCLI
 ```
 
