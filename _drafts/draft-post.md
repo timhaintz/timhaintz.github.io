@@ -30,7 +30,6 @@ Install-Module -Name VMware.PowerCLI
 ```
 ![HTML Report]({{ "/assets/20180725/4-Installation-Progress.png" | absolute_url }})
 
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
 
 ### Results
 ```PowerShell
