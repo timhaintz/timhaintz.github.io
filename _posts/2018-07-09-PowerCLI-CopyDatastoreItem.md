@@ -18,16 +18,16 @@ Copy-DatastoreItem -Item 'c:\ISOs\' -Destination 'vmstores:\virtualcentername@44
 
 ### Explanation
 
-#### *[Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html)*
+### *[Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html)*
 [Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html) can be used to copy between vCenters, if you are connected to two vCenters in PowerCLI, between datastores in the same vCenter and also from a local system provider to a vCenter.
 
-#### *-Item*
+### *-Item*
 This is the source file or folder. The *RHEL-7* folder is the source folder.
 
-#### *-Destination*
+### *-Destination*
 This is the destination file or folder. Please note that the path ends with *\*. *SSD_ISOs* is the destination folder. *RHEL-7* will be copied to *SSD_ISOs*.
 
-#### *-Recurse*
+### *-Recurse*
 Copy the item as well as its children items.
 
 
