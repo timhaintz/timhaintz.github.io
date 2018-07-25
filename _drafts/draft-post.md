@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PowerCLI - Installation"
-date: 2018-07-26
+date: 2018-07-25
 ---
 ## PowerCLI - Installation
 VMware [PowerCLI](https://www.vmware.com/support/developer/PowerCLI/) is a command-line and scripting tool built on Windows Powershell.
@@ -82,6 +82,7 @@ Specify names or name patterns of modules. Supports wilcard characters.
 Gets all installed modules listed in [PSModulePath](https://docs.microsoft.com/en-us/powershell/developer/module/modifying-the-psmodulepath-installation-path) environment variable.
 
 ### Conclusion
+Once you have installed PowerCLI as above, connect to your VMware environment using [Connect-VIServer](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Connect-VIServer.html). Once credentials have been passed, you are able to manage your VMware environment using PowerCLI.
 
 Hope you're having a great day and this is of use.
 
