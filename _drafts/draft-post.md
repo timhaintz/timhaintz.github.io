@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PowerCLI - Installation"
-date: 2018-07-25
+date: 2018-07-26
 ---
 ## PowerCLI - Installation
 VMware [PowerCLI](https://www.vmware.com/support/developer/PowerCLI/) is a command-line and scripting tool built on Windows Powershell.
@@ -71,14 +71,12 @@ Finds modules from an online gallery that match specified criteria. By default, 
 The name of the module you are looking for.
 
 #### *[Install-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6)*
+Downloads modules from an online gallery and installs them on the local computer. By default, it refers to the [PowerShell Gallery](https://www.powershellgallery.com/).
+#### *-Name*
+Specify the exact names of the modules to install. Supports wildcard characters.
 
-#### *-Paramater 1*
-
-#### *-Paramater 2*
-
-#### *-Paramater N*
-
-#### *Cmdlet N*
+#### *[Get-Module](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6)*
+Gets the modules that have been imported.
 
 #### *-Paramater 1*
 
