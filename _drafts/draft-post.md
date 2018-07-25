@@ -18,7 +18,7 @@ Installing PowerCLI via PowerShell gallery is below.
 
 ![HTML Report]({{ "/assets/20180725/1-NuGet.png" | absolute_url }})
 ```PowerShell
-Find-Module VMware.PowerCLI
+Find-Module -Name VMware.PowerCLI
 
 Version    Name                                Repository           Description
 -------    ----                                ----------           -----------
@@ -64,10 +64,11 @@ Script     6.5.1.7... VMware.VumAutomation                {Add-EntityBaseline, C
 
 ### Explanation
 
-#### *Cmdlet 1*
+#### *[Find-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/find-module?view=powershell-6)*
+Finds modules from an online gallery that match specified criteria. By default, it refers to the [PowerShell Gallery](https://www.powershellgallery.com/). [Register-PSRepository](https://docs.microsoft.com/en-us/powershell/module/powershellget/register-psrepository?view=powershell-6) allows you to add additional galleries.
 
-#### *-Paramater 1*
-
+#### *-Name*
+The name of the module you are looking for.
 #### *-Paramater 2*
 
 #### *-Paramater N*
