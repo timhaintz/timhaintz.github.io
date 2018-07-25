@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PowerCLI - Installation"
+title: "Installing PowerCLI"
 date: 2018-07-25
 ---
 ## PowerCLI - Installation
