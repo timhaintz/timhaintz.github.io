@@ -69,6 +69,11 @@ Finds modules from an online gallery that match specified criteria. By default, 
 
 #### *-Name*
 The name of the module you are looking for.
+
+#### *[Install-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6)*
+
+#### *-Paramater 1*
+
 #### *-Paramater 2*
 
 #### *-Paramater N*
@@ -80,7 +85,6 @@ The name of the module you are looking for.
 #### *-Paramater 2*
 
 #### *-Paramater N*
-
 
 
 ### Insert Assets
