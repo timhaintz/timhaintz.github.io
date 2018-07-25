@@ -64,21 +64,21 @@ Script     6.5.1.7... VMware.VumAutomation                {Add-EntityBaseline, C
 
 ### Explanation
 
-#### *[Find-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/find-module?view=powershell-6)*
+### *[Find-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/find-module?view=powershell-6)*
 Finds modules from an online gallery that match specified criteria. By default, it refers to the [PowerShell Gallery](https://www.powershellgallery.com/). [Register-PSRepository](https://docs.microsoft.com/en-us/powershell/module/powershellget/register-psrepository?view=powershell-6) allows you to add additional galleries.
 #### *-Name*
 The name of the module you are looking for.
 
-#### *[Install-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6)*
+### *[Install-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6)*
 Downloads modules from an online gallery and installs them on the local computer. By default, it refers to the [PowerShell Gallery](https://www.powershellgallery.com/).
-#### *-Name*
+### *-Name*
 Specify the exact names of the modules to install. Supports wildcard characters.
 
-#### *[Get-Module](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6)*
+### *[Get-Module](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6)*
 Gets the modules that have been imported into the current session.
-#### *-Name*
+### *-Name*
 Specify names or name patterns of modules. Supports wilcard characters.
-#### *-ListAvailable*
+### *-ListAvailable*
 Gets all installed modules listed in [PSModulePath](https://docs.microsoft.com/en-us/powershell/developer/module/modifying-the-psmodulepath-installation-path) environment variable.
 
 ### Conclusion
