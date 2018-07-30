@@ -3,12 +3,15 @@ layout: post
 title: "Template Title"
 date: 2018-08-04
 ---
-## What is the next title
+## Machine Uptime
 
 ### Script
 #### PowerShell Code Block
 ```PowerShell
-
+# Check how long a machine has been up for
+Get-CimInstance -ClassName win32_operatingsystem | select csname, @{name="Uptime"; expression = {((get-date)-($_.lastbootuptime))}}
+New-TimeSpan -start (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime -end (get-date) 
+New-TimeSpan -Start ((Get-WmiObject win32_operatingsystem | Select-Object @{Name='LastBootUptime';Expression={$_.ConverttoDateTime($_.lastbootuptime)}}).lastbootuptime) -End (get-date) 
 ```
 
 ### Results
