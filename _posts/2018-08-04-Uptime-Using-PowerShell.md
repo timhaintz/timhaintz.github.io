@@ -3,7 +3,7 @@ layout: post
 title: "Uptime Using PowerShell"
 date: 2018-08-04
 ---
-
+### Introduction
 There was a question on StackExchange/SuperUser, [How to know how long I have launched this machine](https://superuser.com/questions/1255236/how-to-know-how-long-i-have-launched-this-machine/1255476#1255476), asking the equivalent of *uptime* in Linux. Please see my answer below using PowerShell.
 
 ### Script
