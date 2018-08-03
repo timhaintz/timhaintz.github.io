@@ -3,7 +3,7 @@ layout: post
 title: "PowerCLI - Copy-DatastoreItem"
 date: 2018-07-09
 ---
-## PowerCLI - Copy-DatastoreItem
+### Introduction
 [Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html) copies items/files between datastores and between a datastore and a local file system provider.
 
 ### Script
