@@ -46,10 +46,12 @@ Days Hours Minutes
 
 
 ### Explanation
-The above code blocks display multiple ways of retrieving the uptime of a machine. Using *Get-CimInstance* and querying the [win32_operatingsystem](https://docs.microsoft.com/en-us/windows/desktop/cimwin32prov/win32-operatingsystem) WMI class for the LastBootUpTime value enables a simple calculation of the time right now *Get-Date* minus LastBootUpTime. The calculation is being performed in a [Select-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6) calculated propery. The first example could be added into a [ForEach Statement](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_foreach?view=powershell-6) to iterate through multiple machines. The name of the machine and uptime are displayed together.
+The above code blocks display multiple ways of retrieving the uptime of a machine. Using [Get-CimInstance](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/get-ciminstance?view=powershell-6) and querying the [win32_operatingsystem](https://docs.microsoft.com/en-us/windows/desktop/cimwin32prov/win32-operatingsystem) WMI class for the LastBootUpTime value enables a simple calculation of the time right now *Get-Date* minus LastBootUpTime. The calculation is being performed in a [Select-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6) calculated propery. The first example could be added into a [ForEach Statement](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_foreach?view=powershell-6) to iterate through multiple machines. The name of the machine and uptime are displayed together.
 
 [New-TimeSpan](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/new-timespan?view=powershell-6) creates a TimeSpan object can be used to add or subtract time from DateTime objects.
 Using *New-TimeSPan* with a *-Start* and *-End* Parameter, the *LastBootUpTime* and current time *Get-Date* are compared and the difference returned.
+
+In the final code block, [Select-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6) is being used to retrieve only the desired properties.
 
 
 
