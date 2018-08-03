@@ -22,9 +22,9 @@ New-TimeSpan -Start ((Get-WmiObject win32_operatingsystem | Select-Object @{Name
 
 ### Explanation
 
-### *Cmdlet 1*
+### *Get-CimInstance*
 
-### *-Paramater 1*
+### *-ClassName*
 
 ### *-Paramater 2*
 
