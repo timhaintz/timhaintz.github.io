@@ -3,7 +3,7 @@ layout: post
 title: "Installing PowerCLI"
 date: 2018-07-26
 ---
-## Installing PowerCLI
+### Introduction
 VMware [PowerCLI](https://www.vmware.com/support/developer/PowerCLI/) is a command-line and scripting tool built on Windows Powershell.
 
 To install PowerCLI, you first need to download it. As of this writing, the current version is [VMware PowerCLI 10.1.1](https://code.vmware.com/web/dp/tool/vmware-powercli/10.1.1).
