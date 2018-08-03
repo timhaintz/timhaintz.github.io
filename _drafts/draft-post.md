@@ -51,11 +51,11 @@ Days Hours Minutes
 
 ### *-ClassName*
 
-### *Select-Object*
+### *[Select-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6)*
 
 ### *-Property*
 
-### *New-TimeSpan*
+### *[New-TimeSpan](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/new-timespan?view=powershell-6)*
 
 ### *-Start*
 
