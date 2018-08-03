@@ -3,7 +3,6 @@ layout: post
 title: "Template Title"
 date: 2018-06-09
 ---
-## Template Title
 
 ### Script
 #### PowerShell Code Block
