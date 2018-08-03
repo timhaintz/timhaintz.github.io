@@ -22,7 +22,7 @@ New-TimeSpan -Start ((Get-WmiObject win32_operatingsystem | Select-Object @{Name
 
 ### Explanation
 
-### *Get-CimInstance*
+### *[Get-CimInstance](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/get-ciminstance?view=powershell-6)*
 
 ### *-ClassName*
 
