@@ -3,7 +3,8 @@ layout: post
 title: "Copying files to other machines: New-PSSession & Copy-Item"
 date: 2018-05-08
 ---
-## New-PSSession and Copy-Item
+### Introduction
+
 On occassion, files need to be copied from one machine to another. This can include times where the machines are in different domains, or elevated permissions are required to fulfil the task. There are quite a few methods to do this. 
 
 Below, I use [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential?view=powershell-6), [New-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/new-pssession?view=powershell-6) and [Copy-Item](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/copy-item?view=powershell-6). From the *Notes* section of the New-PSSession documentation **This cmdlet uses the Windows PowerShell remoting infrastructure. To use this cmdlet, the local computer and any remote computers must be configured for Windows PowerShell remoting.** Please ensure [PowerShell Remoting](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/running-remote-commands?view=powershell-6#windows-powershell-remoting) is setup.
