@@ -3,7 +3,7 @@ layout: post
 title: "VMware PowerCLI - Multipathing"
 date: 2018-06-12
 ---
-## VMware PowerCLI - Multipathing
+### Introduction
 
 Often it is useful to see multipathing information from your VMware hosts to your storage device(s). This could be for reduncancy testing or confirmation. You may be migrating VMware ESXi hosts or storage/SAN and need to confirm that multipathing is correct. The below script will give you the information you need. 
 
