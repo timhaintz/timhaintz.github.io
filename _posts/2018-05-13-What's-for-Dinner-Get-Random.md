@@ -3,7 +3,7 @@ layout: post
 title: "What's for Dinner?: Get-Random"
 date: 2018-05-13
 ---
-## Get-Random
+### Introduction
 
 Often, as a family, it gets to 5:00PM and the inevitable question is asked.
 
