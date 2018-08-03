@@ -78,6 +78,7 @@ Specified the start of a time span. Enter a string that represents the date and 
 Specifies the end of a time span.
 
 ### Conclusion
+Being able to run a 'one liner' to determine the uptime a machine saves a lot of time. You don't have to login to the machine and check event logs or the *Ethernet Status*. You could also run it remotely if you have [PowerShell Remoting](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/running-remote-commands?view=powershell-6) setup.
 
 Hope you're having a great day and this is of use.
 
