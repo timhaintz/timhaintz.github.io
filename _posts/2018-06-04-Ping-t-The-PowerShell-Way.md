@@ -3,7 +3,7 @@ layout: post
 title: "Ping -t - The PowerShell Way"
 date: 2018-06-04
 ---
-## Ping -t - The PowerShell Way
+### Introduction
 
 How often have you run [Ping](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/ping) or *ping -t*? How often have you run *ping -t* and found it still running 6 hours later? 2 days later?
 I know it has happened to me more than once. I thought "wouldn't it be nice to be able to run it for a pre-determined length of time".
