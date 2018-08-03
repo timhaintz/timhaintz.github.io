@@ -57,19 +57,25 @@ In the final code block, [Select-Object](https://docs.microsoft.com/en-us/powers
 
 ### Cmdlets used
 ### *[Get-CimInstance](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/get-ciminstance?view=powershell-6)*
+Gets the CIM instances of a class from a CIM server.
 
 ### *-ClassName*
+Specifies the name of the CIM class for which to retrieve the CIM instances. NOTE: You can use tab completion to browse the list of classes, because PowerShell gets a list of classes from the local WMI server to provide a list of class names.
 
 ### *[Select-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object?view=powershell-6)*
+Selects specific properties of an object or set of objects.
 
 ### *-Property*
+Specifies the properties to select.
 
 ### *[New-TimeSpan](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/new-timespan?view=powershell-6)*
+The New-TimeSpan cmdlet creates a TimeSpan object that represents a time interval. You can use a TimeSpan object to add or subtract time from DateTime objects.
 
 ### *-Start*
+Specified the start of a time span. Enter a string that represents the date and time or a DateTime object.
 
 ### *-End*
-
+Specifies the end of a time span.
 
 ### Conclusion
 
