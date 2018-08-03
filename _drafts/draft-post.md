@@ -36,7 +36,7 @@ TotalMilliseconds : 1122755887.1585
 
 #### Uptime - Days, Hours and Minutes
 ```PowerShell
-New-TimeSpan -start (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime -end (Get-Date) | Select-Object Days,Hours,Minutes
+New-TimeSpan -start (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime -end (Get-Date) | Select-Object -Property Days,Hours,Minutes
 
 Days Hours Minutes
 ---- ----- -------
@@ -51,20 +51,16 @@ Days Hours Minutes
 
 ### *-ClassName*
 
-### *-Paramater 2*
+### *Select-Object*
 
-### *-Paramater N*
+### *-Property*
 
-### *Cmdlet N*
+### *New-TimeSpan*
 
-### *-Paramater 1*
+### *-Start*
 
-### *-Paramater 2*
+### *-End*
 
-### *-Paramater N*
-
-### Insert Assets
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
 
 ### Conclusion
 
