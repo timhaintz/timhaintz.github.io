@@ -17,6 +17,7 @@ csname Uptime
 ca1    12.23:50:46.6914567
 ```
 
+#### PowerShell Code Block
 #### Uptime - Days to TotalMilliseconds
 ```PowerShell
 New-TimeSpan -start (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime -end (Get-Date)
@@ -34,6 +35,7 @@ TotalSeconds      : 1122755.8871585
 TotalMilliseconds : 1122755887.1585
 ```
 
+#### PowerShell Code Block
 #### Uptime - Days, Hours and Minutes
 ```PowerShell
 New-TimeSpan -start (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime -end (Get-Date) | Select-Object -Property Days,Hours,Minutes
