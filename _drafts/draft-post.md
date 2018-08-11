@@ -9,7 +9,55 @@ date: 2018-08-11
 ### Script
 #### PowerShell Code Block
 ```PowerShell
+$input = (Get-Content $env:TEMP\CSVtoMkDown.csv)
+$header = $contents[0]
 
+foreach($content in $contents)
+{
+    if($content -eq $header)
+    {
+        $headersplit = $header -split(',')
+        $content -split(',') |
+        ForEach-Object {
+            if($_ -eq $headersplit[-1])
+            {
+                $_ = $_.replace('"','')
+                $_ = "||$_||`n"
+            }
+            else
+            {
+                $_ = $_.replace('"','')
+                $_ = "||$_"
+            } 
+            Write-Output $_
+        } |
+        Out-File -FilePath $env:TEMP\markdown.md -Append -NoClobber -NoNewline
+        # end region
+    }
+    # end region
+    else 
+    {
+        $contentsplit = $content -split(',')
+        $content -split(',') |
+        ForEach-Object {
+            if($_ -eq $contentsplit[-1])
+            {
+                $_ = $_.replace('"','')
+                $_ = "|$_|`n"
+            }
+            else
+            {
+                $_ = $_.replace('"','')
+                $_ = "|$_"
+            }
+            Write-Output $_
+        } |
+        Out-File -FilePath $env:TEMP\markdown.md -Append -NoClobber -NoNewline
+        # end region
+    }
+    #end region
+}
+#end region
 ```
 
 ### Results
