@@ -5,6 +5,7 @@ date: 2018-08-11
 ---
 
 ### Introduction
+The below script is used to convert a CSV file to a Confluence markdown table. The Confluence markdown table is Table 1 from [Confluence Wiki Markup](https://confluence.atlassian.com/doc/confluence-wiki-markup-251003035.html).
 
 ### Script
 #### PowerShell Code Block
