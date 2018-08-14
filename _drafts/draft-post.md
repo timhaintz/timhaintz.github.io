@@ -34,7 +34,7 @@ foreach($content in $contents)
             } 
             Write-Output $_
         } |
-        Out-File -FilePath $env:TEMP\markdown.md -Append -NoClobber -NoNewline
+        Out-File -FilePath $outputlocation -Append -NoClobber -NoNewline
         # end region
     }
     # end region
@@ -63,7 +63,7 @@ foreach($content in $contents)
 #end region
 ```
 ### Explanation
-The conversion takes a CSV file *$input = (Get-Content $env:TEMP\CSVtoMkDown.csv)* and then uses string manipulation to format the content. Based on if the content is a header **
+The conversion takes a CSV file *$contents = (Get-Content $env:TEMP\CSVtoMkDown.csv)* and then uses string manipulation to format the content. Based on if the content is a header *$header = $contents[0]* & *if($content -eq $header)*
 
 ### Cmdlets used
 ### *Cmdlet 1*
