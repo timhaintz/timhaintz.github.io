@@ -63,7 +63,8 @@ foreach($content in $contents)
 #end region
 ```
 ### Explanation
-The conversion takes a CSV file *$contents = (Get-Content $env:TEMP\CSVtoMkDown.csv)* and then uses string manipulation to format the content. If the content is a header *$header = $contents[0]* & *if($content -eq $header)* it will place || around each cell value.
+The conversion takes a CSV file *$contents = (Get-Content $env:TEMP\CSVtoMkDown.csv)* and then uses string manipulation to format the content. If the content is a header *$header = $contents[0]* & *if($content -eq $header)* it will place || at the start of each cell value. If it is the last object in the array *if($_ -eq $headersplit[-1])*, it will place || before and after the cell value and create a new line *`n*.
+
 
 ### Cmdlets used
 ### *Cmdlet 1*
