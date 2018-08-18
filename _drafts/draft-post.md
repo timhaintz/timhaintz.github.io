@@ -22,7 +22,7 @@ foreach($content in $contents)
         $headersplit = $header -split(',')
         $content -split(',') |
         ForEach-Object {
-            if($_ -eq $headersplit[-1])
+            if($headersplit[-1])
             {
                 $_ = $_.replace('"','')
                 $_ = "||$_||`n"
@@ -43,7 +43,7 @@ foreach($content in $contents)
         $contentsplit = $content -split(',')
         $content -split(',') |
         ForEach-Object {
-            if($_ -eq $contentsplit[-1])
+            if($contentsplit[-1])
             {
                 $_ = $_.replace('"','')
                 $_ = "|$_|`n"
