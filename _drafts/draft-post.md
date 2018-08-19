@@ -69,7 +69,7 @@ If the content is not a header, the else statement is invoked and it puts a sing
 
 
 ### Cmdlets used
-### *Cmdlet 1*
+### *ForEach-Object*
 
 ### *-Paramater 1*
 
@@ -77,7 +77,15 @@ If the content is not a header, the else statement is invoked and it puts a sing
 
 ### *-Paramater N*
 
-### *Cmdlet N*
+### *Write-Output*
+
+### *-Paramater 1*
+
+### *-Paramater 2*
+
+### *-Paramater N*
+
+### *Out-File*
 
 ### *-Paramater 1*
 
