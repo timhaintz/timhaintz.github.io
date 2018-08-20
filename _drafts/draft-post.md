@@ -10,7 +10,7 @@ The below script is used to convert a CSV file into a Confluence markdown table.
 ### Script
 #### PowerShell Code Block
 ```PowerShell
-$date = (get-date -Format yyyyMMdd)
+$date = (Get-Date -Format yyyyMMdd)
 $input = (Get-Content $env:TEMP\$date`_AutoDoco.csv)
 $contents = $input
 $header = $contents[0]
@@ -43,22 +43,6 @@ The conversion takes a CSV file *$input = (Get-Content $env:TEMP\$date`_AutoDoco
 If the content is not a header, the else statement is invoked and replaces *"* with *|*. The *,* is replaced with blank and any instance of *||* is replaced with a single *|*. *[Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)* is then used to write the string to a file *$outputlocation* and use *$content* as the InputObject. Out-File creates a new line by default.
 
 ### Cmdlets used
-### *ForEach-Object*
-
-### *-Paramater 1*
-
-### *-Paramater 2*
-
-### *-Paramater N*
-
-### *Write-Output*
-
-### *-Paramater 1*
-
-### *-Paramater 2*
-
-### *-Paramater N*
-
 ### *Out-File*
 
 ### *-Paramater 1*
