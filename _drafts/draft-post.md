@@ -45,11 +45,13 @@ If the content is not a header, the else statement is invoked and replaces *"* w
 ### Cmdlets used
 ### *Out-File*
 
-### *-Paramater 1*
+### *-FilePath*
 
-### *-Paramater 2*
+### *-Append*
 
-### *-Paramater N*
+### *-NoClobber*
+
+### *-InputObject*
 
 ### Insert Assets
 ![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
