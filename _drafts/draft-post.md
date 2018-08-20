@@ -44,14 +44,19 @@ If the content is not a header, the else statement is invoked and replaces *"* w
 
 ### Cmdlets used
 ### *Out-File*
+Sends output to a file. 
 
 ### *-FilePath*
+Specifies the path to the output file.
 
 ### *-Append*
+Adds output to the end of an existing file, instead of replacing the file contents.
 
 ### *-NoClobber*
+Will not overwrite an existing file.
 
 ### *-InputObject*
+Specifies the objects to be written to the file.
 
 ### Insert Assets
 ![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
