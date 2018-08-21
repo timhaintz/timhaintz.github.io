@@ -91,12 +91,16 @@ Specifies the objects to be written to the file.
 ![Confluence Wiki]({{ "/assets/20180821/1-ConfluenceWiki.png" | absolute_url }})
 
 ### *Get-Service*
+Gets objects that represent the services on a computer.
 
 ### *Select-Object*
+Selects specified properties of an object or set of objects. It can also select unique objects, a specified number of objects, or objects in a specified position in an array.
 
 ### *-First*
+Gets only the specified number of objects.
 
 ### *-Property*
+Specified the properties to select.
 
 ### Conclusion
 
