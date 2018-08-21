@@ -42,6 +42,12 @@ The conversion takes a CSV file *$input = (Get-Content $env:TEMP\$date`_AutoDoco
 
 If the content is not a header, the else statement is invoked and replaces *"* with *|*. The *,* is replaced with blank and any instance of *||* is replaced with a single *|*. *[Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)* is then used to write the string to a file at *$outputlocation* and use *$content* as the InputObject. *Out-File* creates a new line by default.
 
+### Example
+Below, I ran *[Get-Service](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-6)*
+
+![Confluence Wiki]({{ "/assets/20180821/1-ConfluenceWiki.png" | absolute_url }})
+
+
 ### Cmdlets used
 ### *Out-File*
 Sends output to a file. 
