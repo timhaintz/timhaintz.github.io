@@ -103,6 +103,7 @@ Gets only the specified number of objects.
 Specified the properties to select.
 
 ### Conclusion
+Hopefully the above has given you some ideas on how you can use string manipulation to convert a CSV file into a Confluence Wiki Markdown Table. This is a great way to present information gathered from a CSV via a webpage.
 
 Hope you're having a great day and this is of use.
 
