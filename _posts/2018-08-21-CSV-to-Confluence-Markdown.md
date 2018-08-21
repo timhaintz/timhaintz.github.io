@@ -87,9 +87,6 @@ Will not overwrite an existing file.
 ### *-InputObject*
 Specifies the objects to be written to the file.
 
-### Insert Assets
-![Confluence Wiki]({{ "/assets/20180821/1-ConfluenceWiki.png" | absolute_url }})
-
 ### *Get-Service*
 Gets objects that represent the services on a computer.
 
