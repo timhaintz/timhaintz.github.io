@@ -59,7 +59,7 @@ Will not overwrite an existing file.
 Specifies the objects to be written to the file.
 
 ### Insert Assets
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
+![Confluence Wiki]({{ "/assets/20180821/1-ConfluenceWiki.png" | absolute_url }})
 
 ### Conclusion
 
