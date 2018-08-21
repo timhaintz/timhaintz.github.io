@@ -28,6 +28,7 @@ title: Glossary of Terms
 * [Get-Random](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-random?view=powershell-6)
 * [Get-ScsiLun - PowerCLI](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-ScsiLun.html)
 * [Get-ScsiLunPath - PowerCLI](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Get-ScsiLunPath.html)
+* [Get-Service](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-6)
 * [Group Policy](https://msdn.microsoft.com/en-us/library/ee663280(v=vs.85).aspx)
 * [If Statement](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_if?view=powershell-6)
 * [Install-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6)
