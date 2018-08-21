@@ -40,7 +40,7 @@ foreach($content in $contents)
 ### Explanation
 The conversion takes a CSV file *$input = (Get-Content $env:TEMP\$date`_AutoDoco.csv)* and then uses string manipulation to format the content. If the content is a header *$header = $contents[0]* & *if($content -eq $header)* it will replace *"* with *||*, replace the *,* with blank and then remove any instance of *||||* and replace it with *||*. *[Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)* is then used to write the string to a file at *$outputlocation* and use *$content* as the InputObject. *Out-File* creates a new line by default.
 
-If the content is not a header, the else statement is invoked and replaces *"* with *|*. The *,* is replaced with blank and any instance of *||* is replaced with a single *|*. *[Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)* is then used to write the string to a file at *$outputlocation* and use *$content* as the InputObject. *Out-File* creates a new line by default.
+If the content is not a header, the else statement is invoked and replaces " with |. The , is replaced with blank and any instance of || is replaced with a single |. *[Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)* is then used to write the string to a file at *$outputlocation* and use *$content* as the InputObject. *Out-File* creates a new line by default.
 
 ### Example
 I ran *[Get-Service](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-6)*
