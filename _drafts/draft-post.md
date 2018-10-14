@@ -9,12 +9,14 @@ date: 2018-08-30
 ### Script
 #### PowerShell Code Block
 ```PowerShell
-((Get-ADUser -Filter * -Properties PasswordLastSet).passwordlastset).adddays(45)
+((Get-ADUser azureadmin -Properties PasswordLastSet).passwordlastset).adddays(45)
 ```
 
 ### Results
 ```PowerShell
+((Get-ADUser azureadmin -Properties PasswordLastSet).passwordlastset).adddays(45)
 
+Tuesday, November 27, 2018 9:39:35 PM
 ```
 
 ### Explanation
