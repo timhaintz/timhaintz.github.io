@@ -9,7 +9,7 @@ date: 2018-08-30
 ### Script
 #### PowerShell Code Block
 ```PowerShell
-
+((Get-ADUser -Filter * -Properties PasswordLastSet).passwordlastset).adddays(45)
 ```
 
 ### Results
