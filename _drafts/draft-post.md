@@ -5,17 +5,17 @@ date: 2018-08-30
 ---
 
 ### Introduction
-Below is a one liner to check when a user password will expire. I have used the Group Policy default setting of 42 days in the example below. [Maximum Password Age](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/maximum-password-age) has further information on the Group Policy setting.
+Below is a one liner to advise when a user password will expire. I have used the Group Policy default setting of 42 days in the example below. The [Maximum Password Age](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/maximum-password-age) link has further information on the Group Policy setting.
 
 ### Script
 #### PowerShell Code Block
 ```PowerShell
-((Get-ADUser azureadmin -Properties PasswordLastSet).passwordlastset).adddays(42)
+((Get-ADUser -Identity azureadmin -Properties PasswordLastSet).passwordlastset).adddays(42)
 ```
 
 ### Results
 ```PowerShell
-((Get-ADUser azureadmin -Properties PasswordLastSet).passwordlastset).adddays(42)
+((Get-ADUser -Identity azureadmin -Properties PasswordLastSet).passwordlastset).adddays(42)
 
 Saturday, November 24, 2018 9:39:35 PM
 ```
@@ -23,24 +23,14 @@ Saturday, November 24, 2018 9:39:35 PM
 ### Explanation
 
 ### Cmdlets used
-### *Cmdlet 1*
-
-### *-Paramater 1*
-
-### *-Paramater 2*
-
-### *-Paramater N*
-
-### *Cmdlet N*
-
-### *-Paramater 1*
-
-### *-Paramater 2*
-
-### *-Paramater N*
-
-### Insert Assets
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
+### *[Get-ADUser](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-aduser?view=win10-ps)*
+The *Get-ADUser* cmdlet gets a specified user object or performs a search to get multiple user objects.
+### *-Identity*
+Specifies an Active Directory user object.
+### *-Properties*
+Specifies the properties of the output object to retrieve from the server. Use this parameter to retrieve properties that are not included in the default set.
+### *adddays() method*
+By using parentheses around *(Get-ADUser -Identity azureadmin -Properties PasswordLastSet).passwordlastset)* I can call the [adddays()](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.adddays?view=netframework-4.7.2) method. Scripting Guy has a great blog post called [Adding and Subtracting Dates with PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/21/adding-and-subtracting-dates-with-powershell/) if you would like further backgound. Using adddays() allows me to take a DateTime object and add days or, using a -, subtract days.
 
 ### Conclusion
 
