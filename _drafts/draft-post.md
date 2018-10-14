@@ -33,6 +33,7 @@ Specifies the properties of the output object to retrieve from the server. Use t
 By using parentheses around *(Get-ADUser -Identity azureadmin -Properties PasswordLastSet).passwordlastset)* I can call the [adddays()](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.adddays?view=netframework-4.7.2) method. Scripting Guy has a great blog post called [Adding and Subtracting Dates with PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/21/adding-and-subtracting-dates-with-powershell/) if you would like further backgound. Using adddays() allows me to take a DateTime object and add days or, using a -, subtract days.
 
 ### Conclusion
+The above one liner is a quick and easy way to check when a user password will expire. It also shows how PowerShell can be used to view date time objects.
 
 Hope you're having a great day and this is of use.
 
