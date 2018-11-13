@@ -26,9 +26,9 @@ Save the above code block with a *.Tests.ps1* extension. For this example, I hav
 
 ### Results
 ```PowerShell
-PS C:\Users\azureadmin> Set-ADUser guest -Enabled $true
+Set-ADUser guest -Enabled $true
 
-PS C:\Users\azureadmin> Invoke-Pester C:\Users\azureadmin\ActiveDirectory.Tests.ps1
+Invoke-Pester C:\Users\azureadmin\ActiveDirectory.Tests.ps1
 
 Describing Testing Guest Account Disabled
    Context Logins
@@ -40,21 +40,15 @@ Describing Testing Guest Account Disabled
 Tests completed in 46ms
 Passed: 0 Failed: 1 Skipped: 0 Pending: 0 Inconclusive: 0
 
-PS C:\Users\azureadmin> Set-ADUser guest -Enabled $false
+Set-ADUser guest -Enabled $false
 
-PS C:\Users\azureadmin> Invoke-Pester C:\Users\azureadmin\ActiveDirectory.Tests.ps1
-
-
-
-
+Invoke-Pester C:\Users\azureadmin\ActiveDirectory.Tests.ps1
 
 Describing Testing Guest Account Disabled
    Context Logins
     [+] The Guest account should be disabled 40ms
 Tests completed in 40ms
 Passed: 1 Failed: 0 Skipped: 0 Pending: 0 Inconclusive: 0
-
-PS C:\Users\azureadmin> 
 
 ```
 
