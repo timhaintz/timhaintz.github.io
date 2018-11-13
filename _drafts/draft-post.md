@@ -19,6 +19,8 @@ Describe "Testing Guest Account Disabled" {
         It "The Guest account should be disabled"{
             (Get-ADUser Guest).Enabled | Should be 'False'
         }
+    }
+}
 ```
 
 ### Results
