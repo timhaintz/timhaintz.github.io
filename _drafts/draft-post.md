@@ -52,6 +52,8 @@ Passed: 1 Failed: 0 Skipped: 0 Pending: 0 Inconclusive: 0
 
 ```
 
+![Pester Test Results]({{ "/assets/20181114/1-PesterTest.png" | absolute_url }})
+
 ### Explanation
 
 
