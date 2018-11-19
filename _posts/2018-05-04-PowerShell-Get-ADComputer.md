@@ -7,11 +7,11 @@ date: 2018-05-04
 I'm often looking up workstation and/or server details. This can be tedious if I have to open up *Active Directory Users and Computers* and *Find* every time. PowerShell to the rescue! If I don't know the exact name, something I use often is the -Filter parameter from the [Get-ADComputer](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adcomputer?view=win10-ps) [cmdlet](https://msdn.microsoft.com/en-us/library/ms714395(v=vs.85).aspx).
 
 ### PowerShell Code Block
-```PowerShell
+```powerShell
 Get-ADComputer -Filter {name -like '*a*'}
 ```
 ### Results
-```PowerShell
+```powerShell
 PS C:\Users\azureadmin> Get-ADComputer -Filter {name -like '*a*'}
 
 
@@ -33,7 +33,7 @@ If you are using Windows 10, you will need to install [Remote Server Administrat
 ### Steps to run the ActiveDirectory module from Windows 10.
 1. Install RSAT
 2. 
-```PowerShell
+```powerShell
 Get-WindowsOptionalFeature -Online -FeatureName RSATClient-Roles-AD-Powershell
 ```
 3. You will now be able to use the ActiveDirectory module from your Windows 10 machine.
