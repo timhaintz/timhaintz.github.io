@@ -5,3 +5,5 @@ syntax_highlighter_opts:
   css_class: 'highlight'
 
 permalink: /blog/:year/:month/:day/:title
+
+theme: jekyll-theme-slate
