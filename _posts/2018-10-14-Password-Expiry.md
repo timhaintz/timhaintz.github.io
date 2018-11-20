@@ -29,7 +29,7 @@ The *Get-ADUser* cmdlet gets a specified user object or performs a search to get
 Specifies an Active Directory user object.
 ### *-Properties*
 Specifies the properties of the output object to retrieve from the server. Use this parameter to retrieve properties that are not included in the default set.
-### *adddays() method*
+### *[adddays() method](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.adddays?view=netframework-4.7.2)*
 By using parentheses around *(Get-ADUser -Identity azureadmin -Properties PasswordLastSet).passwordlastset)* I can call the [adddays()](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.adddays?view=netframework-4.7.2) method. Scripting Guy has a great blog post called [Adding and Subtracting Dates with PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/21/adding-and-subtracting-dates-with-powershell/) if you would like further backgound. Using adddays() allows me to take a DateTime object and add days or, using a -, subtract days.
 
 ### Conclusion
