@@ -9,12 +9,12 @@ Below is a one liner to advise when a user password will expire. I have used the
 
 ### Script
 #### PowerShell Code Block
-```PowerShell
+```powerShell
 ((Get-ADUser -Identity azureadmin -Properties PasswordLastSet).passwordlastset).adddays(42)
 ```
 
 ### Results
-```PowerShell
+```powerShell
 ((Get-ADUser -Identity azureadmin -Properties PasswordLastSet).passwordlastset).adddays(42)
 
 Saturday, November 24, 2018 9:39:35 PM
