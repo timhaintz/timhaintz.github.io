@@ -6,4 +6,4 @@ syntax_highlighter_opts:
 
 permalink: /blog/:year/:month/:day/:title
 
-theme: jekyll-theme-slate
+theme: jekyll-theme-modernist
