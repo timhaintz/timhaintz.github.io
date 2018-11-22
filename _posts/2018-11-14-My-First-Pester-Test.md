@@ -13,7 +13,7 @@ I plan on writing a lot more Pester Tests and discussing them here.
 
 ### Script
 #### PowerShell Code Block
-```PowerShell
+```powershell
 Describe "Testing Guest Account Disabled" {
     Context "Logins" {
         It "The Guest account should be disabled"{
@@ -25,7 +25,7 @@ Describe "Testing Guest Account Disabled" {
 Save the above code block with a *.Tests.ps1* extension. For this example, I have saved the file as *ActiveDirectory.Tests.ps1*
 
 ### Results
-```PowerShell
+```powershell
 Set-ADUser guest -Enabled $true
 
 Invoke-Pester C:\Users\azureadmin\ActiveDirectory.Tests.ps1

@@ -8,7 +8,7 @@ date: 2018-07-09
 
 ### Script
 #### PowerShell Code Block
-```PowerShell
+```powershell
 # PowerCLI VMware copy datastore to datastore
 Copy-DatastoreItem -Item 'vmstores:\virtualcentername@443\SAS7K_ISOs\RHEL-7\' -Destination 'vmstores:\virtualcentername@443\SSD_ISOs\' -Recurse
 

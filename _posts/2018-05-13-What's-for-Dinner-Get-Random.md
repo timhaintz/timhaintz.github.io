@@ -25,7 +25,7 @@ To my wife, Thank You for being the best Mum our kids could ask for.
 
 Now, to the code...
 ### PowerShell Code Block
-```PowerShell
+```powershell
 Get-Random @('Spaghetti Bolognaise','Tuna Pasta Bake','Steak and Vegies',
              'Silverside and Vegies','Toasted Sangas','Tacos','Chicken Pasta',
              'Chicken Pasta Bake'.'Pancakes','FODMAP Soup and Sandwiches',
@@ -40,7 +40,7 @@ As a single quote is used as an apostrophe, PowerShell thinks the string has fin
 
 Below is the error without *'Sharron''s'*.
 
-```PowerShell
+```powershell
 PS C:\Users\timha\Desktop> .\randomMeals.ps1
 At C:\Users\timha\Desktop\randomMeals.ps1:7 char:63
 + ...            'Hot Dogs','Nuggets and Chips','Nachos','Sharron's Chicken ...
@@ -67,7 +67,7 @@ To execute the script, I saved the file as a .PS1 file. As long as [PowerShell](
 
 ### Results
 
-```PowerShell
+```powershell
 PS C:\Users\timha\Desktop> .\randomMeals.ps1
 Shepherds Pie
 PS C:\Users\timha\Desktop> .\randomMeals.ps1
@@ -83,14 +83,14 @@ Sharron's Chicken and Salad
 Feel free to change the meals, or, use the idea to randomise anything.
 
 Usually, in a script like above, I would use parameter completion and use:
-```PowerShell
+```powershell
 Get-Random -InputObject @('String1','String2')
 ```
 However, this generated the error *Get-Random : Cannot validate argument on parameter 'InputObject'.*
 See [PowerShell GitHub Issue 3682](https://github.com/PowerShell/PowerShell/issues/3682) for further information.
 
 *Get-Random* has a lot of uses as shown by running [Get-Help](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-help?view=powershell-6) against it, or by viewing the documentation as linked above.
-```PowerShell
+```powershell
 Get-Help Get-Random -Full
 ```
 

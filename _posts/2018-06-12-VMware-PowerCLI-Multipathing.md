@@ -5,13 +5,13 @@ date: 2018-06-12
 ---
 ### Introduction
 
-Often it is useful to see multipathing information from your VMware hosts to your storage device(s). This could be for reduncancy testing or confirmation. You may be migrating VMware ESXi hosts or storage/SAN and need to confirm that multipathing is correct. The below script will give you the information you need. 
+Often it is useful to see multipathing information from your VMware hosts to your storage device(s). This could be for reduncancy testing or confirmation. You may be migrating VMware ESXi hosts or storage/SAN and need to confirm that multipathing is correct. The below script will give you the information you need.
 
 ### Script
 #### PowerCLI code block
-```PowerShell
-Get-Datastore esx11_local | Get-ScsiLun | 
-Select-Object VMHost,CanonicalName,@{Name='SAN ID';Expression={($_ | Get-ScsiLunPath).SanID }} | 
+```powershell
+Get-Datastore esx11_local | Get-ScsiLun |
+Select-Object VMHost,CanonicalName,@{Name='SAN ID';Expression={($_ | Get-ScsiLunPath).SanID }} |
 Sort-Object -Property VMHost | Format-Table -AutoSize
 ```
 
@@ -29,9 +29,9 @@ Using the [Automatic Variable](https://docs.microsoft.com/en-us/powershell/modul
 
 This propery is the value of the vmhba path to the specified SCSI device.
 
-[Sort-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-6) has been added in if you are checking multiple VMware hosts. 
+[Sort-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-6) has been added in if you are checking multiple VMware hosts.
 
-*Sort-Object - Property VMHost* will keep all of the VMware hosts together and sorted by name. 
+*Sort-Object - Property VMHost* will keep all of the VMware hosts together and sorted by name.
 
 Finally, [Format-Table](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table?view=powershell-6) is used to output the information as a table.
 
@@ -40,7 +40,7 @@ Finally, [Format-Table](https://docs.microsoft.com/en-us/powershell/module/micro
 
 ### Results
 I edited the results below to easily show the CanonicalName and SAN ID. The first results display when only 1 path is visible from VMware to the storage. The second results show when 4 paths are visible.
-```PowerShell
+```powershell
 # Code block run with 1 path visible
 VMHost  CanonicalName   SAN ID
 ------  -------------   ------
@@ -53,7 +53,7 @@ esx11   naa.00a06       {F4:25, F4:34, F4:05, F4:14}
 ```
 
 ### Conclusion
-The above script can be very useful to confirm that your VMware ESXi environment is able to see all of the paths that are presented. If  paths are missing, you can then troubleshoot your environment for any misconfigurations. 
+The above script can be very useful to confirm that your VMware ESXi environment is able to see all of the paths that are presented. If  paths are missing, you can then troubleshoot your environment for any misconfigurations.
 
 Hope you're having a great day and this is of use.
 

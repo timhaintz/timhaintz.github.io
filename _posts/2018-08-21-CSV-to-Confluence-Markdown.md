@@ -9,7 +9,7 @@ The below script is used to convert a CSV file into a Confluence markdown table.
 
 ### Script
 #### PowerShell Code Block
-```PowerShell
+```powershell
 $date = (Get-Date -Format yyyyMMdd)
 $input = (Get-Content $env:TEMP\$date`_AutoDoco.csv)
 $contents = $input
@@ -47,7 +47,7 @@ I ran *[Get-Service](https://docs.microsoft.com/en-us/powershell/module/microsof
 as an example to show the conversion.
 
 #### PowerShell Code Block
-```PowerShell
+```powershell
 Get-Service | Select-Object -First 5 -Property Name,DisplayName,Status,ServiceType | Export-CSV $env:TEMP\20180821_AutoDoco.csv
 
 # Contents of CSV file
@@ -73,7 +73,7 @@ Get-Service | Select-Object -First 5 -Property Name,DisplayName,Status,ServiceTy
 
 ### Cmdlets used
 ### *Out-File*
-Sends output to a file. 
+Sends output to a file.
 
 ### *-FilePath*
 Specifies the path to the output file.

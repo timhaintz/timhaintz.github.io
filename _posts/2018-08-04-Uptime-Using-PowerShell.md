@@ -8,16 +8,16 @@ There was a question on StackExchange/SuperUser, [How to know how long I have la
 
 ### Scripts
 #### PowerShell Code Block - Machine Name and Uptime
-```PowerShell
+```powershell
 Get-CimInstance -ClassName win32_operatingsystem | Select-Object csname, @{name="Uptime"; expression = {((Get-Date)-($_.lastbootuptime))}}
 
-csname Uptime             
------- ------             
+csname Uptime
+------ ------
 ca1    12.23:50:46.6914567
 ```
 
 #### PowerShell Code Block - Uptime - Days to TotalMilliseconds
-```PowerShell
+```powershell
 New-TimeSpan -start (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime -end (Get-Date)
 
 Days              : 12
@@ -34,7 +34,7 @@ TotalMilliseconds : 1122755887.1585
 ```
 
 #### PowerShell Code Block - Uptime - Days, Hours and Minutes
-```PowerShell
+```powershell
 New-TimeSpan -start (Get-CimInstance -ClassName win32_operatingsystem).LastBootUpTime -end (Get-Date) | Select-Object -Property Days,Hours,Minutes
 
 Days Hours Minutes
