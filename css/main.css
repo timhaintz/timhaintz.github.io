@@ -41,6 +41,9 @@ ul.posts li {
     list-style: none;
 }
 
+/* Syntax highlighting for Rouge from https://github.com/richleland/pygments-css */
+/* Autumn theme below */
+
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #ffffff; }
 .highlight .c { color: #aaaaaa; font-style: italic } /* Comment */
