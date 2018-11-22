@@ -42,6 +42,7 @@ ul.posts li {
 }
 
 /* Syntax highlighting for Rouge from https://github.com/richleland/pygments-css */
+/* Examples of each theme can be found here: http://richleland.github.io/pygments-css/ */
 /* Autumn theme below */
 
 .highlight .hll { background-color: #ffffcc }
