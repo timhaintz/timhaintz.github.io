@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Copying files to other machines: New-PSSession & Copy-Item"
 date: 2018-05-08
 ---

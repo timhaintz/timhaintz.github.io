@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Configuring Automatic Updates - Group Policy or Registry"
 date: 2018-06-30
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "What's for Dinner?: Get-Random"
 date: 2018-05-13
 ---

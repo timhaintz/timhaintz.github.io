@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "My First Pester Test"
 
 date: 2018-11-14

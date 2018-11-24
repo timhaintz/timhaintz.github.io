@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Password Expiry Date"
 date: 2018-10-14
 ---
