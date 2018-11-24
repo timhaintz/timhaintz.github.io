@@ -1,4 +1,4 @@
-theme: minima
+theme: jekyll-theme-tactile
 name: Tim Haintz' Blog
 markdown: kramdown
 syntax_highlighter: rouge
