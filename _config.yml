@@ -1,5 +1,14 @@
 theme: jekyll-theme-midnight
-name: Tim Haintz' Blog
+title: Tim Haintz' Blog
+description: This Blog has been created to share useful automation scripts and tips, primarily using PowerShell.
+url: timhaintz.github.io
+author: Tim Haintz
+social:
+  name: Tim Haintz
+  links:
+    - https://github.com/timhaintz
+    - https://social.technet.microsoft.com/profile/tim%20haintz/
+    - https://stackexchange.com/users/9500988/tim-haintz?tab=accounts
 markdown: kramdown
 syntax_highlighter: rouge
 syntax_highlighter_opts:
