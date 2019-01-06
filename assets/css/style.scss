@@ -3,10 +3,10 @@
 
 @import "{{ site.theme }}";
 
-nav {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 10px;
-    background: rgb(53,53,53);
-    margin: 6px auto;
+# header nav {
+                max-width: 650px;
+                margin: 0 auto;
+                padding: 0 10px;
+                background: rgb(53,53,53);
+                margin: 6px auto;
 }
