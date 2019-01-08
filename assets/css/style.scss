@@ -2,27 +2,45 @@
 ---
 
 @import "{{ site.theme }}";
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+body {
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family: 'Arial', 'Helvetica', 'Sans-Serif';
+    font-weight: bold;
+    list-style: none;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    color: #999;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-family: 'Arial', 'Helvetica', 'Sans-Serif';
+    font-size: 3em;
+}
+p {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.1em;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
 }
 
-li {
-  float: left;
+ul.posts {
+    font-size: 1.0em;
+    margin: 20px auto 40px;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
+ul.posts li {
+    list-style: none;
 }
