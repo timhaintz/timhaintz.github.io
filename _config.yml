@@ -10,8 +10,5 @@ social:
     - https://social.technet.microsoft.com/profile/tim%20haintz/
     - https://stackexchange.com/users/9500988/tim-haintz?tab=accounts
 markdown: kramdown
-syntax_highlighter: rouge
-syntax_highlighter_opts:
-  css_class: 'highlight'
 
 permalink: /blog/:year/:month/:day/:title
