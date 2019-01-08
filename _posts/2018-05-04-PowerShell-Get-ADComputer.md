@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "PowerShell ActiveDirectory Module & Get-ADComputer"
 date: 2018-05-04
 ---

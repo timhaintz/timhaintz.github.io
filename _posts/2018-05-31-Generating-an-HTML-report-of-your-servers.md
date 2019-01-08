@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Generating an HTML Report of your servers"
 date: 2018-05-31
 ---

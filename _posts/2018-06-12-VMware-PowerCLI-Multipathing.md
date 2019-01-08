@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "VMware PowerCLI - Multipathing"
 date: 2018-06-12
 ---

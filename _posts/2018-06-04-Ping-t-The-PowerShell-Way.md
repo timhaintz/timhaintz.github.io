@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Ping -t - The PowerShell Way"
 date: 2018-06-04
 ---
