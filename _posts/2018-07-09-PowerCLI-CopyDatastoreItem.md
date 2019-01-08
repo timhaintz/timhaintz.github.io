@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "PowerCLI - Copy-DatastoreItem"
 date: 2018-07-09
 ---

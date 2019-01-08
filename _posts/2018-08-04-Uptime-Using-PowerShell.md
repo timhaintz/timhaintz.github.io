@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Uptime Using PowerShell"
 date: 2018-08-04
 ---

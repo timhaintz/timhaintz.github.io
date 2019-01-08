@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "CSV to Confluence Markdown"
 date: 2018-08-21
 ---

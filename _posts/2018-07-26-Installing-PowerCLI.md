@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Installing PowerCLI"
 date: 2018-07-26
 ---

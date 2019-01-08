@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Tim Haintz Blog Launch"
 date: 2018-04-26
 ---
