@@ -35,22 +35,10 @@
    display:block;
    margin:0 0 0 0px;
    padding:3px 10px;
-   background:#ddd;
-   color:#000;
    text-decoration:none;
    line-height:1.3em;
 }
 
-#header ul li a:hover {
-   background:#369;
-   color:#fff;
-}
-#header ul li a.active,
-#header ul li a.active:hover {
-   color:#fff;
-   background:#000;
-   font-weight:bold;
-}
 /*
 li {
   float: left;
