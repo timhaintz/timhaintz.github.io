@@ -15,5 +15,3 @@ If I have made a mistake or a type (see what I did there?), please feel free to 
 If you would like to see some of my contributions to the community, please see the GitHub, TechNet and StackExchange links on the footer of each page.
 
 Thank you for stopping by. Hopefully some of the information on this site will be useful.
-
-Thanks, Tim.
