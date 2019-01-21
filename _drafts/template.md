@@ -3,17 +3,20 @@ layout: default
 title: "Template Title"
 date: 2018-10-03
 ---
-# {{ page.title }} 
+# {{ page.title }}
 
-### Introduction
+## Introduction
 
 ### Script
+
 #### PowerShell Code Block
+
 ```PowerShell
 
 ```
 
 ### Results
+
 ```PowerShell
 
 ```
@@ -21,6 +24,7 @@ date: 2018-10-03
 ### Explanation
 
 ### Cmdlets used
+
 #### *Cmdlet 1*
 
 #### *-Paramater 1*
@@ -38,9 +42,10 @@ date: 2018-10-03
 #### *-Paramater N*
 
 ### Insert Assets
+
 ![Name of Image](/assets/20180531/HTML-EmailAsFile.png)
 
-### Conclusion
+## Conclusion
 
 Hope you're having a great day and this is of use.
 
