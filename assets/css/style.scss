@@ -39,6 +39,43 @@
    line-height:1.3em;
 }
 
+.footer {
+  float:left;
+  width:100%;
+  overflow:hidden;
+}
+
+.footer ul {
+ clear: left;
+ float: left;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ position: relative;
+ background-color: #333;
+ left: 50%;
+ text-align: center;
+ padding: 20px;
+}
+
+.footer ul li{
+  display:block;
+  float:left;
+  list-style:none;
+  margin:0;
+  padding:0;
+  position:relative;
+  right:50%;
+}
+
+.footer ul li a {
+  display:block;
+  margin:0 0 0 0px;
+  padding:3px 10px;
+  text-decoration:none;
+  line-height:1.3em;
+}
+
 /*
 li {
   float: left;
