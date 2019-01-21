@@ -16,7 +16,7 @@ Installing from PowerShell via [PowerShell Gallery](https://www.powershellgaller
 ### Script
 #### PowerShell Code Block
 
-![HTML Report]({{ "/assets/20180725/1-NuGet.png" | absolute_url }})
+![NuGet](/assets/20180725/1-NuGet.png)
 ```powershell
 Find-Module -Name VMware.PowerCLI
 
