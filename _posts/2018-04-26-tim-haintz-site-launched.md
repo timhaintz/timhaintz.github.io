@@ -3,7 +3,7 @@ layout: default
 title: "Tim Haintz Blog Launch"
 date: 2018-04-26
 ---
-<h1>{{ page.title }}</h1>
+# {{ page.title }}
 
 Welcome to the launch of my Blog.
 
