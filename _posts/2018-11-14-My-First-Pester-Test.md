@@ -52,7 +52,7 @@ Passed: 1 Failed: 0 Skipped: 0 Pending: 0 Inconclusive: 0
 
 ```
 
-![Pester Test Results](/assets/20181114/1-PesterTest.png")
+![Pester Test Results](/assets/20181114/1-PesterTest.png)
 
 ### Conclusion
 This post was written as my first attempt at a Pester Test, using Active Directory. Hopefully you can think of some uses in your own environment to start running Pester Tests. I look forward to writing more about Pester and learning more about [Test-Driven Development](https://en.wikipedia.org/wiki/Test-driven_development).
