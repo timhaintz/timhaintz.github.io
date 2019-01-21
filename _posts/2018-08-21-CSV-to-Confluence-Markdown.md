@@ -68,7 +68,7 @@ Get-Service | Select-Object -First 5 -Property Name,DisplayName,Status,ServiceTy
 ```
 
 #### Confluence Wiki output
-![Confluence Wiki]({{ "/assets/20180821/1-ConfluenceWiki.png" | absolute_url }})
+![Confluence Wiki](/assets/20180821/1-ConfluenceWiki.png)
 
 
 ### Cmdlets used

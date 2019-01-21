@@ -15,10 +15,10 @@ Remove-PSSession -Session $session
 # Wait for the VM's heartbeat integration component to come up if it is enabled
 $heartbeatic  = (Get-VM | where {$_.Name -eq "$vmname"} | `
                  Get-VMIntegrationService)
-If ($heartbeatic -and ($heartbeatic.Enabled -eq $true)) 
+If ($heartbeatic -and ($heartbeatic.Enabled -eq $true))
 {
     $startTime = Get-Date
-    do 
+    do
     {
         $timeElapsed = $(Get-Date) - $startTime
         if ($($timeElapsed).TotalMinutes -ge 2)
@@ -26,9 +26,9 @@ If ($heartbeatic -and ($heartbeatic.Enabled -eq $true))
             Write-Host "Heartbeat Integration Components did not come up after 2 minutes" `
                         -MessageType Error
             throw
-        } 
+        }
         Start-Sleep -sec 1
-    } 
+    }
     until ($heartbeatic.PrimaryStatusDescription -eq "OK")
     Write-Host "$vmname has successfully rebooted. Hyper-V has received a heartbeat from $vmname. Please wait." -ForegroundColor Green
 $session = New-PSSession -VMName $vmname -Credential $domaincred
@@ -61,7 +61,7 @@ $session = New-PSSession -VMName $vmname -Credential $domaincred
 ### *-Paramater N*
 
 ### Insert Assets
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
+![HTML Report](/assets/20180531/HTML-EmailAsFile.png)
 
 ### Conclusion
 

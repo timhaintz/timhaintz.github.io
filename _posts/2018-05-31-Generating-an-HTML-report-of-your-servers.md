@@ -189,7 +189,7 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 ### Result
 A screenshot of the report from my test environment is shown below:
 
-![HTML Report]({{ "/assets/20180531/HTML-Report.png" | absolute_url }})
+![HTML Report](/assets/20180531/HTML-Report.png")
 
 This is a nice visual way of displaying if any of your servers or computers are no longer 'pingable' and may need attention.
 
@@ -207,13 +207,13 @@ and used the credentials for SendGrid. You could also use Export-Clixml and Impo
 $body = Get-Content $ouputlocation -Raw
 Send-MailMessage -Subject 'Test HTML message' -Body $body -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
+![HTML EmailAsFile](/assets/20180531/HTML-EmailAsFile.png)
 
 #### Option 2 - Using the outputted HTML file and attaching it to the email
 ```powershell
 Send-MailMessage -Subject 'Test HTML message' -Attachments $outputlocation -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFileAttached.png" | absolute_url }})
+![HTML EmailAsFile](/assets/20180531/HTML-EmailAsFileAttached.png)
 
 #### Option 3 - Storing the converted HTML as a variable and using it in the email. No file created.
 ```powershell
@@ -224,7 +224,7 @@ $body = $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 
 Send-MailMessage -Subject 'Test HTML message' -Body $($body) -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
-![HTML Report]({{ "/assets/20180531/HTML-EmailRaw.png" | absolute_url }})
+![HTML EmailRaw](/assets/20180531/HTML-EmailRaw.png")
 
 As shown above, these are a few ways you can send HTML reports via email.
 
