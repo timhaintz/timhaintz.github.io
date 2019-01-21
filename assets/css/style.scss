@@ -39,13 +39,13 @@
    line-height:1.3em;
 }
 
-#footer {
+footer {
   float:left;
   width:100%;
   overflow:hidden;
 }
 
-#footer ul {
+footer ul {
  clear: left;
  float: left;
  list-style: none;
@@ -58,7 +58,7 @@
  padding: 20px;
 }
 
-#footer ul li{
+footer ul li{
   display:block;
   float:left;
   list-style:none;
@@ -68,7 +68,7 @@
   right:50%;
 }
 
-#footer ul li a {
+footer ul li a {
   display:block;
   margin:0 0 0 0px;
   padding:3px 10px;
