@@ -224,7 +224,7 @@ $body = $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 
 Send-MailMessage -Subject 'Test HTML message' -Body $($body) -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
-![HTML EmailRaw](/assets/20180531/HTML-EmailRaw.png")
+![HTML EmailRaw](/assets/20180531/HTML-EmailRaw.png)
 
 As shown above, these are a few ways you can send HTML reports via email.
 
