@@ -24,11 +24,11 @@ Version    Name                                Repository           Description
 -------    ----                                ----------           -----------
 10.1.1.... VMware.PowerCLI                     PSGallery            This Windows PowerShell module contains VMware.PowerCLI
 ```
-![HTML Report]({{ "/assets/20180725/3-Install-Module-VMware-Warning.png" | absolute_url }})
+![VMware warning](/assets/20180725/3-Install-Module-VMware-Warning.png)
 ```powershell
 Install-Module -Name VMware.PowerCLI
 ```
-![HTML Report]({{ "/assets/20180725/4-Installation-Progress.png" | absolute_url }})
+![Installation Progress](/assets/20180725/4-Installation-Progress.png)
 
 
 ### Results
