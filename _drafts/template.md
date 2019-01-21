@@ -3,6 +3,7 @@ layout: post
 title: "Template Title"
 date: 2018-10-03
 ---
+<h1>{{ page.title }}</h1>
 
 ### Introduction
 
@@ -20,24 +21,24 @@ date: 2018-10-03
 ### Explanation
 
 ### Cmdlets used
-### *Cmdlet 1*
+#### *Cmdlet 1*
 
-### *-Paramater 1*
+#### *-Paramater 1*
 
-### *-Paramater 2*
+#### *-Paramater 2*
 
-### *-Paramater N*
+#### *-Paramater N*
 
-### *Cmdlet N*
+#### *Cmdlet N*
 
-### *-Paramater 1*
+#### *-Paramater 1*
 
-### *-Paramater 2*
+#### *-Paramater 2*
 
-### *-Paramater N*
+#### *-Paramater N*
 
 ### Insert Assets
-![HTML Report]({{ "/assets/20180531/HTML-EmailAsFile.png" | absolute_url }})
+![Name of Image](/assets/20180531/HTML-EmailAsFile.png)
 
 ### Conclusion
 
