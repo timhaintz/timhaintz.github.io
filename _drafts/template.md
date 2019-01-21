@@ -3,7 +3,7 @@ layout: default
 title: "Template Title"
 date: 2018-10-03
 ---
-{{ page.title }}
+"{{ page.title }}"
 
 ### Introduction
 
