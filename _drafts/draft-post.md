@@ -3,6 +3,7 @@ layout: post
 title: "Hyper-V Heartbeat"
 date: 2018-12-24
 ---
+# {{ page.title }}
 
 ### Introduction
 
