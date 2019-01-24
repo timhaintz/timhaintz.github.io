@@ -25,7 +25,7 @@ Below is a one liner to advise when a user password will expire. I have used the
 Saturday, November 24, 2018 9:39:35 PM
 ```
 
-### Explanation
+## Explanation
 
 ### Cmdlets used
 
