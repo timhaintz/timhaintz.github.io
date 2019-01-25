@@ -5,10 +5,12 @@ date: 2018-12-24
 ---
 # {{ page.title }}
 
-### Introduction
+## Introduction
 
 ### Script
+
 #### PowerShell Code Block
+
 ```PowerShell
 # Wait for Hyper-V heartbeat
 Start-Sleep -seconds 20
@@ -38,13 +40,15 @@ $session = New-PSSession -VMName $vmname -Credential $domaincred
 ```
 
 ### Results
+
 ```PowerShell
 
 ```
 
-### Explanation
+## Explanation
 
 ### Cmdlets used
+
 ### *Cmdlet 1*
 
 ### *-Paramater 1*
@@ -64,7 +68,7 @@ $session = New-PSSession -VMName $vmname -Credential $domaincred
 ### Insert Assets
 ![HTML Report](/assets/20180531/HTML-EmailAsFile.png)
 
-### Conclusion
+## Conclusion
 
 Hope you're having a great day and this is of use.
 
