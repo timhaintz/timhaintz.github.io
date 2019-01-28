@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hyper-V Heartbeat"
-date: 2018-12-24
+title: "Pester: Testing multiple services on a remote server"
+date: 2019-01-28
 ---
 # {{ page.title }}
 
@@ -12,29 +12,19 @@ date: 2018-12-24
 #### PowerShell Code Block
 
 ```PowerShell
-# Wait for Hyper-V heartbeat
-Start-Sleep -seconds 20
-Remove-PSSession -Session $session
-# Wait for the VM's heartbeat integration component to come up if it is enabled
-$heartbeatic  = (Get-VM | where {$_.Name -eq "$vmname"} | `
-                 Get-VMIntegrationService)
-If ($heartbeatic -and ($heartbeatic.Enabled -eq $true))
-{
-    $startTime = Get-Date
-    do
-    {
-        $timeElapsed = $(Get-Date) - $startTime
-        if ($($timeElapsed).TotalMinutes -ge 2)
-        {
-            Write-Host "Heartbeat Integration Components did not come up after 2 minutes" `
-                        -MessageType Error
-            throw
+# Thanks to: https://sqldbawithabeard.com/2017/11/28/2-ways-to-loop-through-collections-in-pester/
+$cred = Get-Credential azureadmin
+# Services we want to test for
+$services = 'Service1','Service2'
+# Fill the testCases with the values and name of the Service
+Describe "Testing critical services on ca1" {
+    $services.ForEach{
+        Context "Testing $($_)" {
+            It "The $($_) service should be running" {
+                (Invoke-Command -ComputerName ca1 -ScriptBlock {param($_) Get-Service -ServiceName $_} -Credential $cred -ArgumentList $_ ).status | Should be 'Running'
+            }
         }
-        Start-Sleep -sec 1
     }
-    until ($heartbeatic.PrimaryStatusDescription -eq "OK")
-    Write-Host "$vmname has successfully rebooted. Hyper-V has received a heartbeat from $vmname. Please wait." -ForegroundColor Green
-$session = New-PSSession -VMName $vmname -Credential $domaincred
 }
 
 ```
