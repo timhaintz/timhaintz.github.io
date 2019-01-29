@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Pester - Testing multiple services on a remote server"
 date: 2019-01-28
 ---
