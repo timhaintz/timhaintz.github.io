@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pester: Testing multiple services on a remote server"
+title: "Pester - Testing multiple services on a remote server"
 date: 2019-01-28
 ---
 # {{ page.title }}
@@ -37,23 +37,6 @@ Describe "Testing critical services on ca1" {
 
 ## Explanation
 
-### Cmdlets used
-
-### *Cmdlet 1*
-
-### *-Paramater 1*
-
-### *-Paramater 2*
-
-### *-Paramater N*
-
-### *Cmdlet N*
-
-### *-Paramater 1*
-
-### *-Paramater 2*
-
-### *-Paramater N*
 
 ### Insert Assets
 ![HTML Report](/assets/20180531/HTML-EmailAsFile.png)
