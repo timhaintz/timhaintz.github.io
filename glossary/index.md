@@ -42,6 +42,7 @@ title: Glossary of Terms
 * [Operators](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6)
 * [Operators - Comparison](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-6)
 * [Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)
+* [Pester](https://github.com/pester/Pester)
 * [Pipelines](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines?view=powershell-6)
 * [PowerCLI - VMware](https://www.vmware.com/support/developer/PowerCLI/)
 * [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-6)
