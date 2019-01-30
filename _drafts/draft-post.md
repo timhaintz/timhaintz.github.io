@@ -39,7 +39,7 @@ Describe "Testing critical services on ca1" {
 ```
 
 ## Explanation
-
+Using Pester for auditing your environment
 
 ### Insert Assets
 ![HTML Report](/assets/20180531/HTML-EmailAsFile.png)
