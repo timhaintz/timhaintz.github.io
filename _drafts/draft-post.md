@@ -7,7 +7,7 @@ date: 2019-01-28
 
 ## Introduction
 
-Something I've been looking into for Pester is Infrastructure auditing. Is something the way you expect it. I'm also looking to do this to remove machines. Something useful is to check if certain services are running on a remote machine.
+Something I've been looking into for Pester is Infrastructure auditing. Is something the way you expect it? I'm also looking to do this to remote machines. Something useful is to check if certain services are running on a remote machine.
 
 The below Pester test checks for a number of services and returns if they're running or not.
 
