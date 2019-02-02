@@ -7,7 +7,9 @@ date: 2019-01-28
 
 ## Introduction
 
-Something I've been looking into for Pester is Infrastructure auditing. Is something the way you expect it? I'm also looking to do this to remote machines. Something useful is to check if certain services are running on a remote machine.
+I've been looking into utilising Pester for infrastructure auditing. This was driven through my use of [InSpec](https://www.inspec.io/), Chef's Audit and Testing Framework. I like the idea of Pester as it is already 'built in' to the operating system (Windows 10 and Server 2016).
+
+Something useful to check is if certain services are running on a remote machine.
 
 The below Pester test checks for a number of services and returns if they're running or not.
 
