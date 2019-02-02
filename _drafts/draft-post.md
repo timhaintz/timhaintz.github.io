@@ -17,7 +17,7 @@ The below Pester test checks for a number of services and returns if they're run
 
 #### PowerShell Code Block
 
-```PowerShell
+```powershell
 # Thanks to: https://sqldbawithabeard.com/2017/11/28/2-ways-to-loop-through-collections-in-pester/
 $cred = Get-Credential azureadmin
 # Services we want to test for
@@ -37,7 +37,7 @@ Describe "Testing critical services on ca1" {
 
 ### Results
 
-```PowerShell
+```powershell
 
 ```
 

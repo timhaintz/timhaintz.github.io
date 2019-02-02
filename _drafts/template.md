@@ -11,13 +11,13 @@ date: 2018-10-03
 
 #### PowerShell Code Block
 
-```powerShell
+```powershell
 
 ```
 
 ### Results
 
-```powerShell
+```powershell
 
 ```
 
