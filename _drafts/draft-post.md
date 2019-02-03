@@ -9,7 +9,7 @@ date: 2019-01-28
 
 I've been looking into utilising Pester for infrastructure auditing. This was driven through my use of [InSpec](https://www.inspec.io/), Chef's Audit and Testing Framework. I like the idea of Pester as it is already 'built in' to the operating system (Windows 10 and Server 2016).
 
-Something useful to check is if certain services are running on a remote machine.
+Something useful to check is if specific services are running on a remote machine.
 
 The below Pester test checks for a number of services and returns if they're running or not.
 
@@ -21,7 +21,7 @@ The below Pester test checks for a number of services and returns if they're run
 # Thanks to: https://sqldbawithabeard.com/2017/11/28/2-ways-to-loop-through-collections-in-pester/
 $cred = Get-Credential azureadmin
 # Services we want to test for
-$services = 'Service1','Service2'
+$services = 'bthserv','WinRM'
 # Fill the testCases with the values and name of the Service
 Describe "Testing critical services on ca1" {
     $services.ForEach{
