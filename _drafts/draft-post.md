@@ -21,7 +21,7 @@ The below Pester test checks for a number of services and returns if they're run
 # Thanks to: https://sqldbawithabeard.com/2017/11/28/2-ways-to-loop-through-collections-in-pester/
 # Services we want to test for
 $services = 'bthserv','WinRM'
-# Fill the testCases with the values and name of the Service
+# Loop through the services
 Describe "Testing critical services on ca1" {
     $services.ForEach{
         Context "Testing $($_)" {
