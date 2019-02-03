@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Pester - Testing multiple services on a remote server"
-date: 2019-01-28
+date: 2019-02-03
 ---
 # {{ page.title }}
 
@@ -19,7 +19,6 @@ The below Pester test checks for a number of services and returns if they're run
 
 ```powershell
 # Thanks to: https://sqldbawithabeard.com/2017/11/28/2-ways-to-loop-through-collections-in-pester/
-$cred = Get-Credential azureadmin
 # Services we want to test for
 $services = 'bthserv','WinRM'
 # Fill the testCases with the values and name of the Service
