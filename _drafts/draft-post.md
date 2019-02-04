@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Pester - Testing multiple services on a remote server"
-date: 2019-02-03
+date: 2019-02-04
 ---
 # {{ page.title }}
 
@@ -42,7 +42,8 @@ Describe "Testing critical services on ca1" {
 
 ## Explanation
 
-Using Pester for auditing your environment
+You can add the services you choose to be tested. This will loop through as many services as you chooose.
+You could also add another loop around this one to change the server name. You could then check multiple servers for the services.
 
 ### Insert Assets
 
