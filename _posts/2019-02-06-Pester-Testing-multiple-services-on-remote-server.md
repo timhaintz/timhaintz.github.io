@@ -17,7 +17,7 @@ Thanks to [SQL DBA with A Beard](https://sqldbawithabeard.com/2017/11/28/2-ways-
 
 ### Script
 
-#### PowerShell Code Block
+#### Pester Code Block
 
 ```powershell
 # Thanks to: https://sqldbawithabeard.com/2017/11/28/2-ways-to-loop-through-collections-in-pester/
