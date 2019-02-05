@@ -36,18 +36,16 @@ Describe "Testing critical services on ca1" {
 
 ### Results
 
-```powershell
+When a service is off, the below failure is displayed.
+![Pester Multiple Services - Remote Fail](/assets/20180531/HTML-EmailAsFile.png)
 
-```
+When the services are all running, the below success is displayed.
+![Pester Multiple Services - Remote Pass](/assets/20180531/HTML-EmailAsFile.png)
 
 ## Explanation
 
 You can add the services you choose to be tested. This will loop through as many services as you chooose.
 You could also add another loop around this one to change the server name. You could then check multiple servers for the services.
-
-### Insert Assets
-
-![HTML Report](/assets/20180531/HTML-EmailAsFile.png)
 
 ## Conclusion
 
