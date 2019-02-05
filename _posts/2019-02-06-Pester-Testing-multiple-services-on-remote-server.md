@@ -38,11 +38,11 @@ Describe "Testing critical services on ca1" {
 
 ### Results
 
-#### When a service is off, the below failure is displayed.
+#### When a service is off, the below failure is displayed
 
 ![Pester Multiple Services - Remote Fail](/assets/20190206/1-PesterMultipleServicesRemoteF.png)
 
-#### When the services are all running, the below success is displayed.
+#### When the services are all running, the below success is displayed
 
 ![Pester Multiple Services - Remote Pass](/assets/20190206/2-PesterMultipleServicesRemoteP.png)
 
