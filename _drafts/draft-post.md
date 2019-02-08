@@ -7,7 +7,9 @@ date: 2019-02-08
 
 ## Introduction
 
+In April 2018, I started this blog. I started it so that I could document some of the things I was interested in and also to share knowledge. I have been involved with PowerShell since 2009 and started to 'give back' to the community via [Stack Exchange](https://stackexchange.com/users/9500988/tim-haintz?tab=accounts) & [Microsoft TechNet](https://social.technet.microsoft.com/profile/tim%20haintz/) in late 2016. Helping out via the forums led me into writing this blog.
 
+For the past 10 months, I have been writing and publishing posts, not really 'realeasing' it publicly though. I have also been learning CSS and desining the sight so it was more than just black text on a white background. Coleagues and friends providing feedback.
 
 ### Script
 
