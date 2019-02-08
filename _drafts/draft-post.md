@@ -18,7 +18,18 @@ The below scripts show the value of community and sharing. My original script is
 #### Original Post Pester Code Block
 
 ```powershell
-
+# Services we want to test for
+$services = 'bthserv','WinRM'
+# Loop through the services
+Describe "Testing critical services on ca1" {
+    $services.ForEach{
+        Context "Testing $($_)" {
+            It "The $($_) service should be running" {
+                (Invoke-Command -ComputerName ca1 -ScriptBlock {param($_) Get-Service -ServiceName $_} -ArgumentList $_ ).status | Should be 'Running'
+            }
+        }
+    }
+}
 ```
 
 #### [SQLDBAwithbeard suggestion Pester Code Block](https://twitter.com/sqldbawithbeard/status/1092885384772624384)
