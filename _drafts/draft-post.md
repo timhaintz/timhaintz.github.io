@@ -7,11 +7,11 @@ date: 2019-02-10
 
 ## Introduction
 
-In April 2018, I started this blog. I started it so that I could document some of the things I was interested in and also to share knowledge. I have been involved with PowerShell since 2009 and started to 'give back' to the community via [Stack Exchange](https://stackexchange.com/users/9500988/tim-haintz?tab=accounts) & [Microsoft TechNet](https://social.technet.microsoft.com/profile/tim%20haintz/) in late 2016. Helping out via the forums led me into writing this blog.
+I started this blog in April 2018 to document some of the things I was interested in and also to share knowledge. I have been using PowerShell since 2009 and started to *give back* to the community via [Stack Exchange](https://stackexchange.com/users/9500988/tim-haintz?tab=accounts) & [Microsoft TechNet](https://social.technet.microsoft.com/profile/tim%20haintz/) in late 2016. Helping via the forums led me into writing this blog.
 
-For the past 10 months, I have been writing and publishing posts, not 'realeasing' them publicly. On the 6th of February this year, I decided to use [Twitter](https://twitter.com/timhaintz/status/1092873004978122752) to announce my new blog post. What a great idea that was! Within an hour, I had feedback not just from the PowerShell community, but from the exact people that have unknowingly helped me out over the years from their own blogs, websites and articles. [SQLDBAwithbeard](https://twitter.com/sqldbawithbeard) & [Mike F Robbins](https://twitter.com/mikefrobbins) both provided valuable ideas.
+For the past 10 months, I have been writing and publishing posts, not *realeasing* them publicly. On the 6th of February this year, I decided to use my newly created Twitter account to announce my [new blog post](https://twitter.com/timhaintz/status/1092873004978122752). What a great idea that was! Within an hour, I had feedback not just from the PowerShell community, but from the exact people that have unknowingly helped me out over the years from their own blogs, websites and articles. [SQLDBAwithbeard](https://twitter.com/sqldbawithbeard) & [Mike F Robbins](https://twitter.com/mikefrobbins) both provided valuable ideas.
 
-The below scripts show the value of community and sharing. My original script is shown first. The *SQLDBAwithbeard* and *Mike F Robbins* suggestions are also shown.
+The below scripts show the value of community and sharing. My original script is shown first. The *SQLDBAwithbeard* and *Mike F Robbins* suggestions are shown after.
 
 ### Script
 
