@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "The Joy of Community"
-date: 2019-02-08
+date: 2019-02-10
 ---
 # {{ page.title }}
 
@@ -72,10 +72,17 @@ Describe "Testing critical services on ca1" {
 #### [Mike F Robbins suggestion Pester Code Block](https://mikefrobbins.com/2016/12/09/loop-through-a-collection-of-items-with-the-pester-testcases-parameter-instead-of-using-a-foreach-loop/)
 
 ```powershell
-
+Describe 'Testing critical services on ca1' {
+    $services = @{service = 'bthserv'}, @{service = 'WinRM'}
+    It "The <service> Service on ca1 Should Be Running" -TestCases $services {
+        param($service)
+        (Get-Service -ComputerName ca1 -Name $service).Status |
+        Should Be 'Running'
+    }
+}
 ```
 
-### Results
+### Mike F Robbins Results
 
 #### When a service is off, the below failure is displayed
 
