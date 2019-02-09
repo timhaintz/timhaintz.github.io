@@ -44,7 +44,7 @@ Describe "Testing critical services on ca1" {
 
 #### [SQLDBAwithbeard suggestion Pester Code Block](https://twitter.com/sqldbawithbeard/status/1092885384772624384)
 
-Please note, the below syntax `-Be` requires [Pester v4](https://github.com/pester/Pester/wiki/Should).
+Please note, the below syntax `Should -Be` requires [Pester v4](https://github.com/pester/Pester/wiki/Should).
 
 ```powershell
 # Services we want to test for
