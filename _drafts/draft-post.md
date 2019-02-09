@@ -32,11 +32,42 @@ Describe "Testing critical services on ca1" {
 }
 ```
 
+### Original Results
+
+#### When a service is off, the below failure is displayed
+
+![Pester Multiple Services - Remote Fail](/assets/20190206/1-PesterMultipleServicesRemoteF.png)
+
+#### When the services are all running, the below success is displayed
+
+![Pester Multiple Services - Remote Pass](/assets/20190206/2-PesterMultipleServicesRemoteP.png)
+
 #### [SQLDBAwithbeard suggestion Pester Code Block](https://twitter.com/sqldbawithbeard/status/1092885384772624384)
 
-```powershell
+Please note, the below syntax `-Be` requires [Pester v4](https://github.com/pester/Pester/wiki/Should).
 
+```powershell
+# Services we want to test for
+$services = Get-Service 'bthserv','WinRM' -Computername ca1
+# Loop through the services
+Describe "Testing critical services on ca1" {
+    $services.ForEach{
+    It " $($PsItem.Name) should be running" {
+        $Psitem.Status | Should -Be 'Running' -Because 'these are critical services on this server.'
+        }
+    }
+}
 ```
+
+### SQLDBAwithBeard Results
+
+#### When a service is off, the below failure is displayed
+
+![Pester Multiple Services - Remote Fail](/assets/20190206/1-PesterMultipleServicesRemoteF.png)
+
+#### When the services are all running, the below success is displayed
+
+![Pester Multiple Services - Remote Pass](/assets/20190206/2-PesterMultipleServicesRemoteP.png)
 
 #### [Mike F Robbins suggestion Pester Code Block](https://mikefrobbins.com/2016/12/09/loop-through-a-collection-of-items-with-the-pester-testcases-parameter-instead-of-using-a-foreach-loop/)
 
