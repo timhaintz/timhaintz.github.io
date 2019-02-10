@@ -36,11 +36,11 @@ Describe "Testing critical services on ca1" {
 
 #### When a service is off, the below failure is displayed
 
-![Pester Multiple Services - Remote Fail](/assets/20190206/1-PesterMultipleServicesRemoteF.png)
+![Pester Multiple Services - Remote Fail](/assets/20190210/1-PesterMultipleServicesRemoteF.png)
 
 #### When the services are all running, the below success is displayed
 
-![Pester Multiple Services - Remote Pass](/assets/20190206/2-PesterMultipleServicesRemoteP.png)
+![Pester Multiple Services - Remote Pass](/assets/20190210/2-PesterMultipleServicesRemoteP.png)
 
 #### [SQLDBAwithbeard suggestion Pester Code Block](https://twitter.com/sqldbawithbeard/status/1092885384772624384)
 
@@ -63,11 +63,11 @@ Describe "Testing critical services on ca1" {
 
 #### When a service is off, the below failure is displayed
 
-![Pester Multiple Services - Remote Fail](/assets/20190206/1-PesterMultipleServicesRemoteF.png)
+![Pester Multiple Services - SQLDBAwithBeard - Remote Fail](/assets/20190210/1-PesterMultipleServicesRemoteSQLDBAF.png)
 
 #### When the services are all running, the below success is displayed
 
-![Pester Multiple Services - Remote Pass](/assets/20190206/2-PesterMultipleServicesRemoteP.png)
+![Pester Multiple Services - SQLDBAwithBeard - Remote Pass](/assets/20190210/2-PesterMultipleServicesRemoteSQLDBAP.png)
 
 #### [Mike F Robbins suggestion Pester Code Block](https://mikefrobbins.com/2016/12/09/loop-through-a-collection-of-items-with-the-pester-testcases-parameter-instead-of-using-a-foreach-loop/)
 
@@ -86,11 +86,11 @@ Describe 'Testing critical services on ca1' {
 
 #### When a service is off, the below failure is displayed
 
-![Pester Multiple Services - Remote Fail](/assets/20190206/1-PesterMultipleServicesRemoteF.png)
+![Pester Multiple Services - Mike F Robbins - Remote Fail](/assets/20190210/1-PesterMultipleServicesRemoteMikeFF.png)
 
 #### When the services are all running, the below success is displayed
 
-![Pester Multiple Services - Remote Pass](/assets/20190206/2-PesterMultipleServicesRemoteP.png)
+![Pester Multiple Services - Mike F Robbins - Remote Pass](/assets/20190210/2-PesterMultipleServicesRemoteMikeFP.png)
 
 ## Explanation
 
