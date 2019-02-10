@@ -15,7 +15,7 @@ The below scripts show the value of community and sharing. My original script is
 
 ### Script
 
-#### Original Post Pester Code Block
+### Original Post - Pester Code Block
 
 ```powershell
 # Services we want to test for
@@ -42,7 +42,7 @@ Describe "Testing critical services on ca1" {
 
 ![Pester Multiple Services - Remote Pass](/assets/20190210/2-PesterMultipleServicesRemoteP.png)
 
-#### [SQLDBAwithbeard suggestion Pester Code Block](https://twitter.com/sqldbawithbeard/status/1092885384772624384)
+### [SQLDBAwithbeard suggestion - Pester Code Block](https://twitter.com/sqldbawithbeard/status/1092885384772624384)
 
 Please note, the below syntax `Should -Be` requires [Pester v4](https://github.com/pester/Pester/wiki/Should).
 
@@ -69,7 +69,7 @@ Describe "Testing critical services on ca1" {
 
 ![Pester Multiple Services - SQLDBAwithBeard - Remote Pass](/assets/20190210/2-PesterMultipleServicesRemoteSQLDBAP.png)
 
-#### [Mike F Robbins suggestion Pester Code Block](https://mikefrobbins.com/2016/12/09/loop-through-a-collection-of-items-with-the-pester-testcases-parameter-instead-of-using-a-foreach-loop/)
+### [Mike F Robbins suggestion - Pester Code Block](https://mikefrobbins.com/2016/12/09/loop-through-a-collection-of-items-with-the-pester-testcases-parameter-instead-of-using-a-foreach-loop/)
 
 ```powershell
 Describe 'Testing critical services on ca1' {
