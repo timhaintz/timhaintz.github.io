@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Template Title"
+title: "Azure Automated Test Environment"
 date: 2019-02-15
 ---
 # {{ page.title }}
