@@ -193,11 +193,11 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 
 A screenshot of the report from my test environment is shown below:
 
-![HTML Report](/assets/20180531/HTML-Report.png")
+![HTML Report](/assets/20180531/HTML-Report.png)
 
 This is a nice visual way of displaying if any of your servers or computers are no longer 'pingable' and may need attention.
 
-### UPDATE:
+### UPDATE
 
 I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) by @ottafish how to send the HTML report via email. Using a very helpful post from [A Guide to Microsoft Products](http://guidestomicrosoft.com/2016/02/17/configure-a-smtp-server-in-azure/) I setup a SendGrid SMTP relay in Azure. The script using [Send-MailMessage](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-5.1) and [SendGrid](https://sendgrid.com/) is below. I have added a screen shot of the email I received after each option of code.
 
@@ -223,6 +223,7 @@ Send-MailMessage -Subject 'Test HTML message' -Body $body -BodyAsHtml -Credentia
 ```powershell
 Send-MailMessage -Subject 'Test HTML message' -Attachments $outputlocation -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
+
 ![HTML EmailAsFile](/assets/20180531/HTML-EmailAsFileAttached.png)
 
 #### Option 3 - Storing the converted HTML as a variable and using it in the email. No file created.
