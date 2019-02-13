@@ -3,7 +3,9 @@ layout: default
 title: "Copying files to other machines: New-PSSession & Copy-Item"
 date: 2018-05-08
 ---
-### Introduction
+# {{ page.title }}
+
+## Introduction
 
 On occassion, files need to be copied from one machine to another. This can include times where the machines are in different domains, or elevated permissions are required to fulfil the task. There are quite a few methods to do this.
 
@@ -44,12 +46,15 @@ Mode                LastWriteTime         Length Name
 -a----         5/8/2018   8:32 PM              0 Test4.txt
 ```
 To copy the folders and files, the below PowerShell commands are run.
+
 ### PowerShell Code Block
+
 ```powershell
 $credential = Get-Credential timhaintz\azureadmin
 $session = New-PSSession -ComputerName dc1 -Credential $credential
 Copy-Item -Recurse "C:\Users\azureadmin\test" -Destination "C:\test\" -ToSession $Session
 ```
+
 The first line $credential = Get-Credential...... prompts for a username and password. In a future blog, I will use [Export-Clixml](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-clixml?view=powershell-6) to export the credentials into an XML file, so as to remove the need for user interaction.
 
 The New-PSSession example is taken straight from Microsoft's documenation, as is Copy-Item.
@@ -61,6 +66,7 @@ PS C:\Users\azureadmin\test> Enter-PSSession -Session $session
 
 [dc1]: PS C:\test>
 ```
+
 From this session, you can check if the files and folders copied correctly.
 
 ```powershell
@@ -104,6 +110,7 @@ Mode                LastWriteTime         Length Name
 -a----         5/8/2018   8:32 PM              0 Test3.txt
 -a----         5/8/2018   8:32 PM              0 Test4.txt
 ```
+
 As displayed above, the folders and files from the local machine are successfully copied to the destination machine using a session.
 
 Hope this is of use.
