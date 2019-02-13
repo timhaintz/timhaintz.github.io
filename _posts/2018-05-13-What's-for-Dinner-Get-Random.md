@@ -3,7 +3,9 @@ layout: default
 title: "What's for Dinner?: Get-Random"
 date: 2018-05-13
 ---
-### Introduction
+# {{ page.title }}
+
+## Introduction
 
 Often, as a family, it gets to 5:00PM and the inevitable question is asked.
 
@@ -24,7 +26,9 @@ for everything you do that isn't recognised and Thank You for being you!
 To my wife, Thank You for being the best Mum our kids could ask for.
 
 Now, to the code...
+
 ### PowerShell Code Block
+
 ```powershell
 Get-Random @('Spaghetti Bolognaise','Tuna Pasta Bake','Steak and Vegies',
              'Silverside and Vegies','Toasted Sangas','Tacos','Chicken Pasta',
@@ -35,6 +39,7 @@ Get-Random @('Spaghetti Bolognaise','Tuna Pasta Bake','Steak and Vegies',
              'Hot Dogs','Nuggets and Chips','Nachos','Sharron''s Chicken and Salad',
              'Chicken and Leek Pie','Shepherds Pie')
 ```
+
 Those with a keen eye may have noticed *Sharron''s Chicken and Salad*.
 As a single quote is used as an apostrophe, PowerShell thinks the string has finished at *'Sharron'*. Therefore, we need to use two single quotes side by side.
 
@@ -58,6 +63,7 @@ Missing closing ')' in subexpression.
     + CategoryInfo          : ParserError: (:) [], ParseException
     + FullyQualifiedErrorId : UnexpectedToken
 ```
+
 Single quotes inside single quotes cannot be escaped by using the the normal escape character, the backtick `.
 A work around could be to use double quotes *"Sharron's Chicken and Salad"* around the string.
 For more information on this, [Richard Mueller's PowerShell Escape article](http://www.rlmueller.net/PowerShellEscape.htm) has a good explanation of escaping characters.
@@ -83,13 +89,16 @@ Sharron's Chicken and Salad
 Feel free to change the meals, or, use the idea to randomise anything.
 
 Usually, in a script like above, I would use parameter completion and use:
+
 ```powershell
 Get-Random -InputObject @('String1','String2')
 ```
+
 However, this generated the error *Get-Random : Cannot validate argument on parameter 'InputObject'.*
 See [PowerShell GitHub Issue 3682](https://github.com/PowerShell/PowerShell/issues/3682) for further information.
 
 *Get-Random* has a lot of uses as shown by running [Get-Help](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-help?view=powershell-6) against it, or by viewing the documentation as linked above.
+
 ```powershell
 Get-Help Get-Random -Full
 ```
