@@ -3,12 +3,15 @@ layout: default
 title: "Generating an HTML Report of your servers"
 date: 2018-05-31
 ---
+# {{ page.title }}
+
 ### Introduction
 
 Below is an example of some of the data that you can retrieve from the Get-ADComputer cmdlet about a computer/server. I'm outputting this information to a HTML document.
 This script is also slightly interactive as it uses [Write-Host](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-6). This is for visual feedback in an interactive environment. Note that Write-Host isn't able to output to another script or be re-used. Inventor of PowerShell, Jeffrey Snover, has a great article [here](http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/) about using Write-Host.
 
 ### PowerShell Script
+
 The script is below. Copy it and save it as a .PS1 file. After the script, I break down what each section of the script does.
 
 ```powershell
@@ -106,16 +109,16 @@ $date = (Get-Date -Format yyyyMMdd)
 $outputlocation = "$env:TEMP\$date`_test.html"
 ```
 
-### Capturing the Servers and Their Properties Section
+### Capturing the Servers and their Properties Section
 
 Get-ADComputer can't search multiple OUs with the -SearchBase parameter. For this reason, we have to store the OUs as separate strings and then run them through the [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6) cmdlet.
 
-$ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com' is where I have the computers stored in Active Directory.
+`$ous = 'CN=Computers,DC=timhaintz,DC=com','OU=Domain Controllers,DC=timhaintz,DC=com'` is where I have the computers stored in Active Directory.
 
-$servers = $ous | ForEach-Object { Get-ADComputer -Filter * -Properties * -SearchBase $_ } searches through each of the OUs for the machines I'm looking for and stores them in the $servers variable.
-Get-ADComputer cmdlet, I'm using -Filter * and -Properties * to retrieve all machines and also all information about those machines.
+`$servers = $ous | ForEach-Object { Get-ADComputer -Filter * -Properties * -SearchBase $_ }` searches through each of the OUs for the machines I'm looking for and stores them in the $servers variable.
+Get-ADComputer cmdlet, I'm using `-Filter * and -Properties *` to retrieve all machines and also all information about those machines.
 
-$servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'
+`$servers = $servers | Where-Object{$_.dnshostname} | Sort-Object -Property 'CN'`
 Checks that the computer object contains a dnshostname value. I also use [Sort-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-6) to sort the list of servers from their CN value or server name.
 
 Write-Host is being used to present feedback to the user running the script.
@@ -187,6 +190,7 @@ $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 ```
 
 ### Result
+
 A screenshot of the report from my test environment is shown below:
 
 ![HTML Report](/assets/20180531/HTML-Report.png")
@@ -194,28 +198,35 @@ A screenshot of the report from my test environment is shown below:
 This is a nice visual way of displaying if any of your servers or computers are no longer 'pingable' and may need attention.
 
 ### UPDATE:
+
 I was [asked](https://github.com/timhaintz/timhaintz.github.io/issues/2) by @ottafish how to send the HTML report via email. Using a very helpful post from [A Guide to Microsoft Products](http://guidestomicrosoft.com/2016/02/17/configure-a-smtp-server-in-azure/) I setup a SendGrid SMTP relay in Azure. The script using [Send-MailMessage](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-5.1) and [SendGrid](https://sendgrid.com/) is below. I have added a screen shot of the email I received after each option of code.
 
 For $cred, I used:
+
 ```powershell
 $cred = Get-Credential
 ```
+
 and used the credentials for SendGrid. You could also use Export-Clixml and Import-Clixml if you wanted to automate entering credentials. I will be doing a blog post in the coming weeks around Export-Clixml and Import-Clixml.
 
 #### Option 1 - Using the outputted HTML file and creating HTML email
+
 ```powershell
 $body = Get-Content $ouputlocation -Raw
 Send-MailMessage -Subject 'Test HTML message' -Body $body -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
+
 ![HTML EmailAsFile](/assets/20180531/HTML-EmailAsFile.png)
 
 #### Option 2 - Using the outputted HTML file and attaching it to the email
+
 ```powershell
 Send-MailMessage -Subject 'Test HTML message' -Attachments $outputlocation -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
 ![HTML EmailAsFile](/assets/20180531/HTML-EmailAsFileAttached.png)
 
 #### Option 3 - Storing the converted HTML as a variable and using it in the email. No file created.
+
 ```powershell
 # If you don't want to store a file at all, modify the last part of the script to as below
 $body = $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
@@ -224,6 +235,7 @@ $body = $frag | ConvertTo-Html -Title 'Failed PING of Servers' `
 
 Send-MailMessage -Subject 'Test HTML message' -Body $($body) -BodyAsHtml -Credential $cred -From <from@address.com> -To <to@address.com> -SmtpServer smtp.sendgrid.net -UseSsl -Port 587
 ```
+
 ![HTML EmailRaw](/assets/20180531/HTML-EmailRaw.png)
 
 As shown above, these are a few ways you can send HTML reports via email.
