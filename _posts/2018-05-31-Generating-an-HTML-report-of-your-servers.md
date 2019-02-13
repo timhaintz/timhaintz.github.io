@@ -5,9 +5,9 @@ date: 2018-05-31
 ---
 # {{ page.title }}
 
-### Introduction
+## Introduction
 
-Below is an example of some of the data that you can retrieve from the Get-ADComputer cmdlet about a computer/server. I'm outputting this information to a HTML document.
+Below is an example of some of the data that you can retrieve from the [Get-ADComputer](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-adcomputer?view=win10-ps) cmdlet about a computer/server. I'm outputting this information to a HTML document.
 This script is also slightly interactive as it uses [Write-Host](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-host?view=powershell-6). This is for visual feedback in an interactive environment. Note that Write-Host isn't able to output to another script or be re-used. Inventor of PowerShell, Jeffrey Snover, has a great article [here](http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/) about using Write-Host.
 
 ### PowerShell Script
