@@ -3,7 +3,10 @@ layout: default
 title: "Installing PowerCLI"
 date: 2018-07-26
 ---
+# {{ page.title }}
+
 ### Introduction
+
 VMware [PowerCLI](https://www.vmware.com/support/developer/PowerCLI/) is a command-line and scripting tool built on Windows Powershell.
 
 To install PowerCLI, you first need to download it. As of this writing, the current version is [VMware PowerCLI 10.1.1](https://code.vmware.com/web/dp/tool/vmware-powercli/10.1.1).
@@ -14,9 +17,11 @@ The [VMware PowerCLI Blog](https://blogs.vmware.com/PowerCLI/2017/04/powercli-in
 Installing from PowerShell via [PowerShell Gallery](https://www.powershellgallery.com/) is below.
 
 ### Script
+
 #### PowerShell Code Block
 
 ![NuGet](/assets/20180725/1-NuGet.png)
+
 ```powershell
 Find-Module -Name VMware.PowerCLI
 
@@ -24,14 +29,17 @@ Version    Name                                Repository           Description
 -------    ----                                ----------           -----------
 10.1.1.... VMware.PowerCLI                     PSGallery            This Windows PowerShell module contains VMware.PowerCLI
 ```
+
 ![VMware warning](/assets/20180725/3-Install-Module-VMware-Warning.png)
+
 ```powershell
 Install-Module -Name VMware.PowerCLI
 ```
+
 ![Installation Progress](/assets/20180725/4-Installation-Progress.png)
 
-
 ### Results
+
 ```powershell
 Get-Module -Name VMware* -ListAvailable
 
@@ -65,23 +73,35 @@ Script     6.5.1.7... VMware.VumAutomation                {Add-EntityBaseline, C
 ### Explanation
 
 ### *[Find-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/find-module?view=powershell-6)*
+
 Finds modules from an online gallery that match specified criteria. By default, it refers to the [PowerShell Gallery](https://www.powershellgallery.com/). [Register-PSRepository](https://docs.microsoft.com/en-us/powershell/module/powershellget/register-psrepository?view=powershell-6) allows you to add additional galleries.
+
 #### *-Name*
+
 The name of the module you are looking for.
 
 ### *[Install-Module](https://docs.microsoft.com/en-us/powershell/module/powershellget/install-module?view=powershell-6)*
+
 Downloads modules from an online gallery and installs them on the local computer. By default, it refers to the [PowerShell Gallery](https://www.powershellgallery.com/).
+
 ### *-Name*
+
 Specify the exact names of the modules to install. Supports wildcard characters.
 
 ### *[Get-Module](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-module?view=powershell-6)*
+
 Gets the modules that have been imported into the current session.
+
 ### *-Name*
+
 Specify names or name patterns of modules. Supports wilcard characters.
+
 ### *-ListAvailable*
+
 Gets all installed modules listed in [PSModulePath](https://docs.microsoft.com/en-us/powershell/developer/module/modifying-the-psmodulepath-installation-path) environment variable.
 
 ### Conclusion
+
 Once you have installed PowerCLI as above, connect to your VMware environment using [Connect-VIServer](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Connect-VIServer.html). Once credentials have been passed, you are able to manage your VMware environment using PowerCLI.
 
 Hope you're having a great day and this is of use.
