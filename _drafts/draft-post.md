@@ -13,7 +13,7 @@ With the adoption of Infrastructure as Code, I noticed there wasn't a base level
 
 I created my first Open Source project to solve this problem. Once you have an Azure account, [Azure Automated Test Environment](https://github.com/timhaintz/aate) asks you to enter a username and password. AATE then deploys and builds everything you need as shown in the screen shot below.
 
-![All resources](/assets/allResources.png)
+![All resources](/assets/20190220/allResources.png)
 
 ### History
 
