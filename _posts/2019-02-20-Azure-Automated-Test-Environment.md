@@ -11,13 +11,13 @@ How would you like to enter a username/password and a fully built Active Directo
 
 With the adoption of Infrastructure as Code, I noticed there wasn't a base level of automation to setup an environment from scratch. A true green fields deployment. [Desired State Configuration](https://docs.microsoft.com/en-us/powershell/dsc/overview/overview) (DSC) assumes you already have an environement setup. [Azure Resource Manager Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates) (ARM Templates) assume you have an environment to deploy to. The environment needs a subscription, resource group, storage, networking, credential storage etc.
 
-I created my first Open Source project to solve this problem. Once you have an Azure account, [Azure Automated Test Environment](https://github.com/timhaintz/aate) asks you to enter a username and password. AATE then deploys and builds everything you need as shown in the screen shot below.
+I created my first Open Source project to solve this problem. Once you have an Azure account, AATE asks you to enter a username and password. AATE then deploys and builds everything you need as shown in the screen shot below.
 
 ![All resources](/assets/20190220/allResources.png)
 
 ### History
 
-I originally wrote all of the DSC sections of [Azure Automated Test Environment](https://github.com/timhaintz/aate) (AATE) using [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/). Managing the base OS creation using the [Microsoft Deployment Toolkit](https://www.microsoft.com/en-au/download/details.aspx?id=54259) was time consuming. [Johan Arwidmark](https://deploymentresearch.com/) has some great posts about how to deploy images. I used a lot of Johan's blogs and videos to get my Hyper-V environment up and running.
+I originally wrote all of the DSC sections of AATE using [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/). Managing the base OS creation using the [Microsoft Deployment Toolkit](https://www.microsoft.com/en-au/download/details.aspx?id=54259) was time consuming. [Johan Arwidmark](https://deploymentresearch.com/) has some great posts about how to deploy images. I used a lot of Johan's blogs and videos to get my Hyper-V environment up and running.
 
 I realised that using Hyper-V wasn't as easily sharable as using Azure. Base OS images were needed to be built locally before being able to deploy the DSC components. I embarked on re-factoring my Hyper-V scripts to deploy in Azure, that's where AATE was born.
 
