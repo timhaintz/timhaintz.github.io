@@ -37,7 +37,7 @@ If you are looking to create complex labs, please see [AutomatedLab](https://git
 
 ## Conclusion and Next Steps
 
-Please feel free to provide feedback. Happy to accept Issues and Pull Requests. Also happy for it to be expanded upon to peform further tasks. Something I would like to do in the future is also deploy a Linux server and use DSC to deploy a webserver and simple webpage using a certificate generated from the CA. The idea is for it to remain simple to consume for end users. Enter a username and password then explore and experiment in Azure.
+Please feel free to provide feedback. Happy to accept Issues and Pull Requests. Also happy for it to be expanded upon to peform further tasks. Something I would like to do in the future is also deploy a Linux server and use DSC to deploy a webserver and simple webpage using a certificate generated from the CA. The idea is for it to remain simple to consume for end users. Enter a username/password then explore and experiment in Azure.
 
 Again, thank you to [Dan Scott-Raynsford](https://twitter.com/dscottraynsford) for helping me out and being so welcoming. That started my community contributions and has led me down the path of writing this blog. Thank you also to everyone that wrote the posts on [URLs used to build initial environment](https://github.com/timhaintz/aate#urls-used-to-build-initial-environment).
 
