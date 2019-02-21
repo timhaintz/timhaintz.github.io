@@ -3,12 +3,16 @@ layout: default
 title: "CSV to Confluence Markdown"
 date: 2018-08-21
 ---
+# {{ page.title }}
 
-### Introduction
+## Introduction
+
 The below script is used to convert a CSV file into a Confluence markdown table. The Confluence markdown table format used is Table 1 from [Confluence Wiki Markup](https://confluence.atlassian.com/doc/confluence-wiki-markup-251003035.html#ConfluenceWikiMarkup-Tables).
 
 ### Script
+
 #### PowerShell Code Block
+
 ```powershell
 $date = (Get-Date -Format yyyyMMdd)
 $input = (Get-Content $env:TEMP\$date`_AutoDoco.csv)
@@ -37,16 +41,20 @@ foreach($content in $contents)
 }
 #end region
 ```
+
 ### Explanation
+
 The conversion takes a CSV file *$input = (Get-Content $env:TEMP\$date`_AutoDoco.csv)* and then uses string manipulation to format the content. If the content is a header *$header = $contents[0]* & *if($content -eq $header)* it will replace *"* with *||*, replace the *,* with blank and then remove any instance of *||||* and replace it with *||*. *[Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)* is then used to write the string to a file at *$outputlocation* and use *$content* as the InputObject. *Out-File* creates a new line by default.
 
 If the content is not a header, the else statement is invoked and replaces " with \| . The comma is replaced with blank and any instance of \|\| is replaced with a single \| . *[Out-File](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file?view=powershell-6)* is then used to write the string to a file at *$outputlocation* and use *$content* as the InputObject. *Out-File* creates a new line by default.
 
 ### Example
+
 I ran *[Get-Service](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-service?view=powershell-6)*
 as an example to show the conversion.
 
 #### PowerShell Code Block
+
 ```powershell
 Get-Service | Select-Object -First 5 -Property Name,DisplayName,Status,ServiceType | Export-CSV $env:TEMP\20180821_AutoDoco.csv
 
@@ -68,38 +76,49 @@ Get-Service | Select-Object -First 5 -Property Name,DisplayName,Status,ServiceTy
 ```
 
 #### Confluence Wiki output
+
 ![Confluence Wiki](/assets/20180821/1-ConfluenceWiki.png)
 
-
 ### Cmdlets used
+
 ### *Out-File*
+
 Sends output to a file.
 
 ### *-FilePath*
+
 Specifies the path to the output file.
 
 ### *-Append*
+
 Adds output to the end of an existing file, instead of replacing the file contents.
 
 ### *-NoClobber*
+
 Will not overwrite an existing file.
 
 ### *-InputObject*
+
 Specifies the objects to be written to the file.
 
 ### *Get-Service*
+
 Gets objects that represent the services on a computer.
 
 ### *Select-Object*
+
 Selects specified properties of an object or set of objects. It can also select unique objects, a specified number of objects, or objects in a specified position in an array.
 
 ### *-First*
+
 Gets only the specified number of objects.
 
 ### *-Property*
+
 Specified the properties to select.
 
 ### Conclusion
+
 Hopefully the above has given you some ideas on how you can use string manipulation to convert a CSV file into a Confluence Wiki Markdown Table. This is a great way to present information gathered from a CSV via a webpage.
 
 Hope you're having a great day and this is of use.
