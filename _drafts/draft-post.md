@@ -25,7 +25,7 @@ date: 2019-02-28
 
 ### Cmdlets used
 
-### *Cmdlet 1*
+### *[Get-ComputerInfo](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-computerinfo?view=powershell-6)*
 
 ### *-Paramater 1*
 
