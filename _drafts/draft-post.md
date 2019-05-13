@@ -67,6 +67,8 @@ Get-ADUser -Filter * -SearchBase 'OU=Employees,DC=timhaintz,DC=com' | Remove-ADU
 
 ## Explanation
 
+This method can be used to create a lot of users very quickly.
+
 ### Cmdlets used
 
 ### *Cmdlet 1*
