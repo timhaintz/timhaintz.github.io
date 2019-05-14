@@ -33,7 +33,7 @@ Displays and outputs:
 ```powershell
 New-ADOrganizationalUnit -Name "Employees" -Path "DC=TIMHAINTZ,DC=COM"
 
-1..10 | ForEach-Object {New-AdUser -Name "User-$_" -samAccountname "User-$_" -UserPrincipalName "User-$_`@timhaintz.com" -Path "OU=Employees,DC=timhaintz,DC=com" -enabled $true -AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -force)}
+1..10 | ForEach-Object {New-ADUser -Name "User-$_" -samAccountname "User-$_" -UserPrincipalName "User-$_`@timhaintz.com" -Path "OU=Employees,DC=timhaintz,DC=com" -enabled $true -AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -force)}
 
 ```
 
@@ -67,7 +67,7 @@ Get-ADUser -Filter * -SearchBase 'OU=Employees,DC=timhaintz,DC=com' | Remove-ADU
 
 ## Explanation
 
-This method can be used to create a lot of users very quickly.
+This method can be used to create many users very quickly. Change the range of numbers and it will create that many users. For example, `1..10000` will create 10,000 users.
 
 ### Cmdlets used
 
