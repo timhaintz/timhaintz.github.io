@@ -7,7 +7,7 @@ date: 2019-05-22
 
 ## Introduction
 
-When testing, it is usefull to be able to create and destroy users repeatedly. A straight forward method I use to create multiple users is using the PowerShell [Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-). This allows me to pipe a range of numbers (if you're using PowerShell 6, the range operator also works with *Characters*) into the `ForEach-Object` cmdlet.
+When testing, it is usefull to be able to create and destroy users repeatedly. A straight forward method I use to create multiple users is using the PowerShell [Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-). This allows me to pipe a range of numbers (if you're using PowerShell 6, the range operator also works with *Characters*) into the [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6)cmdlet.
 
 ### Script
 
@@ -67,19 +67,18 @@ Get-ADUser -Filter * -SearchBase 'OU=Employees,DC=timhaintz,DC=com' | Remove-ADU
 
 ## Explanation
 
-This method can be used to create many users very quickly. Change the range of numbers and it will create that many users. For example, `1..10000` will create 10,000 users.
+This method can be used to create many users very quickly. Change the range of numbers and it will create that many users. For example, `1..10000` will create 10,000 users. Combining the range operator and Active Directory cmdlets, you can quickly deploy test solutions for your needs.
 
-### Cmdlets used
+### PowerShell tools used
 
-### *Cmdlet 1*
+### *[Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-)*
 
-### *-Paramater 1*
+From the documentation, "Represents the sequential integers in an integer array, given an upper, and lower boundary."
+*From PowerShell 6, the range operator works with Characters as well as Integers.*
 
-### *-Paramater 2*
+### *[ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6)*
 
-### *-Paramater N*
-
-### *Cmdlet N*
+Performs an operation on each item in a collection. We piped the output from the range operator into ForEach-Object.
 
 ### *-Paramater 1*
 
