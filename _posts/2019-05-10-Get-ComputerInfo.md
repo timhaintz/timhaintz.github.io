@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Get-ComputerInfo"
-date: 2019-10-05
+date: 2019-05-10
 ---
 # {{ page.title }}
 
