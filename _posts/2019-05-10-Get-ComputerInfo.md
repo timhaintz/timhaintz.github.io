@@ -21,7 +21,9 @@ Get-ComputerInfo
 ```
 
 ## Results
+
 Below is a small sample of the output.
+
 ```powershell
 WindowsBuildLabEx                                       : 17763.1.amd64fre.rs5_release.180914-1434
 WindowsCurrentVersion                                   : 6.3
