@@ -59,7 +59,7 @@ UserPrincipalName : User-4@timhaintz.com
 
 To delete all of the users in the Organizational Unit without prompting for confirmation, run the below.
 
-####
+### Delete users PowerShell Code Block
 
 ```powershell
 Get-ADUser -Filter * -SearchBase 'OU=Employees,DC=timhaintz,DC=com' | Remove-ADUser -Confirm:$false
@@ -80,7 +80,7 @@ From the documentation, "Represents the sequential integers in an integer array,
 
 Performs an operation on each item in a collection. We piped the output from the range operator into ForEach-Object.
 
-### *-Paramater 1*
+### *[New-ADOrganizationalUnit](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adorganizationalunit?view=win10-ps)*
 
 ### *-Paramater 2*
 
