@@ -23,9 +23,8 @@ Copy-DatastoreItem -Item 'c:\ISOs\' -Destination 'vmstores:\virtualcentername@44
 
 ### Explanation
 
-### *[Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/
+### *[Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html)*
 
-Copy-DatastoreItem.html)*
 [Copy-DatastoreItem](https://code.vmware.com/docs/6702/cmdlet-reference#/doc/Copy-DatastoreItem.html) can be used to copy between vCenters, if you are connected to two vCenters in PowerCLI, between datastores in the same vCenter and also from a local system provider to a vCenter.
 
 ### *-Item*
