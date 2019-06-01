@@ -67,7 +67,7 @@ Get-ADUser -Filter * -SearchBase 'OU=Employees,DC=timhaintz,DC=com' | Remove-ADU
 
 ## Explanation
 
-This method can be used to create many users very quickly. Change the range of numbers and it will create that many users. For example, `1..10000` will create 10,000 users. Combining the range operator and Active Directory cmdlets, you can quickly deploy test solutions for your needs.
+This method can be used to create many users very quickly. Changing the range of numbers will create that many users. For example, `1..10000` will create 10,000 users. Combining the range operator and Active Directory cmdlets, you can quickly deploy test solutions for your needs.
 
 ### PowerShell tools used
 
@@ -82,9 +82,15 @@ Performs an operation on each item in a collection. We piped the output from the
 
 ### *[New-ADOrganizationalUnit](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adorganizationalunit?view=win10-ps)*
 
-### *-Paramater 2*
+Create an Active Directory Organizational Unit.
 
-### *-Paramater N*
+### *-Name*
+
+Specifies the name of the object.
+
+### *-Path*
+
+Specifies the X.500 path of the OU or container where the object is created. See *-path* under [Optional Parameters](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adorganizationalunit?view=win10-ps#optional-parameters) for further details.
 
 ### Insert Assets
 
