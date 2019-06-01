@@ -71,15 +71,6 @@ This method can be used to create many users very quickly. Changing the range of
 
 ### PowerShell tools used
 
-### *[Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-)*
-
-From the documentation, "Represents the sequential integers in an integer array, given an upper, and lower boundary."
-*From PowerShell 6, the range operator works with Characters as well as Integers.*
-
-### *[ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6)*
-
-Performs an operation on each item in a collection. We piped the output from the range operator into ForEach-Object.
-
 ### *[New-ADOrganizationalUnit](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adorganizationalunit?view=win10-ps)*
 
 Create an Active Directory Organizational Unit.
@@ -91,6 +82,19 @@ Specifies the name of the object.
 ### *-Path*
 
 Specifies the X.500 path of the OU or container where the object is created. See *-path* under [Optional Parameters](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adorganizationalunit?view=win10-ps#optional-parameters) for further details.
+
+### *[New-ADUser](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-aduser?view=win10-ps)*
+
+Creates a new user in Active Directory.
+
+### *[Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-)*
+
+From the documentation, "Represents the sequential integers in an integer array, given an upper, and lower boundary."
+*From PowerShell 6, the range operator works with Characters as well as Integers.*
+
+### *[ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6)*
+
+Performs an operation on each item in a collection. We piped the output from the range operator into ForEach-Object.
 
 ### Insert Assets
 
