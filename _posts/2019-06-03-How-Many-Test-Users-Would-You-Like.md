@@ -30,6 +30,8 @@ Displays and outputs:
 
 ### New-ADUser PowerShell Code Block
 
+Using the Range Operator, `ForEach-Object` and `New-ADuser`, many test users can be created quickly.
+
 ```powershell
 New-ADOrganizationalUnit -Name "Employees" -Path "DC=TIMHAINTZ,DC=COM"
 
