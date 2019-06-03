@@ -13,7 +13,7 @@ When testing, it is usefull to be able to create and destroy users repeatedly. A
 
 #### Range operator PowerShell Code Block
 
-Range operator in use:
+Using the Range operator:
 
 ```powershell
 1..4
@@ -28,7 +28,7 @@ Displays and outputs:
 4
 ```
 
-#### New-ADUser PowerShell Code Block
+## New-ADUser PowerShell Code Block
 
 ```powershell
 New-ADOrganizationalUnit -Name "Employees" -Path "DC=TIMHAINTZ,DC=COM"
@@ -36,6 +36,8 @@ New-ADOrganizationalUnit -Name "Employees" -Path "DC=TIMHAINTZ,DC=COM"
 1..10 | ForEach-Object {New-ADUser -Name "User-$_" -SamAccountname "User-$_" -UserPrincipalName "User-$_`@timhaintz.com" -Path "OU=Employees,DC=timhaintz,DC=com" -Enabled $true -AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force)}
 
 ```
+
+The above code block creates 10 users in the OU=Employees,DC=timhaintz,DC=com OU.
 
 ## Results
 
