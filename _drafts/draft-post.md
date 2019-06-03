@@ -33,7 +33,7 @@ Displays and outputs:
 ```powershell
 New-ADOrganizationalUnit -Name "Employees" -Path "DC=TIMHAINTZ,DC=COM"
 
-1..10 | ForEach-Object {New-ADUser -Name "User-$_" -samAccountname "User-$_" -UserPrincipalName "User-$_`@timhaintz.com" -Path "OU=Employees,DC=timhaintz,DC=com" -enabled $true -AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -force)}
+1..10 | ForEach-Object {New-ADUser -Name "User-$_" -SamAccountname "User-$_" -UserPrincipalName "User-$_`@timhaintz.com" -Path "OU=Employees,DC=timhaintz,DC=com" -Enabled $true -AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -force)}
 
 ```
 
@@ -71,6 +71,11 @@ This method can be used to create many users very quickly. Changing the range of
 
 ### PowerShell tools used
 
+### *[Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-)*
+
+From the documentation, "Represents the sequential integers in an integer array, given an upper, and lower boundary."
+*From PowerShell 6, the range operator works with Characters as well as Integers.*
+
 ### *[New-ADOrganizationalUnit](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adorganizationalunit?view=win10-ps)*
 
 Create an Active Directory Organizational Unit.
@@ -83,18 +88,41 @@ Specifies the name of the object.
 
 Specifies the X.500 path of the OU or container where the object is created. See *-path* under [Optional Parameters](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-adorganizationalunit?view=win10-ps#optional-parameters) for further details.
 
+### *[ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6)*
+
+Performs an operation on each item in a collection. We piped the output from the range operator into ForEach-Object.
+
 ### *[New-ADUser](https://docs.microsoft.com/en-us/powershell/module/addsadministration/new-aduser?view=win10-ps)*
 
 Creates a new user in Active Directory.
 
-### *[Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-)*
+### *-Name*
 
-From the documentation, "Represents the sequential integers in an integer array, given an upper, and lower boundary."
-*From PowerShell 6, the range operator works with Characters as well as Integers.*
+Specifies the name of the object.
 
-### *[ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6)*
+### *-SamAccountName*
 
-Performs an operation on each item in a collection. We piped the output from the range operator into ForEach-Object.
+Specifies the Security Account Manager [SAM](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc756748(v=ws.10)) name of the user.
+
+### *-UserPrincipalName*
+
+Specifies the User Principal Name [UPN](https://docs.microsoft.com/en-us/windows/desktop/adschema/a-userprincipalname) of the user.
+
+### *-Path*
+
+Specifies the X.500 path of the OU or container where the new object is created.
+
+### *-Enabled*
+
+Specifies if an account is enabled. An enabled account requires a password.
+
+### *-AccountPassword*
+
+Specifies a new password value for an account. This value is stored as an encrypted string. Using `ConvertTo-SecureString` allows for the password to be passed as part of the `ForEach-Object` loop.
+
+### *[ConvertTo-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-6)*
+
+
 
 ### Insert Assets
 
