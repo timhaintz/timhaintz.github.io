@@ -7,11 +7,11 @@ date: 2019-06-03
 
 ## Introduction
 
-When testing, it is usefull to be able to create and destroy users repeatedly. A straight forward method I use to create multiple users is using the PowerShell [Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-). This allows me to pipe a range of numbers (if you're using PowerShell 6, the range operator also works with *Characters*) into the [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6) cmdlet.
+When testing, it is usefull to be able to create and destroy users repeatedly. A straight forward method I use to create multiple users is using the PowerShell [Range operator ..](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-6#range-operator-) . This allows me to pipe a range of numbers (if you're using PowerShell 6, the range operator also works with *Characters*) into the [ForEach-Object](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/foreach-object?view=powershell-6) cmdlet.
 
-### Script
+## Script
 
-#### Range operator PowerShell Code Block
+### Range operator PowerShell Code Block
 
 Using the Range operator:
 
@@ -28,7 +28,7 @@ Displays and outputs:
 4
 ```
 
-## New-ADUser PowerShell Code Block
+### New-ADUser PowerShell Code Block
 
 ```powershell
 New-ADOrganizationalUnit -Name "Employees" -Path "DC=TIMHAINTZ,DC=COM"
