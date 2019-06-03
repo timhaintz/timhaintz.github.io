@@ -33,7 +33,7 @@ Displays and outputs:
 ```powershell
 New-ADOrganizationalUnit -Name "Employees" -Path "DC=TIMHAINTZ,DC=COM"
 
-1..10 | ForEach-Object {New-ADUser -Name "User-$_" -SamAccountname "User-$_" -UserPrincipalName "User-$_`@timhaintz.com" -Path "OU=Employees,DC=timhaintz,DC=com" -Enabled $true -AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -force)}
+1..10 | ForEach-Object {New-ADUser -Name "User-$_" -SamAccountname "User-$_" -UserPrincipalName "User-$_`@timhaintz.com" -Path "OU=Employees,DC=timhaintz,DC=com" -Enabled $true -AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force)}
 
 ```
 
@@ -68,6 +68,8 @@ Get-ADUser -Filter * -SearchBase 'OU=Employees,DC=timhaintz,DC=com' | Remove-ADU
 ## Explanation
 
 This method can be used to create many users very quickly. Changing the range of numbers will create that many users. For example, `1..10000` will create 10,000 users. Combining the range operator and Active Directory cmdlets, you can quickly deploy test solutions for your needs.
+
+To delete the users, you can use `Get-ADUser` and pipe the result to `Remove-ADUser`. I have used the *Employees OU* to retrieve all of the users and then remove them.
 
 ### PowerShell tools used
 
@@ -122,11 +124,41 @@ Specifies a new password value for an account. This value is stored as an encryp
 
 ### *[ConvertTo-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-6)*
 
+Converts encrypted standard strings to secure strings. I have used it to convert plain text to a secure string.
 
+*Not recommended to be used in production as the string is in plain text.*
 
-### Insert Assets
+### *-AsPlainText*
 
-![Name of Image](/assets/20180531/HTML-EmailAsFile.png)
+Specifies a plain text string to convert to a secure string.
+
+*Not recommended to be used in production as the string is in plain text.*
+
+### *-Force*
+
+Confirms that you understand the implications of using the *AsPlainText* parameter.
+
+*Not recommended to be used in production as the string is in plain text.*
+
+### *[Get-ADUser](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-aduser?view=win10-ps)*
+
+Gets one or more Active Directory users.
+
+### *-Filter*
+
+Specifies a query string that retrieves Active Directory objects. I'm using `*` as a wildcard character.
+
+### *-SearchBase*
+
+Specifies an Active Directory path to search under.
+
+### *[Remove-ADUser](https://docs.microsoft.com/en-us/powershell/module/activedirectory/remove-aduser?view=winserver2012-ps)*
+
+Removes and Active Directory user.
+
+### *-Confirm*
+
+Prompts you for confirmation before running the cmdlet. I have used `-Confirm:$false` to remove the prompt for confirmation before removal.
 
 ## Conclusion
 
