@@ -1,47 +1,13 @@
 ---
 layout: default
-title: "Template Title"
-date: 2019-02-12
+title: "Exam time?"
+date: 2019-06-10
 ---
 # {{ page.title }}
 
 ## Introduction
 
-### Script
-
-#### PowerShell Code Block
-
-```powershell
-
-```
-
-## Results
-
-```powershell
-
-```
-
-## Explanation
-
-### Cmdlets used
-
-### *Cmdlet 1*
-
-### *-Paramater 1*
-
-### *-Paramater 2*
-
-### *-Paramater N*
-
-### *Cmdlet N*
-
-### *-Paramater 1*
-
-### *-Paramater 2*
-
-### *-Paramater N*
-
-### Insert Assets
+The last time I sat an IT certification exam was in 2006. I sat for my CCNA. I had failed the exam twice before and thankfully, it was third time lucky for me. I sat my first IT Certification exam in 2002, passing the Windows 2000 Professional exam. Since then, I have continually honed my craft, learned and gained knowledge, I've just not sat an exam to certifiy.
 
 ![Name of Image](/assets/20180531/HTML-EmailAsFile.png)
 
