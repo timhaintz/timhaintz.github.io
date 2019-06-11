@@ -5,25 +5,10 @@ date: 2019-06-11
 ---
 # {{ page.title }}
 
-The last time I sat an IT certification exam was in 2009, just over 10 years ago! I sat *Managing and Maintaining a Microsoft Windows Server 2003 Environment*. The exam before that was my CCNA in 2006. I had failed the exam twice before and thankfully, it was third time lucky for me. I sat my first IT Certification exam in 2003, passing *Installing, Confiugring, and Administering Microsoft Windows 2000 Professional*. I have continually honed my craft, learned and gained knowledge, I've just not sat an exam to certifiy. A driving philosophy of mine is [Kaizen](https://en.wikipedia.org/wiki/Kaizen), or, in my words, getting a little bit better each day.
+The first series of online training is [Cloud Concepts - Principals of cloud computing](https://docs.microsoft.com/en-us/learn/modules/principles-cloud-computing/index). This is a fundemental overview of Azure. It is used as base knowledge for future concepts.
 
-Why take an exam now?
+The second series of online training is [Core Cloud Services - Introduction to Azure](https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/index). This is more hands on and allows you to create a virtual machine using [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
 
-A collegue of mine recently sat a certification exam and it inspired me to do the same. I started working in IT in 2001 and completed my Bachelor of Computing degree in 2003. I have 18+ years working in IT and watched as the paper MCSEs flooded the market in the early 2000s. It left a bad taste in my mouth around certifications. The new exams sound much more 'useful' than the TestKing cram exams of the past. Also, my kids are older now and I have a little more free time to dedicate to specific study.
-
-Now that I have a blog, I thought I would write about what I'm learning. The first certification I'm going to study is the [Microsoft Certified: Azure Administrator Associate](https://www.microsoft.com/en-us/learning/azure-administrator.aspx). Rather than learning via instructor led training, I thought I would follow the [Microsoft Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure&roles=administrator&resource_type=learning%20path) Azure Administrator Associate path. This is a free learning path I can follow it at my own pace. I work with Azure daily so I'm hoping running at my own pace allows me the flexibility to study and then implement and solidify the learnings at work. The [Learning path for Azure Administrator](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWtY7Z) is the path I will be taking.
-
-Each blog post will likely cover the key areas under *Skills Measured*.
-These being:
-
-* Manage Azure subscriptions and resources
-* Implement and manage storage
-* Deploy and manage virtual machines (VMs)
-* Configure and manage virtual networks
-* Manage identities
-
-Blogging will allow me to write down what I'm learning in my own words which should help with knowledge retention. I've never studied like this before so I'm interested to see the impact it has.
-
-Hope you're having a great day and this is of use.
+[Core Cloud Services - Azure architecture and service guarantees](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/index)
 
 Thanks, Tim.
