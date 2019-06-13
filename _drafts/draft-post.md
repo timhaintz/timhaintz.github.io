@@ -32,7 +32,7 @@ The second series of online training is [Core Cloud Services - Introduction to A
   * Primarily used for VMs, managed disks, load balancers, and SQL databases
   * Two categories:
     * Zonal services
-      * Ping the resource to a specific zone
+      * Pin the resource to a specific zone
     * Zone-redundant services
       * Platform replicates automatically across zones
 * *Region Pairs*
@@ -72,9 +72,62 @@ The second series of online training is [Core Cloud Services - Introduction to A
       * Student
     * Access control and billing occur at the subscription level
   * Authenticate access with Azure Active Directory
-    *
+* *Authenticate access with Azure Active Directory*
+  * Azure AD is all about web-based authentication standards such as OpenID and OAuth
+  * A tenant is a dedicated, isolated instance of the Azure Active Directory service, owned and managed by an organisation
+  * Azure AD tenants and subscriptions have a many-to-one trust relationship
+    * A tenant can be associated with multiple Azure subscriptions
+    * Every subscription is associated with only one tenant
 
+[Core Cloud Services - Manage services with the Azure portal](https://docs.microsoft.com/en-gb/learn/modules/tour-azure-portal/)
 
+* *Azure management options*
+  * Tools used for day-to-day management and interaction:
+    * Azure portal, GUI
+    * Azure PowerShell and Azure Command-Line Interface (CLI) for automation- based interactions
+    * Azure Cloud Shell for a web-based command-line interface
+    * Azure mobile app for monitoring and managing resources from mobile device
+  * Azure portal
+    * Web based
+    * Identify a service you're looking for
+    * Get links for help
+    * Deploy, manage and delete resources
+    * Wizards and tooltips to guide you through complex admin tasks
+    * Can customise the dashboard
+    * Time consuming and error prone for complex tasks as there is no automation
+  * Azure PowerShell
+    * Install the Azure PowerShell module
+    * Sign in using `Connect-AzureRMAccount`
+    * Powerful was to automate and optimise workflow
+  * Azure CLI
+    * Cross-platform command-line program
+      * Runs on:
+        * Windows
+        * Linux
+        * macOS
+    * Login using `az login`
+  * Azure Cloud Shell
+    * Browser-based scripting environment
+    * Two shell environments:
+      * Bash for Linux
+      * PowerShell for Windows
+    * Supports Azure CLI and Azure PowerShell CLI
+    * Also has a suite of developer tools available such as:
+      * .NET Core,Python, Go
+      * code, vim, nano
+      * git, maven, make
+    * An Azure Storage Account is created when you connect
+      * $HOME folder
+      * Scripts or data kept is available across sessions
+      * Each subscription has a unique storage account associated
+  * Azure mobile app
+    * Access, manage and monitor all Azure accounts and resources from iOS or Android
+    * Check current status
+    * Start, stop, and restart virtual macines
+    * Use Azure Cloud Shell
+  * Other options
+    * Azure SDKs
+    * REST APIs
 
 Hope you're having a great day and this is of use.
 
