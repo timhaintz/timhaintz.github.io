@@ -128,6 +128,31 @@ The second series of online training is [Core Cloud Services - Introduction to A
   * Other options
     * Azure SDKs
     * REST APIs
+  * Navigate the portal
+    * A *blade* is a slide-out panel containing the UI for a single level in a navigation sequence
+      * Some blade options generate another blade
+    * The Marketplace allows customers to find, try, purchase, and provision applications and services
+    * The bell icon displays the *Notifications* pane
+    * (>_) displays the *Cloud Shell*
+    * The gear icon opens the *Portal settings*
+    * The smiley face icon opens the *Send us feedback* blade
+    * Question mark opens the *Help* blade
+    * *Help + Support options* opens the main support area and is also where *New support request* can be requested.
+    * *Book and Filter* icon shows the *Directory + subscription* blade
+    * *Profile settings* are found on your name in the top right hand corner
+      * Profile settings include:
+      * Sign in with another account or sign out
+      * View account profile, where you can change your password
+      * Check permissions
+      * View your bill
+      * Update contact information
+    * *Azure Advisor*
+      * Free service built into Azure that provides recommendations on:
+        * High availability
+        * Security
+        * Performance and
+        * Cost
+
 
 Hope you're having a great day and this is of use.
 
