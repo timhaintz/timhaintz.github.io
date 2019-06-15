@@ -152,7 +152,32 @@ The second series of online training is [Core Cloud Services - Introduction to A
         * Security
         * Performance and
         * Cost
-
+  * *Exercise - Work with blades*
+    * Recommend doing the hands on exercises in the sandbox environment
+  * *Exercise - Use the Azure portal*
+    * Recommend doing the hands on exercises in the sandbox environment
+  * *Azure Portal dashboards*
+    * A dashboard is a customisable collectin of UI tiles displayed in the Azure portal
+    * You can add, remove, and position tiles to create the view you want
+    * Dashboards can be created for roles, RBAC can then be used to control who has access to the dashboard
+    * Stored as JSON files
+      * Can be shared
+      * Need a resource group to share the JSON
+      * Need to grant permissions to the JSON file
+    * Didn't realise the dashboard was so customisable
+    * Lots of modifications can be made
+      * Size
+      * Location on page
+      * You can take elements from child blades and put them on the dashboard
+  * *Exercise - Customize the dashboard*
+    * Recommend doing the hands on exercises in the sandbox environment
+  * *Access public and private preview features*
+    * Test beta and other pre-release features, products, services, software, and regions
+    * Previews are not covered by customer support
+    * Once evaluated and tested successfully, it becomes *General Availablilty (GA)*
+    * Private and Public preview
+    * [Preview Azure portal](https://preview.portal.azure.com/)
+    * GA releases are available on the "What's New" link or [Azure Updates](https://azure.microsoft.com/en-gb/updates/)
 
 Hope you're having a great day and this is of use.
 
