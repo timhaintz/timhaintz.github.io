@@ -128,56 +128,97 @@ The second series of online training is [Core Cloud Services - Introduction to A
   * Other options
     * Azure SDKs
     * REST APIs
-  * Navigate the portal
-    * A *blade* is a slide-out panel containing the UI for a single level in a navigation sequence
-      * Some blade options generate another blade
-    * The Marketplace allows customers to find, try, purchase, and provision applications and services
-    * The bell icon displays the *Notifications* pane
-    * (>_) displays the *Cloud Shell*
-    * The gear icon opens the *Portal settings*
-    * The smiley face icon opens the *Send us feedback* blade
-    * Question mark opens the *Help* blade
-    * *Help + Support options* opens the main support area and is also where *New support request* can be requested.
-    * *Book and Filter* icon shows the *Directory + subscription* blade
-    * *Profile settings* are found on your name in the top right hand corner
-      * Profile settings include:
-      * Sign in with another account or sign out
-      * View account profile, where you can change your password
-      * Check permissions
-      * View your bill
-      * Update contact information
-    * *Azure Advisor*
-      * Free service built into Azure that provides recommendations on:
-        * High availability
-        * Security
-        * Performance and
-        * Cost
-  * *Exercise - Work with blades*
-    * Recommend doing the hands on exercises in the sandbox environment
-  * *Exercise - Use the Azure portal*
-    * Recommend doing the hands on exercises in the sandbox environment
-  * *Azure Portal dashboards*
-    * A dashboard is a customisable collectin of UI tiles displayed in the Azure portal
-    * You can add, remove, and position tiles to create the view you want
-    * Dashboards can be created for roles, RBAC can then be used to control who has access to the dashboard
-    * Stored as JSON files
-      * Can be shared
-      * Need a resource group to share the JSON
-      * Need to grant permissions to the JSON file
-    * Didn't realise the dashboard was so customisable
-    * Lots of modifications can be made
-      * Size
-      * Location on page
-      * You can take elements from child blades and put them on the dashboard
-  * *Exercise - Customize the dashboard*
-    * Recommend doing the hands on exercises in the sandbox environment
-  * *Access public and private preview features*
-    * Test beta and other pre-release features, products, services, software, and regions
-    * Previews are not covered by customer support
-    * Once evaluated and tested successfully, it becomes *General Availablilty (GA)*
-    * Private and Public preview
-    * [Preview Azure portal](https://preview.portal.azure.com/)
-    * GA releases are available on the "What's New" link or [Azure Updates](https://azure.microsoft.com/en-gb/updates/)
+* Navigate the portal
+  * A *blade* is a slide-out panel containing the UI for a single level in a navigation sequence
+    * Some blade options generate another blade
+  * The Marketplace allows customers to find, try, purchase, and provision applications and services
+  * The bell icon displays the *Notifications* pane
+  * (>_) displays the *Cloud Shell*
+  * The gear icon opens the *Portal settings*
+  * The smiley face icon opens the *Send us feedback* blade
+  * Question mark opens the *Help* blade
+  * *Help + Support options* opens the main support area and is also where *New support request* can be requested.
+  * *Book and Filter* icon shows the *Directory + subscription* blade
+  * *Profile settings* are found on your name in the top right hand corner
+    * Profile settings include:
+    * Sign in with another account or sign out
+    * View account profile, where you can change your password
+    * Check permissions
+    * View your bill
+    * Update contact information
+  * *Azure Advisor*
+    * Free service built into Azure that provides recommendations on:
+      * High availability
+      * Security
+      * Performance and
+      * Cost
+* *Exercise - Work with blades*
+  * Recommend doing the hands on exercises in the sandbox environment
+* *Exercise - Use the Azure portal*
+  * Recommend doing the hands on exercises in the sandbox environment
+* *Azure Portal dashboards*
+  * A dashboard is a customisable collectin of UI tiles displayed in the Azure portal
+  * You can add, remove, and position tiles to create the view you want
+  * Dashboards can be created for roles, RBAC can then be used to control who has access to the dashboard
+  * Stored as JSON files
+    * Can be shared
+    * Need a resource group to share the JSON
+    * Need to grant permissions to the JSON file
+  * Didn't realise the dashboard was so customisable
+  * Lots of modifications can be made
+    * Size
+    * Location on page
+    * You can take elements from child blades and put them on the dashboard
+* *Exercise - Customize the dashboard*
+  * Recommend doing the hands on exercises in the sandbox environment
+* *Access public and private preview features*
+  * Test beta and other pre-release features, products, services, software, and regions
+  * Previews are not covered by customer support
+  * Once evaluated and tested successfully, it becomes *General Availablilty (GA)*
+  * Private and Public preview
+  * [Preview Azure portal](https://preview.portal.azure.com/)
+  * GA releases are available on the "What's New" link or [Azure Updates](https://azure.microsoft.com/en-gb/updates/)
+
+[Core Cloud Services - Azure compute options](https://docs.microsoft.com/en-gb/learn/modules/intro-to-azure-compute/)
+
+* *Essential Azure compute concepts*
+  * On demand compute for:
+    * multi-core procesors
+    * supercomputers
+      * via virtual machines and containers
+  * Serverless computing
+  * Pay only for as long as you're using them
+  * Four common compute techniques
+    * Virtual machines
+    * Containers
+    * Azure App Service
+    * Serverless computing
+* *Explore Azure Virtual Machines*
+  * IaaS
+  * Total control over the operating system (OS)
+  * Ability to run custom software
+  * An image is a template used to create a VM
+  * Moving a physical server to the cloud "lift and shift"
+  * Must update and maintain a VM through patching etc.
+  * Scaling VMs in Azure
+    * Availability sets
+      * Logical grouping of two or more VMs
+      * Planned maintenance avoids updating availability sets at the same time
+        * VMs are put into different update domains
+      * Unplanned maintenance
+        * Automatically switch to a working physical server
+          * VMs that share common hardware are in the same fault domain
+      * Three fault domains that each have a server rack
+      * Five logical update domains
+      * No cost to an availability set, only pay for the VM
+    * Virtual Machine Scale Sets
+      * Identical, load balanced VMs
+      * Routes between VMs
+      * Centrally manage, configure, and update a large number of VMs in minutes
+      * Can scale up or down in response to demand or a defined schedule
+    * Azure Batch
+      * Large-scale job scheduling and compute management
+
 
 Hope you're having a great day and this is of use.
 
