@@ -218,6 +218,43 @@ The second series of online training is [Core Cloud Services - Introduction to A
       * Can scale up or down in response to demand or a defined schedule
     * Azure Batch
       * Large-scale job scheduling and compute management
+* *Explore Containers in Azure*
+  * Containers are meant to be:
+    * Lightweight
+    * Created
+    * Scaled out
+    * Stopped dynamically
+  * Run multiple isolated applications on a single VM host
+  * Azure supports Docker containers
+  * Manage containers in Azure using:
+    * Azure Container Instances (ACI)
+      * PaaS offering that allows you to upload your containers and execute them directly
+    * Azure Kubernetes Service (AKS)
+      * Complete orchestration service for containers with distributed architectures
+  * Containers are often used to create solutions using microservice architecture
+    * This enables solutions to be broken down into smaller, independent pieces
+* *Explore Azure App Service*
+  * Enables you to build and host:
+    * Web apps
+    * background jobs
+    * Mobile backends
+    * RESTful APIs
+  * PaaS
+  * Types of web apps
+    * Web apps
+      * Window or Linux
+      * ASP.NET, ASP.NET Core, Java, Ruby, Node.js, PHP or Python
+    * API Apps
+      * Full Swagger support, and the ability to package and publish your API in the Azure Marketplace
+    * WebJobs
+      * Run a program (.exe, Java, PHP, Python or Node.js) or script (.cmd, .bat, PowerShell, or Bash)
+    * Mobile Apps
+      * Build a back-end for iOS and Android apps
+      * Store mobile app data in a cloud-based SQL database
+      * Authenticate customers agains common social providers
+      * Send push notifications
+      * Execute custom back-end logic  in C# or Node.js
+* *Explore Serverless computing in Azure*
 
 
 Hope you're having a great day and this is of use.
