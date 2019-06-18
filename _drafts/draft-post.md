@@ -272,6 +272,79 @@ The second series of online training is [Core Cloud Services - Introduction to A
     * Runs only in cloud
   * An orchestration is a collection of functions or steps, that are executed to accomplish a complex task
 
+[Core Cloud Services - Azure data storage options](https://docs.microsoft.com/en-gb/learn/modules/intro-to-data-in-azure/)
+
+* *Benefits of using Azure to store data*
+  * Automated backup and recovery
+  * Replication across the globe
+  * Support for data analytics
+  * Encryption capabilities
+  * Multiple data types
+  * Data storage in virtual disks
+  * Storage tiers
+  * Types of data:
+    * Structured data (relational data)
+    * Semi-structured data (non-relational or NoSQL)
+    * Unstructured data
+* *How Azure data storage can meet your business to storage needs*
+  * Azure SQL Database
+    * DaaS
+    * Azure Database Migration Service to move on-prem to cloud
+      * Uses Microsoft Data Migration Assistant
+    * Just change connection sting in Apps once migrated
+  * Azure Cosmos DB
+    * Globally distributed database service
+    * Schema-less data
+    * Supports Always On applications
+  * Azure Blob storage
+    * Unstructured
+      * No restrictions on the kinds of data it can hold
+    * Highly scalable
+    * Reached from anywhere with an internet connection
+    * Store up to 8TB of data for virtual machines
+  * Azure Data Lake Storage Gen2
+    * Scalability and cost benefits of object storage
+    * Reliability and performance of the Big Data file system capabilities
+    * Cleanses, enriches, annotates and schematises data
+    * Ingest -> Prepare -> Store -> Analyse
+  * Azure Files
+    * Fully managed files shares
+    * Accessed via Server Message Block (SMB)
+    * Mounted concurrently by cloud or on-premises by Windows, Linux and macOS
+    * SMB ensures data is encrypted at rest and in transit
+  * Azure Queue
+    * Service for storing large numbers of messages
+    * Asynchronous message queueing for communication between application components
+    * One or more sender components
+    * One or more receiver components
+  * Disk Storage
+    * Allows data to be persistently stored and accessed from an attached virtual hard disk
+    * Managed and unmanaged disks
+  * Storage tiers for blob storage:
+    * Hot storage tier - accessed frequently
+    * Cool storage tier - accessed infrequently stored for at least 30 days
+    * Archive storage tier - accessed rarely stored for at least 180 days with flexible latency requirements
+  * Encryption and replication for storage services
+    * Azure Storage Service Encyption (SSE)
+      * Data at rest
+      * Encypts data before storing it
+      * Decypts data before retrieving it
+      * Encyption/decryption transparent to the user
+    * Client-side encryption
+      * Data already encrypted by client libraries
+  * Replication for storage availability
+    * Replication type is setup when you create a storage account
+    * Regional and geographic replication
+* *Comparison between Azure data storage and on-premises storage*
+  * Cost effectiveness
+    * Azure is pay-as-you-go pricing
+    * Scalable
+  * Reliability
+  * Storage types
+  *Agility
+
+[Core Cloud Services - Azure networking options](https://docs.microsoft.com/en-gb/learn/modules/intro-to-azure-networking/)
+
 
 Hope you're having a great day and this is of use.
 
