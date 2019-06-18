@@ -255,6 +255,22 @@ The second series of online training is [Core Cloud Services - Introduction to A
       * Send push notifications
       * Execute custom back-end logic  in C# or Node.js
 * *Explore Serverless computing in Azure*
+  * Azure takes care of managing teh server infrastructure and allocation/dealloation of resources based on demand
+  * Scaling and performance are handled automatically
+  * Event driven
+  * Azure functions
+    * Execute code based on an event
+    * Stateless
+    * Stateful (Durable Functions)
+    * Can run locally or in cloud
+  * Azure Logic Apps
+    * Execute workflows built from predefined logic blocks
+    * Persisted as JSON
+    * GUI driven
+      * From the Azure Portal
+      * Visual Studio
+    * Runs only in cloud
+  * An orchestration is a collection of functions or steps, that are executed to accomplish a complex task
 
 
 Hope you're having a great day and this is of use.
