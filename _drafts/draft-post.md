@@ -345,6 +345,57 @@ The second series of online training is [Core Cloud Services - Introduction to A
 
 [Core Cloud Services - Azure networking options](https://docs.microsoft.com/en-gb/learn/modules/intro-to-azure-networking/)
 
+* *Deploy your site to Azure*
+  * Benefits of Loosely Coupled Architectures
+    * N-tier architecture
+      * Divides an application into two or more logical tiers
+      * A higher tier can access services in a lower tier, but a lower tier should never access a higher tier
+      * Tiers are designed to be reusable and replacable
+  * What's a virtual network?
+    * Logically isolated network on Azure
+    * Scoped to a single region
+    * Multiple virtual networks from different regions can be connected together using virtual network peering
+    * Can be segmented into one or more subnets
+  * What's a network security group (NSG)?
+    * Allows or denies inbound network traffic
+* *Scale with Azure Load Balancer*
+  * What are availability and high availability?
+    * Availability refers to how long your service is up and running without interruption
+    * Five nines availability mean service is guaranteed to be running 99.999% of the time
+  * What is resiliency?
+    * Resiliency refers to a system's ability to stay operational during abnormal conditions
+  * What is a load balancer?
+    * A load balancer distributes traffic evenly among each system in a pool
+    * Can help achieve both high availability and resiliency
+  * What is Azure Load Balancer?
+    * Load balancer service that Microsoft provides that helps take care of maintenance for you
+    * Provides low latency and high throughput
+    * Scales up to millions of flows for all TCP and UDP applications
+  * Azure Application Gateway
+    * HTTP(S) load balancer that uses Azure Load Balancer at the TCP layer
+    * Application layer (OSI layer 7) load balancing
+    * Cookie affinity
+    * SSL termination
+    * Web application firewall
+    * URL rule-based routes
+    * Rewrite HTTP headers
+  * What is a Content Delivery Network?
+    * Distributed network of servers that can efficiently deliver web content to users
+    * Get content to users in their local region to minimise latency
+    * Cache content at strategically placed physical nodes across the world
+  * What about DNS (Domain Name System)?
+    * Is a way to map user-friendly names to their IP addresses
+    * Can host using Azure DNS
+  * Reduce latency with Azure Traffic Manager
+    * What is network latency?
+      * Time is takes for data to travel over the network
+        * Typically measured in milliseconds
+      * Bandwidth refers to the amount of data that can fit on the connection
+    * Use Traffic Manager to route users to the closest endpoint
+      * Uses the DNS server that's closest to the user to direct user traffic to a globally distributed endpoint
+      * Doesn't see the traffic, rather it redirects the client web browser to the preferred endpoint
+
+
 
 Hope you're having a great day and this is of use.
 
