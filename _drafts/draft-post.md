@@ -395,7 +395,90 @@ The second series of online training is [Core Cloud Services - Introduction to A
       * Uses the DNS server that's closest to the user to direct user traffic to a globally distributed endpoint
       * Doesn't see the traffic, rather it redirects the client web browser to the preferred endpoint
 
+[Security, responsibility and trust in Azure](https://docs.microsoft.com/en-gb/learn/modules/intro-to-security-in-azure/)
 
+* *Cloud security is a shared responsibility*
+  * Shared security responsibility with Azure
+    * IaaS leverages the lowest-level service
+      * Need to patch and manage the security of the environment
+    * PaaS outsources a lot of security concerns
+      * Microsoft looks after the OS and most foundational software
+      * Everything is updated with the latest patches
+    * SaaS code is controlled by the vendor but configured to be used by the customer
+  * A layered approach to security
+    * Defence in depth is a layered approach to security
+      * Employs a series of mechanisms to slow the advance of an attack
+      * Each layer provides protection
+    * Layers are:
+      * Data
+        * Responsibility of the customer to secure their data
+      * Application
+        * Ensure applications are secure and free of vulnerabilities
+      * Compute
+        * Patch systems and make servers secure
+      * Networking
+        * Limit communication between resources
+        * Deny by default
+      * Perimeter
+        * Use DDos protection
+        * Firewalls
+      * Identity and access
+        * Use single sign on and MFA
+        * Audit events and changes
+      * Physical security
+        * Provide physical safeguards
+  * Get tips from Azure Security Center
+    * Provides security recommendations
+    * Monitors security settings
+    * Perform automatic security assessments
+    * Use machine learning to detect and block malware
+    * Analyse and identify potential inbound attacks
+    * Provide just-in-time access control
+    * Part of the Center for Internet Security (CIS) recommendations
+    * Free tier
+    * Standard tier
+    * Incident response
+      * Detect
+      * Assess
+      * Diagnose
+    * Use recommendations to enhance security
+      * Security policy defines the set of controls that are recommended for resources with the subscription or Resource Group
+      * Creates recommendations based on the controls set in the policy
+    * Identity and access
+      * Authentication (AuthN)
+        * The process of establishing the identity of a person or service looking to access resources
+      * Authorization (AuthZ)
+        * The process of establishing what level of access an authenticated person or service has
+    * What is Azure Active Directory (Azure AD)?
+      * Cloud-based identity service
+      * Built in support to synchronise with exsiting on-premises Active Directory or can be used stand alone
+      * Azure AD provides:
+        * Authentication
+          * SSPR
+          * MFA
+        * Single-Sign-On (SSO)
+        * Application management
+          * Azure AD Application Proxy
+        * Business to business (B2B) identity services
+          * Manage guest users and external partners
+        * Device Management
+      * Providing identities to services
+        * Service principals
+          * A principal is an identity acting with certain roles or claims
+          * A Service Principal is an identity that is used by a service or application
+        * Managed identities for Azure services
+          * When you create a managed identity for a service, you are creating an account on the Azure AD tenant
+          * Azure infrastructure will automatically take care of authenticating the service and managing the account
+      * Role-based access control
+        * Identities are mapped to roles directly or through group membership
+        * Roles assigned at a higher scope, like an entire subscription, are inherited by child scopes, like service instances
+      * Privileged Identity Management (PIM)
+        * Provides oversite of:
+          * Role assignments
+          * Self-service
+          * Just-In-Time role activation
+          * Azure AD and Azure resource access reviews
+    * Encryption
 
 Hope you're having a great day and this is of use.
 
