@@ -449,36 +449,200 @@ The second series of online training is [Core Cloud Services - Introduction to A
         * The process of establishing the identity of a person or service looking to access resources
       * Authorization (AuthZ)
         * The process of establishing what level of access an authenticated person or service has
-    * What is Azure Active Directory (Azure AD)?
-      * Cloud-based identity service
-      * Built in support to synchronise with exsiting on-premises Active Directory or can be used stand alone
-      * Azure AD provides:
-        * Authentication
-          * SSPR
-          * MFA
-        * Single-Sign-On (SSO)
-        * Application management
-          * Azure AD Application Proxy
-        * Business to business (B2B) identity services
-          * Manage guest users and external partners
-        * Device Management
-      * Providing identities to services
-        * Service principals
-          * A principal is an identity acting with certain roles or claims
-          * A Service Principal is an identity that is used by a service or application
-        * Managed identities for Azure services
-          * When you create a managed identity for a service, you are creating an account on the Azure AD tenant
-          * Azure infrastructure will automatically take care of authenticating the service and managing the account
-      * Role-based access control
-        * Identities are mapped to roles directly or through group membership
-        * Roles assigned at a higher scope, like an entire subscription, are inherited by child scopes, like service instances
-      * Privileged Identity Management (PIM)
-        * Provides oversite of:
-          * Role assignments
-          * Self-service
-          * Just-In-Time role activation
-          * Azure AD and Azure resource access reviews
-    * Encryption
+  * What is Azure Active Directory (Azure AD)?
+    * Cloud-based identity service
+    * Built in support to synchronise with exsiting on-premises Active Directory or can be used stand alone
+    * Azure AD provides:
+      * Authentication
+        * SSPR
+        * MFA
+      * Single-Sign-On (SSO)
+      * Application management
+        * Azure AD Application Proxy
+      * Business to business (B2B) identity services
+        * Manage guest users and external partners
+      * Device Management
+    * Providing identities to services
+      * Service principals
+        * A principal is an identity acting with certain roles or claims
+        * A Service Principal is an identity that is used by a service or application
+      * Managed identities for Azure services
+        * When you create a managed identity for a service, you are creating an account on the Azure AD tenant
+        * Azure infrastructure will automatically take care of authenticating the service and managing the account
+    * Role-based access control
+      * Identities are mapped to roles directly or through group membership
+      * Roles assigned at a higher scope, like an entire subscription, are inherited by child scopes, like service instances
+    * Privileged Identity Management (PIM)
+      * Provides oversite of:
+        * Role assignments
+        * Self-service
+        * Just-In-Time role activation
+        * Azure AD and Azure resource access reviews
+  * Encryption
+    * Encyption is the process of making data unreadable and unusable to unauthorised viewers
+    * Decryption requires the use of a secret key
+    * Two types of encryption:
+      * Symmetric
+        * Uses the same key to encrypt and decrypt
+      * Asymmetric
+        * Public key and private key pair
+        * Either key can encrypt, only one key can decrypt
+        * Used in Trasnport Layer Security (TLS) and data signing
+    * Encryption at rest
+      * Encrypting data at rest means if a hard drive is stolen, it is very, very difficult to read the actual data
+    * Encryption in transit
+      * HTTPS is an example of application layer in transit
+      * VPN is an example of a secure channel at the network layer
+    * Encryption on Azure
+      * Azure Storage Service Encryption
+        * Azure storage platform
+          * Automatically encrypts your data before persisting it to Azure Managed disks
+          * Encryption, decryption, and key mangegement in Storage Serice Encryption is transparent to applications and services
+      * Encrypt virtual machine disks
+        * Azure Disk Encryption, BitLocker for Windows, dm-crypt for Linux
+          * Integrated with Azure Key Vault
+      * Encrypt databases
+        * Transparent data encryption (TDE) protects Azure SQL Datbase and Azure Data Warehouse
+          * Real-time encryption and decryption of database and transaction logs
+          * On by default for newly deployed Azure SQL Database instances
+      * Encrypt secrets
+        * Azure Key Vault
+          * Centralised cloud service for storing application secrets
+  * Protect your network
+    * A layered approach to network security
+      * Ensure internet facing services are locked down to only allow inbound and outbound communication where necessary
+      * Restrict the ports and protocols required
+    * What is a Firewall?
+      * Firewall rules, generally speaking, also include specific network protocol and port information
+      * Azure Firewall is a managed, cloud-based, network security service
+        * Fully stateful firewall as a service
+      * Azure Application Gateway is a load balancer that includes a Web Application Firewall (WAF)
+      * Network virtual applicances (NVAs) are ideal optoins for non-HTTP services or advanced configurations
+    * Stopping Distributed Denial of Service (DDos) attacks - Azure DDos Protection Service
+      * DDos attacks try to overwhelm a network resource by sending so many requests that the resource becomes slow or unresponsive
+      * Basic tier is automatically enabled
+      * Standard tier provides additional mitigation capabilities
+        * Volumetric attacks
+        * Protocol attackes
+        * Resource (application) layer attacks
+    * Controlling the traffic inside your virtual network
+      * Virtual network security
+        * NSGs are critical to restrict unnecessary communication
+      * Network integration
+        * VPN
+        * Azure Express Route
+          * Use a private circuit rather than the public internet
+  * Protect your shared documents
+    * Microsoft Azure Information Protection (MSIP or sometimes AIP) helps classify and optionally protect documents
+      * Labels can be applied automatically based on rules and conditions
+  * Azure Advanced Threat Protection (ATP)
+    * Cloud-based security solutions that:
+      * Identifies
+      * Detects
+      * Helps investigate:
+        * Advanced threats
+        * Compromised identities
+        * Malicious insider actions
+    * Azure ATP portal
+    * Azure ATP Sensor
+      * Installed directly on domain controllers
+    * Azure ATP cloud service
+
+[Apply and monitor infrastructure standards with Azure Policy](https://docs.microsoft.com/en-gb/learn/modules/intro-to-governance/)
+
+* *Define IT compliance with Azure Policy*
+  * Azure Policy is an Azure service used to:
+    * Define, Assign & Manage standards for resources in your environment
+    * Prevent disallowed resources
+    * Scan for non-compliance
+    * Able to prohibit certain resources, for example, VMs can have a maximum of 4 CPUs
+      * Stock Keeping Units (SKUs)
+    * Can integrate with Azure DevOps
+  * Creating a policy
+    * Use a policy definition
+    * To apply a policy:
+      * Create a policy definition
+      * Assign a definition to a scope of resources
+      * View policy evaluation results
+  * What is a policy definition?
+    * A policy definition expresses what to evaluate and what action to take
+    * Represented as a JSON file
+  * Assign a definition to a scope of resources
+    * A policy assignment is a policy definition that has been assigned to take place within a specific scope
+    * Policy assignments are inherited by all child resources
+  * Policy effects
+    * Each policy definition in Azure Policy has a single effect
+    * Effects determine what happens when the associated policy rule is matched
+    * The policy effects are:
+      * Deny
+      * Disabled
+      * Append
+      * Audit, AuditIfNotExists
+      * DeployIfNotExists
+  * View policy evaluation results
+    * Azure Policy can allow a resource to be created even if it doesn't pass validation
+    * It can trigger an audit event which can be viewed in the Azure Policy portal
+* *Organize policy with initiatives*
+  * Initiatives work alongside policies in Azure Policy
+  * An initiative definition is a set or group of policy definitions
+  * An initiative assignment is an initiative definition assigned to a specific scope
+* *Enterprise governance management*
+  * Access management occurs at the Azure subscription level
+  * Azure Management Groups are containers for managing access, policies, and compliance across multiple Azure subscriptions
+  * All subscriptions within a management group automatically inherit the conditoins applied to the management group
+  * Management groups can be used to provide user access to multi subscriptions
+    * Adding the subscriptions under the management group, one RBAC group can be created to manage all subscriptions
+* *Define standard resources with Azure Blueprints*
+  * Azure Blueprints help with auditing, traceability and compliance
+  * Azure Blueprints is a declarative way to orchestrate the deployment of resource templates and other artefacts such as:
+    * Role assignments
+    * Policy assignments
+    * Azure Resource Manager templates
+    * Resource groups
+  * Implementing Azure Blueprints:
+    * Create an Azure Blueprint
+    * Assign the blueprint
+    * Track the blueprint assignment
+* *Explore your service compliance with Compliance Manager*
+  * What is the Microsoft Trus Center?
+    * Trust Center is a website resource containing information about how Microsoft implements and supports:
+      * Security
+      * Privacy
+      * Compliance
+      * Transparency
+  * What is the Service Trust Portal (STP)?
+    * Microsoft public site for publishing audit reports and other compliance-related information for Microsoft's cloud services
+  * Compliance Manager
+    * Compliance Manager is a workflow-based risk assessment dashboard within the Trust Portal
+* *Monitor your service health*
+  * Azure Monitor
+    * Data sources
+      * Application monitoring data
+      * Guest OS monitoring data
+      * Azure resource monitoring data
+      * Azure subscription monitoring data
+      * Azure tenant monitoring data
+    * Application insights
+      * Service that monitors the availability, performance and usage of web applications
+      * Leverages Log Analytics
+    * Azure Monitor for containers
+      * Service designed to monitor the performance of containers
+    * Azure Monitor for VMs
+      * Service that monitors VMs at scale
+  * Azure Service Health
+    * Suite of experiences that provide personalised guidance and support when issues with Azure services affect you
+    * Azure Status
+      * Provides a global view of the health state of Azure services
+    * Service Health
+      * Customisable dashboard that track the state of your Azure services
+    * Resource Health
+      * Helps diagnose and obtain support when an Azure service issues affects your resources
+      * Personalised dashboard of your resources' health
+
+[Control and organise Azure resources with Azure Resource Manager](https://docs.microsoft.com/en-gb/learn/modules/control-and-organize-with-azure-resource-manager/)
+
+
+
 
 Hope you're having a great day and this is of use.
 
