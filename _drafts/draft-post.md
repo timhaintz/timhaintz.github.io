@@ -639,7 +639,7 @@ The second series of online training is [Core Cloud Services - Introduction to A
       * Helps diagnose and obtain support when an Azure service issues affects your resources
       * Personalised dashboard of your resources' health
 
-[Control and organise Azure resources with Azure Resource Manager](https://docs.microsoft.com/en-gb/learn/modules/control-and-organize-with-azure-resource-manager/)
+[Control and organize Azure resources with Azure Resource Manager](https://docs.microsoft.com/en-gb/learn/modules/control-and-organize-with-azure-resource-manager/)
 
 
 
