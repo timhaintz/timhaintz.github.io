@@ -641,7 +641,7 @@ The second series of online training is [Core Cloud Services - Introduction to A
 
 [Control and organize Azure resources with Azure Resource Manager](https://docs.microsoft.com/en-gb/learn/modules/control-and-organize-with-azure-resource-manager/)
 
-
+* *Principles of resource groups*
 
 
 Hope you're having a great day and this is of use.
