@@ -642,6 +642,33 @@ The second series of online training is [Core Cloud Services - Introduction to A
 [Control and organize Azure resources with Azure Resource Manager](https://docs.microsoft.com/en-gb/learn/modules/control-and-organize-with-azure-resource-manager/)
 
 * *Principles of resource groups*
+  * What are resource groups?
+    * Logical container for resources deployed in Azure
+    * A resource can only be a member of a single resource group
+    * Resources can be moved between resource groups
+    * Resource groups can't be nested
+  * Logical grouping
+    * Help manage and organise your Azure resources
+  * Life cycle
+    * Deleting a resource group deletes all resources
+    * Can be used to remove a set of resources at once
+  * Authorization
+    * Resource groups are a scope for applying role=based access control (RBAC)
+  * The overview panel of the resource group contains:
+    * Subscription it is in
+    * Subscription ID
+    * Tags that are applied
+    * History of deployments
+  * Use resource groups for organization
+    * Consistent naming convention
+    * Understandable naming convention
+    * Organise resources based on multiple principles
+      * Choose a method that makes sense for your organisation
+        * Organising for authorisation
+        * Organising for life cycle
+        * Organising for billing
+* *Use tagging to organize resources*
+  *
 
 
 Hope you're having a great day and this is of use.
