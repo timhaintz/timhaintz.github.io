@@ -5,9 +5,11 @@ date: 2019-06-11
 ---
 # {{ page.title }}
 
-The first series of online training is [Cloud Concepts - Principals of cloud computing](https://docs.microsoft.com/en-us/learn/modules/principles-cloud-computing/index). This is a fundemental overview of Azure. It is used as base knowledge for future concepts.
+The first series of online training is [Azure fundamentals](https://docs.microsoft.com/en-gb/learn/paths/azure-fundamentals/). The first module is [Cloud Concepts - Principals of cloud computing](https://docs.microsoft.com/en-us/learn/modules/principles-cloud-computing/index). This is a fundemental overview of Azure. It is used as base knowledge for future concepts.
 
-The second series of online training is [Core Cloud Services - Introduction to Azure](https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/index). This is more hands on and allows you to create a virtual machine using [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
+The second module is [Core Cloud Services - Introduction to Azure](https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/index). This is more hands on and allows you to create a virtual machine using [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
+
+The following modules are more detailed dot points.
 
 [Core Cloud Services - Azure architecture and service guarantees](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/index) discusses:
 
@@ -668,7 +670,43 @@ The second series of online training is [Core Cloud Services - Introduction to A
         * Organising for life cycle
         * Organising for billing
 * *Use tagging to organize resources*
-  *
+  * What are tags?
+    * Tags are name/value pairs of text data that you can apply to resources and resource groups
+    * Allow you to associate custom details
+  * Use tags for organization
+    * You can use tage to group billing data
+    * Use tags in your monioring system
+    * Can be used in automation
+      * Tag shutdown and startup events and use these in an automation job
+* *Use policies to enforce standards*
+  * What is Azure Policy?
+    * Polices can enforce things such as only allowing specific types of resources to be created
+    * Enforce onnly allowing resources in certain regions
+    * Enforce naming conventions
+  * Use policies to enforce standards
+    * Restrict which regions we can deploy to
+    * Restrict the types of virtual machine sizes that can be deployed
+    * Enforce naming conventions
+* *Secure resources with role-based access control*
+  * RBAC uses an allow model for access
+  * Most access granted is allowed
+  * Best Practices for RBAC
+    * Segregate duties within your team
+    * Grand users the lowest priviledge to do their job
+    * USE RESOURCE LOCKS to prevent modification and deletion
+* *Use resource locks to protect resources*
+  * Can be applied to any resource to block modification or deletion
+  * Can be set to:
+    * Delete
+    * Read-only
+  * Resource locks can be applied to:
+    * Subscriptions
+    * Resource groups
+    * Individual resources
+    * Are inherited when applied to higher levels
+  * Creates an additional action to confirm you really want to delete
+  * Resource locks apply regardless of RBAC permission
+
 
 
 Hope you're having a great day and this is of use.
