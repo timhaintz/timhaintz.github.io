@@ -707,7 +707,19 @@ The following modules are more detailed dot points.
   * Creates an additional action to confirm you really want to delete
   * Resource locks apply regardless of RBAC permission
 
+[Predict costs and optimize spending for Azure](https://docs.microsoft.com/en-gb/learn/modules/predict-costs-and-optimize-spending/index)
 
+* *Purchasing Azure products and services*
+  * Three types of customer
+    * Enterprise
+    * Web direct
+    * Cloud Solution Provider (CSP)
+  * Pay-for-what-you-use model
+  * One or more Usage Meters are created when you provision an Azure resource
+  * Check the billing page at any time to get a quick summary of current usage
+  * Resources are always based on usage
+* *Factors affecting costs*
+  *
 
 Hope you're having a great day and this is of use.
 
