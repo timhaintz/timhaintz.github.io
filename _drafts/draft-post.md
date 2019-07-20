@@ -719,7 +719,30 @@ The following modules are more detailed dot points.
   * Check the billing page at any time to get a quick summary of current usage
   * Resources are always based on usage
 * *Factors affecting costs*
-  *
+  * Resource type
+  * Services
+  * Location
+  * Azure billing zones
+    * Data is usually billed going out of Azure
+    * Data is usually free going into Azure
+* *Estimate costs with the Azure pricing calculator*
+  * [Azure Pricing Calculator](https://azure.microsoft.com/en-gb/pricing/calculator/)
+    * Basic configuration options include:
+      * Region
+      * Tier
+      * Billing Options
+      * Support Options
+      * Programs and Offers
+      * Azure Dev/Test Pricing
+    * Products
+      * This tab has all of the Azure services listed and where you add or remove services
+    * Estimates
+      * Previously saved estimates
+    * FAQ
+      * Frequently Asked Quesions tab
+
+
+
 
 Hope you're having a great day and this is of use.
 
