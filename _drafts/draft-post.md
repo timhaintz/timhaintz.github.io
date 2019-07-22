@@ -755,6 +755,35 @@ The following modules are more detailed dot points.
   * Cloudyn
     * Track cloud expenditure across Azure, AWS and GCP
     * Helps identify underutilised resources
+* *Estimate the Total Cost of Ownership with the Azure TCO calculator*
+  * [Total Cost of Ownership calculator](https://azure.microsoft.com/en-gb/pricing/tco/)
+  * Define your workloads
+  * Adjust assumptions
+  * View the report
+* *Save on infrastructure costs*
+  * Use Azure credits
+    * Visual Studio subscribers can activate a monthly credit to experiment
+  * Use spending limits
+    * Useful for development teams exploring new solutions so costs can be contained
+    * Once the credit is exhausted, services are disabled and turned off for the rest of the billing period
+    * Email notification sent once credits are exhausted
+    * Not available on pay-only, only available to subscriptions with a monthly credit allotment
+  * Use reserved instances
+    * Great for static and predictable VM workloads
+    * Potential saving of 70-80%
+    * Purchased in one-year or three-year terms
+    * Payment required in full up front
+  * Choose low-cost locations and regions
+  * Research available cost-saving offers
+  * Right-size underutilized virtual machines
+    * Change the size of the VM through the Azure portal, Azure PowerShell, or the Azure CLI
+    * VM needs to be stopped, resized and then restarted
+  * Deallocate virtual machiens in off hours
+    * Great for development environments
+    * Automation solution available to leverage
+  * Delete unused virtual machines
+  * Migrate to PaaS or SaaS services
+    * PaaS services typically provide substantial savings in resource and operational costs
 
 Hope you're having a great day and this is of use.
 
