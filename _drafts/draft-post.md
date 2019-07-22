@@ -740,9 +740,21 @@ The following modules are more detailed dot points.
       * Previously saved estimates
     * FAQ
       * Frequently Asked Quesions tab
-
-
-
+* *Predict and optimize with Cost Management and Azure Advisor*
+  * Azure Advisor
+    * Free service built into Azure that provides recommendations on high availability, security, performance and cost
+    * Makes recommendations in the following areas:
+      * Reduce costs by eliminating unprovisioned Azure ExpressRoute circuits
+      * Buy reserved instances to save money over pay-as-you-go
+      * Right-size or shutdown underutilized virtual machines
+  * Azure Cost Management
+    * See historical breakdowns of services
+    * Set budgets
+    * Schedule reports
+    * Analyse cost areas
+  * Cloudyn
+    * Track cloud expenditure across Azure, AWS and GCP
+    * Helps identify underutilised resources
 
 Hope you're having a great day and this is of use.
 
