@@ -1,15 +1,18 @@
 ---
 layout: default
-title: "Certification time?"
-date: 2019-06-11
+title: "Azure fundamentals module"
+date: 2019-08-03
 ---
 # {{ page.title }}
+
+Below is an overview of the *Azure fundamentals* module. It is in dot point format and a raw dump of information as I progressed through the course.
+The modules I'm going to complete are displayed in [Learning path for Azure Administrator](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWtY7Z)
 
 The first series of online training is [Azure fundamentals](https://docs.microsoft.com/en-gb/learn/paths/azure-fundamentals/). The first module is [Cloud Concepts - Principals of cloud computing](https://docs.microsoft.com/en-us/learn/modules/principles-cloud-computing/index). This is a fundemental overview of Azure. It is used as base knowledge for future concepts.
 
 The second module is [Core Cloud Services - Introduction to Azure](https://docs.microsoft.com/en-us/learn/modules/welcome-to-azure/index). This is more hands on and allows you to create a virtual machine using [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
 
-The following modules are more detailed dot points.
+The following modules are more detailed with dot points.
 
 [Core Cloud Services - Azure architecture and service guarantees](https://docs.microsoft.com/en-us/learn/modules/explore-azure-infrastructure/index) discusses:
 
@@ -784,6 +787,25 @@ The following modules are more detailed dot points.
   * Delete unused virtual machines
   * Migrate to PaaS or SaaS services
     * PaaS services typically provide substantial savings in resource and operational costs
+* *Save on licensing costs*
+  * You can choose Linux or Windows OS
+  * Azure Hybrid Benefit
+    * Need Software Assurance
+    * Each two-processor license or each set of 16-core licenses is entitled to two instances of up to 8 cores or one instance of up to 16 cores.
+    * Standard Edition licenses can only be used once either on-premises or in Azure. That means you can't use the same license for an Azure VM and a local computer.
+    * Datacenter Edition benefits allow for simultaneous usage both on-premises and in Azure so that the license will cover two running Windows machines.
+    * Hybrid benefit combined with reserved instances can provide substantial savings
+  * Azure Hybrid Benefit for SQL Server
+    * Use your current Software Assurance licensing investments to reduce the cost of Azure SQL
+  * Used Dev/Test subscription offers
+    * Visual Studio subscription
+    * Used for non-production environments
+    * Eliminates licensing charges and bills at the Linux rate for virtual machines
+    * Users of the environment must have a Visual Studio subscription
+    * If you have an Enterprise Agreement, use [Enterprise Dev/Test](https://azure.microsoft.com/en-gb/offers/ms-azr-0148p/)
+    * If you don't have an Entrprise Agreement, use [Pay-as-you-go Dev/Test](https://azure.microsoft.com/en-gb/offers/ms-azr-0023p/)
+  * SQL Server allows *bring your own license* (BYOL) if you have an Enterprise Agreement
+  * SQL Server Developer Edition is free for nonproduction use
 
 Hope you're having a great day and this is of use.
 
